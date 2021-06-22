@@ -3,5 +3,8 @@ sidebar:
   nav: docs-en
 ---
 
-Definition
+## Definition
 
+## Properties
+
+## Canonical form
