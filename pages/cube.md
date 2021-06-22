@@ -4,12 +4,12 @@ sidebar:
   nav: docs-en
 ---
 
-1. **Definition**
+1. Definition
 
-Unit cube is defined as
+Unit cube $K_n$ is the cartesian product of $n$ unit segments: $K_n=[0,1]^n$
 
-1. **Properties**
+2. Properties
 
-a. F-vector
+  a. F-vector
 
-$$\sqrt{2}$$
+  b. Canonical form
