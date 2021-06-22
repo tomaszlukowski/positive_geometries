@@ -4,12 +4,12 @@ sidebar:
   nav: docs-en
 ---
 
-* **Definition**
+1. **Definition**
 
 Unit cube is defined as
 
-* **Properties**
+1. **Properties**
 
-* F-vector
+a. F-vector
 
 $$\sqrt{2}$$
