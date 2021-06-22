@@ -1,7 +1,8 @@
 ---
 sidebar:
   nav: docs-en
-tag: TeXt
 ---
 
-# Definition
+# Definition of positive geometry
+
+# Basic properties
