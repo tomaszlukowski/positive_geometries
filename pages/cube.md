@@ -4,11 +4,11 @@ sidebar:
   nav: docs-en
 ---
 
-* *Definition*
+* **Definition**
 
 Unit cube is defined as
 
-* *Properties*
+* **Properties**
 
 * F-vector
 
