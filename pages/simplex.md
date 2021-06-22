@@ -3,10 +3,10 @@ sidebar:
   nav: docs-en
 ---
 
-# Definition
+## Definition
 
-# Properties
+## Properties
 
-## F-vector
+### F-vector
 
 $\sqrt{2}$
