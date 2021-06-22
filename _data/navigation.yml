@@ -12,8 +12,12 @@ header:
     url: /about.html
     
 docs-en:
-  - title:      Start
+  - title:      Definition
+    url: /pages/definition.html
+  - title:      List of geometries
     children:
-      - title:  Quick Start
-        url:    /First_page.html
+      - title:  Simplex
+        url:    /simplex.html
+      - title: Unit cube
+        url:    /cube.html
      
