@@ -1,7 +1,12 @@
 ---
-tag: TeXt
 sidebar:
   nav: docs-en
 ---
 
-# Simplex
+# Definition
+
+# Properties
+
+## F-vector
+
+$\sqrt{2}$
