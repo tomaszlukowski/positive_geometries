@@ -1,10 +1,9 @@
 ---
+layout: article
 sidebar:
   nav: docs-en
 ---
 
-## Definition of f-vector
+* **Definition**
 
-## Examples of f-vectors
-
-* Tetrahedron: $(1,4,6,4)$
+    F-vector ...
