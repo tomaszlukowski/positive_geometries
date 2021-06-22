@@ -1,5 +1,5 @@
 ---
-layout: pages
+layout: page
 sidebar:
   nav: docs-en
 ---
