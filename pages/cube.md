@@ -4,12 +4,12 @@ sidebar:
   nav: docs-en
 ---
 
-1. Definition
+* Definition
 
 Unit cube $K_n$ is the cartesian product of $n$ unit segments: $K_n=[0,1]^n$
 
-2. Properties
+* Properties
 
-  a. F-vector
+  ** F-vector
 
-  b. Canonical form
+  ** Canonical form
