@@ -1,10 +1,18 @@
 ---
+layout: article
 sidebar:
   nav: docs-en
 ---
 
-## Definition
+* **Definition**
 
-## Properties
+    An associahedron $A_n$ is defined as an intersection $A_n = H_n \cap \Delta_n$, where
+    $$ K_n=$$
+    and
+    $$ \Delta_n=$$
 
-## Canonical form
+* **Properties**
+
+  * F-vector
+
+  * Canonical form
