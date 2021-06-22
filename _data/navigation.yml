@@ -13,7 +13,12 @@ header:
     
 docs-en:
   - title:      Definition
-    url: /pages/definition.html
+    children:
+      - title: Positive geometry
+        url: /pages/definition.html
+    children:
+      - title: f-vector
+        url: /pages/f_vector.html
   - title:      List of geometries
     children:
       - title:  Simplex
