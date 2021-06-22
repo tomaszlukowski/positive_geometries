@@ -1,9 +1,9 @@
 header:
-  - titles:
+  #- titles:
       # @start locale config
-      en      : &EN       Archive
+ #     en      : &EN       Archive
       # @end locale config
-    url: /archive.html
+  #  url: /archive.html
 
   - titles:
       # @start locale config
