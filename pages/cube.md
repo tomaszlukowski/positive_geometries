@@ -4,4 +4,4 @@ sidebar:
   nav: docs-en
 ---
 
-# Unit cube
+
