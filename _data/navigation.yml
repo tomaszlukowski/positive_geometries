@@ -16,7 +16,6 @@ docs-en:
     children:
       - title: Positive geometry
         url: /pages/definition.html
-    children:
       - title: f-vector
         url: /pages/f_vector.html
   - title:      List of geometries
@@ -25,4 +24,6 @@ docs-en:
         url:    /pages/simplex.html
       - title: Unit cube
         url:    /pages/cube.html
+      - title: Associahedron
+        url:    /pages/associahedron.html
      
