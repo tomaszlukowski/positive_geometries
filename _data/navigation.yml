@@ -17,7 +17,7 @@ docs-en:
   - title:      List of geometries
     children:
       - title:  Simplex
-        url:    /simplex.html
+        url:    /pages/simplex.html
       - title: Unit cube
-        url:    /cube.html
+        url:    /pages/cube.html
      
