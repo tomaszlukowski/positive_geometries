@@ -4,10 +4,10 @@ sidebar:
   nav: docs-en
 ---
 
-## Definition
+* *Definition*
 
-## Properties
+* *Properties*
 
-### F-vector
+* F-vector
 
-$\sqrt{2}$
+$$\sqrt{2}$$
