@@ -4,10 +4,12 @@ sidebar:
   nav: docs-en
 ---
 
-* *Definition*
+* **Definition**
 
-* *Properties*
+    A unit simplex $S_n$ is the convex hull of $n$ basis points: $S_n=\text{conv}\{e_1,\ldots,e_n\}$
 
-* F-vector
+* **Properties**
 
-$$\sqrt{2}$$
+  * F-vector
+
+  * Canonical form
