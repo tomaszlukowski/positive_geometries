@@ -1,8 +1,9 @@
 ---
+layout: article
 sidebar:
   nav: docs-en
 ---
 
-# Definition of positive geometry
+* **Definition**
 
-# Basic properties
+   Positive geometry ...
