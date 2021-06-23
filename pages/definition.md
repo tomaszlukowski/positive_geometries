@@ -4,7 +4,7 @@ sidebar:
   nav: docs-en
 ---
 
-* **Definition**
+* **Definition [[1]]**
 
    A $D$-dimensional positive geometry is a pair $(X, X_{\geq 0})$, where $X$ is a complex projective algebraic variety of complex
    dimension $D$, and  $X_{\geq 0}$ is an oriented subset of the real part of $X$, of real dimension $D$. Every positive geometry is equipped with a unique non-zero differential
@@ -15,3 +15,10 @@ sidebar:
         $$\text{Res}_C \Omega(X, X_{\geq0}) = \Omega(C, C_{\geq0})$$
         
         along every boundary component $C$, and has no singularities elsewhere.
+
+
+
+
+
+
+[1]: <https://arxiv.org/abs/1703.04541> "Definition of positive geometry"
