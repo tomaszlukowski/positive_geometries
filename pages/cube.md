@@ -10,7 +10,7 @@ sidebar:
 
 * **Properties**
 
-  * F-vector
+  * F-vector ([OEIS A062715](https://oeis.org/A062715))
 
     | Simplex | Dimension | (-1)-faces | 0-faces | 1-faces | 2-faces | 3-faces | 4-faces | 5-faces | 6-faces |
     |:-------:|:---------:|:----------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
