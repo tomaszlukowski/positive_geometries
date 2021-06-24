@@ -6,7 +6,7 @@ sidebar:
 
 * **Definition**
 
-    Unit cube $K_n$ is the cartesian product of $n$ unit segments: $K_n=[0,1]^n$
+    Unit hypercube $K_n^{(0)}$ is the cartesian product of $n$ unit segments: $K_n^{(0)}=[0,1]^n$.
 
 * **Properties**
 
@@ -23,3 +23,5 @@ sidebar:
     | $K_6$   |     6     |  1         |  64     | 192     |    240  |    160  |   60    |    12   |   1     |
 
   * Canonical form
+
+    $$ \Omega(K_n^{(0)})=\frac{dY_1\wedge \ldots \wedge dY_n}{\prod_i Y_i\prod_i (1-Y_i)}$$
