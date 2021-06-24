@@ -22,7 +22,7 @@ docs-en:
     children:
       - title:  Simplex
         url:    /pages/simplex.html
-      - title: Unit cube
+      - title: Cube
         url:    /pages/cube.html
       - title: Associahedron
         url:    /pages/associahedron.html
