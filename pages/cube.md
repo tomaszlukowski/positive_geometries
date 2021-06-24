@@ -22,6 +22,10 @@ sidebar:
     | $K_5$   |     5     |  1         |  32     | 80      |    80   |    40   |   10    |    1    |   0     |
     | $K_6$   |     6     |  1         |  64     | 192     |    240  |    160  |   60    |    12   |   1     |
 
+    Generating function:
+
+    $$f(x,y)=\frac{1-2x-x^2 y}{(1-x) (1-2x-x y)}$$
+
   * Canonical form
 
     $$ \Omega(K_n^{(0)})=\frac{dY_1\wedge \ldots \wedge dY_n}{\prod_i Y_i\prod_i (1-Y_i)}$$
