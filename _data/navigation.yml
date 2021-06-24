@@ -22,8 +22,8 @@ docs-en:
     children:
       - title:  Simplex
         url:    /pages/simplex.html
-      - title: Cube
-        url:    /pages/hypercube.html
+      - title: Hypercube
+        url:    /pages/cube.html
       - title: Associahedron
         url:    /pages/associahedron.html
      
