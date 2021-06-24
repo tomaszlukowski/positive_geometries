@@ -23,7 +23,7 @@ docs-en:
       - title:  Simplex
         url:    /pages/simplex.html
       - title: Cube
-        url:    /pages/cube.html
+        url:    /pages/hypercube.html
       - title: Associahedron
         url:    /pages/associahedron.html
      
