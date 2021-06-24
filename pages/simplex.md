@@ -6,9 +6,9 @@ sidebar:
 
 * **Definition**
 
-    A unit simplex is the convex hull of $n$ basis points: $S_n=\text{conv}\\{e_1,\ldots,e_n\\}$
+    A unit simplex is the convex hull of $n$ basis points: $S_n^{(0)}=\text{conv}\\{e_1,\ldots,e_n\\}$
 
-    A projective simplex $S_n$ is a convex hull of $n$ vectors $Z_i=(1,z_i)$.
+    A projective simplex $S_n$ is a convex hull of $n$ vectors $Z_i\in \mathbb{P}^{n-1}$: $S_n=\text{conv}\\{Z_1,\ldots,Z_n\\}$.
 
 * **Properties**
 
@@ -30,4 +30,4 @@ sidebar:
     
     For unit simplex:
 
-    $$ \Omega(S_n^{0}) = \frac{\langle Yd^n Y\rangle }{Y_1 Y_2\ldots Y_n}$$
+    $$ \Omega(S_n^{(0)}) = \frac{\langle Yd^n Y\rangle }{Y_1 Y_2\ldots Y_n}$$
