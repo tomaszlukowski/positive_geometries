@@ -28,4 +28,8 @@ sidebar:
     | $A_5$   |     5     |  1         |  20     | 120     |    300  |    330  |   132   |    1    |   0     |
     | $A_6$   |     6     |  1         |  27     | 225     |    825  |    1485 |   1287  |    429  |   1     |
 
+    F-vector generating function:
+
+    $$\frac{-\sqrt{x^2-4 x y-2 x+1}-2 x y-x+1}{2 x y^2 (y+1)}+\frac{1}{y (1-x y)}$$
+
   * Canonical form
