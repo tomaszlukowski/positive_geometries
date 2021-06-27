@@ -32,7 +32,7 @@ sidebar:
 
       * F-vector exponential generating function:
 
-        $$\frac{e^{x (y+1)}}{y}$$
+        $$\bar{f}(x,y)=\frac{e^{x (y+1)}}{y}$$
   
   * Canonical form
 
