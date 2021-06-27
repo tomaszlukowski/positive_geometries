@@ -14,7 +14,7 @@ sidebar:
 
   * F-vector 
 
-      * ([OEIS A007318](https://oeis.org/A007318))
+      * Table ([OEIS A007318](https://oeis.org/A007318)):
     
       | Simplex | Dimension | (-1)-faces | 0-faces | 1-faces | 2-faces | 3-faces | 4-faces | 5-faces | 6-faces |
       |:-------:|:---------:|:----------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
@@ -32,11 +32,11 @@ sidebar:
 
       * F-vector exponential generating function:
 
-        $$\bar{f}(x,y)=\frac{e^{x (y+1)}}{y}$$
+        $$\tilde{f}(x,y)=\frac{e^{x (y+1)}}{y}$$
   
   * Canonical form
 
-      * General simplex
+      * General simplex:
 
     $$ \Omega(S_n)=\frac{\langle Z_1 Z_2 \ldots Z_n\rangle^{n-1} \langle Yd^n Y\rangle}{m! \langle YZ_1\ldots Z_{n-1}\rangle\langle YZ_2\ldots Z_{n}\rangle\ldots \langle YZ_n\ldots Z_{n-2}\rangle}$$
     
