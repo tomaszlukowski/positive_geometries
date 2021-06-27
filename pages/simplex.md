@@ -38,8 +38,8 @@ sidebar:
 
       * General simplex:
 
-    $$ \Omega(S_n)=\frac{\langle Z_1 Z_2 \ldots Z_n\rangle^{n-1} \langle Yd^n Y\rangle}{m! \langle YZ_1\ldots Z_{n-1}\rangle\langle YZ_2\ldots Z_{n}\rangle\ldots \langle YZ_n\ldots Z_{n-2}\rangle}$$
+    $$ \Omega(S_n)=\frac{\langle Z_1 Z_2 \ldots Z_n\rangle^{n-1} \langle Yd^{n-1} Y\rangle}{m! \langle YZ_1\ldots Z_{n-1}\rangle\langle YZ_2\ldots Z_{n}\rangle\ldots \langle YZ_n\ldots Z_{n-2}\rangle}$$
     
        * Unit simplex:
 
-    $$ \Omega(S_n^{(0)}) = \frac{\langle Yd^n Y\rangle }{Y_1 Y_2\ldots Y_n}$$
+    $$ \Omega(S_n^{(0)}) = \frac{\langle Yd^{n-1} Y\rangle }{y_1 y_2\ldots y_n}$$
