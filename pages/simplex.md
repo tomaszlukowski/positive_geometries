@@ -36,7 +36,7 @@ sidebar:
   
   * Canonical form
 
-      * General simplex:
+      * Projective simplex:
 
     $$ \Omega(S_n)=\frac{\langle Z_1 Z_2 \ldots Z_n\rangle^{n-1} \langle Yd^{n-1} Y\rangle}{(n-1)! \langle YZ_1\ldots Z_{n-1}\rangle\langle YZ_2\ldots Z_{n}\rangle\ldots \langle YZ_n\ldots Z_{n-2}\rangle}$$
     
