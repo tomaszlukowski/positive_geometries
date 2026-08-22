@@ -1262,11 +1262,11 @@
 <h1 id="hypercube">Hypercube<a class="headerlink" href="#hypercube" title="Permanent link">&para;</a></h1>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
 <p>The <strong>unit <span class="arithmatex">\(n\)</span>-cube</strong> is the <span class="arithmatex">\(n\)</span>-fold Cartesian product of the unit
-interval,
-[
+interval,</p>
+<div class="arithmatex">\[
 K_n^{(0)} = [0,1]^n \subset \RR^n,
-]
-a polytope of dimension <span class="arithmatex">\(n\)</span>. As a positive geometry it is the
+\]</div>
+<p>a polytope of dimension <span class="arithmatex">\(n\)</span>. As a positive geometry it is the
 <span class="arithmatex">\(n\)</span>-fold product of the interval <span class="arithmatex">\([0,1]\)</span> with itself (see
 <a href="../../theory/canonical-forms/#products">Products</a>), which is why its
 canonical form factorizes completely.</p>
@@ -1281,10 +1281,10 @@ canonical form factorizes completely.</p>
 <li>Simple polytope: every vertex lies on exactly <span class="arithmatex">\(n\)</span> facets.</li>
 </ul>
 <h2 id="f-vector">f-vector<a class="headerlink" href="#f-vector" title="Permanent link">&para;</a></h2>
-<p>[
+<div class="arithmatex">\[
 f_k(K_n^{(0)}) = 2^{n-k} \binom{n}{k},
-]
-the number of ways to choose which <span class="arithmatex">\(k\)</span> coordinates stay free and then
+\]</div>
+<p>the number of ways to choose which <span class="arithmatex">\(k\)</span> coordinates stay free and then
 fix each remaining coordinate to <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span> —
 <a href="https://oeis.org/A038207">OEIS A038207</a>.</p>
 <table>
@@ -1373,10 +1373,10 @@ f(x,y) = \sum_{n \geq 1} x^n \sum_{k=0}^{n-1} \binom{n}{k} 2^{n-k} y^k
 form is the product of <span class="arithmatex">\(n\)</span> copies of the interval's
 <span class="arithmatex">\(dy_i / y_i(y_i-1)\)</span> (worked out on the
 <a href="../../theory/canonical-forms/#worked-example-the-interval">canonical forms page</a>):</p>
-<p>[
+<div class="arithmatex">\[
 \Omega(K_n^{(0)}) = \frac{dy_1 \wedge \cdots \wedge dy_n}{\prod_{i=1}^n y_i \, (y_i - 1)},
-]
-with a simple pole on each of the <span class="arithmatex">\(2n\)</span> facets <span class="arithmatex">\(\lbrace y_i = 0\rbrace \)</span> and
+\]</div>
+<p>with a simple pole on each of the <span class="arithmatex">\(2n\)</span> facets <span class="arithmatex">\(\lbrace y_i = 0\rbrace \)</span> and
 <span class="arithmatex">\(\lbrace y_i = 1\rbrace \)</span>.</p>
 <h2 id="verified-embedding-dual-and-triangulations">Verified embedding, dual, and triangulations<a class="headerlink" href="#verified-embedding-dual-and-triangulations" title="Permanent link">&para;</a></h2>
 <p>For <span class="arithmatex">\(K_3^{(0)} = [0,1]^3\)</span>, the cube shown below, computed
@@ -1432,7 +1432,7 @@ independently in SageMath + TOPCOM — full computation at
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 18:46:12 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 18:52:17 UTC">August 22, 2026</span>
   </span>
 
     
