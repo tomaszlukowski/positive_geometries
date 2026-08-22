@@ -8,9 +8,11 @@ themselves (some possibly all the way in, collapsing), without changing
 their outward normal directions. Equivalently — Postnikov's formulation —
 it is any polytope whose edges are all parallel to some \(e_i - e_j\), or
 the polytope
+
 \[
 P_z = \Big\lbrace  x \in \RR^n : \sum_i x_i = z(\lbrace 1,\dots,n\rbrace ),\ \sum_{i \in S} x_i \leq z(S)\ \ \forall S \subsetneq \lbrace 1,\dots,n\rbrace  \Big\rbrace 
 \]
+
 associated to any **submodular function** \(z\) on subsets of
 \(\lbrace 1,\dots,n\rbrace \).
 

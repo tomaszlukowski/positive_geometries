@@ -13,9 +13,11 @@ a(bc)\). It has dimension \(d = L-2\).
 places a vertex for each planar binary tree \(T\) with \(L\) leaves at
 the point \(M(T) \in \RR^{L-1}\) whose \(i\)-th coordinate (indexed by
 the \(L-1\) internal nodes of \(T\), read left to right) is
+
 \[
 M(T)_i = a_i(T)\, b_i(T),
 \]
+
 the product of the number of leaves in the left and right subtrees below
 the \(i\)-th internal node. All these points lie in the common
 hyperplane \(\sum_i M(T)_i = \binom{L}{2}\), and their convex hull is
@@ -42,10 +44,12 @@ Faces of \(K_L\) correspond to partial dissections of the
 \((L{+}1)\)-gon: a face of dimension \(j\) is given by drawing
 \(d - j\) non-crossing diagonals (leaving \(j\) undrawn), and the count
 is the classical **Kirkman–Cayley number**
+
 \[
 f_j(K_L) = D\big(L{+}1,\ d-j\big), \qquad
 D(p, k) = \frac{1}{k+1}\binom{p-3}{k}\binom{p+k-1}{k},
 \]
+
 the number of ways to dissect a convex \(p\)-gon into \(k+1\) cells with
 \(k\) non-crossing diagonals — [OEIS A033282](https://oeis.org/A033282).
 In particular \(f_0(K_L) = D(L{+}1, d) = \mathrm{Cat}(L-1)\), the vertex

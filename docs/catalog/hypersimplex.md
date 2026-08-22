@@ -4,10 +4,12 @@
 
 The **hypersimplex** \(\Delta(k,n)\), for \(1 \leq k \leq n-1\), is the
 convex hull of all 0/1 vectors in \(\RR^n\) with exactly \(k\) ones:
+
 \[
 \Delta(k,n) = \conv\lbrace  e_S : S \subset \lbrace 1,\dots,n\rbrace ,\ |S| = k \rbrace ,
 \qquad e_S = \sum_{i \in S} e_i.
 \]
+
 Equivalently, it is the slice \(\lbrace x \in [0,1]^n : \sum_i x_i = k\rbrace \) of
 the [hypercube](hypercube.md). It is the **matroid polytope** of the
 uniform matroid \(U_{k,n}\), and a member of the

@@ -42,6 +42,7 @@ canonical form \(\Omega(X, X_{\geq 0})\) if:
    (logarithmic), and no poles anywhere else on \(X\);
 3. along every boundary component \(C\), the residue of \(\Omega\)
    reproduces the lower-dimensional canonical form exactly:
+
    \[
    \Res_{C}\, \Omega(X, X_{\geq 0}) \;=\; \Omega(C, C_{\geq 0}).
    \]

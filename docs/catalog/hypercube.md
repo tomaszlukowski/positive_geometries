@@ -4,9 +4,11 @@
 
 The **unit \(n\)-cube** is the \(n\)-fold Cartesian product of the unit
 interval,
+
 \[
 K_n^{(0)} = [0,1]^n \subset \RR^n,
 \]
+
 a polytope of dimension \(n\). As a positive geometry it is the
 \(n\)-fold product of the interval \([0,1]\) with itself (see
 [Products](../theory/canonical-forms.md#products)), which is why its
@@ -27,6 +29,7 @@ canonical form factorizes completely.
 \[
 f_k(K_n^{(0)}) = 2^{n-k} \binom{n}{k},
 \]
+
 the number of ways to choose which \(k\) coordinates stay free and then
 fix each remaining coordinate to \(0\) or \(1\) —
 [OEIS A038207](https://oeis.org/A038207).
@@ -66,6 +69,7 @@ form is the product of \(n\) copies of the interval's
 \[
 \Omega(K_n^{(0)}) = \frac{dy_1 \wedge \cdots \wedge dy_n}{\prod_{i=1}^n y_i \, (y_i - 1)},
 \]
+
 with a simple pole on each of the \(2n\) facets \(\lbrace y_i = 0\rbrace \) and
 \(\lbrace y_i = 1\rbrace \).
 

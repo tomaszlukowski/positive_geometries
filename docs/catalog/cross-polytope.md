@@ -4,9 +4,11 @@
 
 The **\(n\)-dimensional cross-polytope** (or *orthoplex*, or generalized
 octahedron) is the convex hull of the \(n\) coordinate axis pairs,
+
 \[
 X_n = \conv\lbrace \pm e_1, \dots, \pm e_n\rbrace  \subset \RR^n,
 \]
+
 equivalently the unit ball of the \(\ell_1\) norm,
 \(X_n = \lbrace x \in \RR^n : |x_1| + \cdots + |x_n| \leq 1\rbrace \), a polytope of
 dimension \(n\). It is the **polar dual** of the [hypercube](hypercube.md):
@@ -28,6 +30,7 @@ facets of one correspond to vertices of the other.
 \[
 f_k(X_n) = \binom{n}{k+1}\, 2^{k+1},
 \]
+
 choosing which \(k+1\) axes span the face, then a sign for each. (This
 triangle is the polar-dual counterpart of the hypercube's
 [A038207](https://oeis.org/A038207); each row is 2 times a row of
@@ -63,9 +66,11 @@ shortcut. It follows directly from
 coning the boundary from the origin splits \(X_n\) into \(2^n\) simplices,
 one per sign pattern \(s \in \lbrace \pm1\rbrace ^n\), each spanned by the origin and
 \(\lbrace s_i e_i\rbrace _{i=1}^n\), and
+
 \[
 \Omega(X_n) = \sum_{s \in \lbrace \pm 1\rbrace ^n} \Omega\big(\conv\lbrace 0, s_1 e_1, \dots, s_n e_n\rbrace \big),
 \]
+
 with each summand the simplex canonical form from the
 [simplex page](simplex.md).
 

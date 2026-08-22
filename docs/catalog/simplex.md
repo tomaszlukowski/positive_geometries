@@ -4,15 +4,19 @@
 
 The **unit simplex** on \(n\) vertices is the convex hull of the standard
 basis vectors,
+
 \[
 S_n^{(0)} = \conv\lbrace e_1, \dots, e_n\rbrace  \subset \RR^n,
 \]
+
 a polytope of dimension \(d = n-1\). Projectively, the **simplex**
 determined by \(n\) points \(Z_1, \dots, Z_n \in \PP^{n-1}\) in general
 position is
+
 \[
 S_n = \conv\lbrace Z_1, \dots, Z_n\rbrace .
 \]
+
 Every facet of \(S_n\) is itself a simplex on \(n-1\) of the \(Z_i\), so
 the family is closed under taking boundary components — the simplex is
 the simplest possible positive geometry after a point.
@@ -69,12 +73,15 @@ homogeneous coordinates),
 \Omega(S_n) = \frac{\br{Z_1 \cdots Z_n}^{\,n-1}\, \br{Y\, d^{n-1}Y}}
 {(n-1)! \; \br{Y Z_1 \cdots Z_{n-1}}\, \br{Y Z_2 \cdots Z_n} \cdots \br{Y Z_n Z_1 \cdots Z_{n-2}}},
 \]
+
 the denominator running cyclically over the \(n\) facets. In the affine
 chart of the unit simplex, with \(y_1, \dots, y_n\) the barycentric-type
 coordinates dual to the vertices,
+
 \[
 \Omega(S_n^{(0)}) = \frac{\br{Y\, d^{n-1}Y}}{y_1 y_2 \cdots y_n},
 \]
+
 manifestly with a simple pole on each of the \(n\) facets \(\lbrace y_i = 0\rbrace \).
 
 ## Verified embedding

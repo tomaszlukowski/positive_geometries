@@ -4,9 +4,11 @@
 
 The **permutohedron** of order \(n\) is the convex hull of all
 permutations of \((1, 2, \dots, n)\), viewed as points in \(\RR^n\):
+
 \[
 \Pi_{n-1} = \conv\lbrace  (\sigma(1), \dots, \sigma(n)) : \sigma \in S_n \rbrace .
 \]
+
 All \(n!\) points lie in the hyperplane \(\sum_i x_i = \binom{n+1}{2}\),
 so \(\Pi_{n-1}\) has dimension \(n-1\) — the subscript records this
 directly. It is the founding example of a **generalized permutohedron**;
@@ -31,9 +33,11 @@ of \(\lbrace 1,\dots,n\rbrace \): a face of dimension \(k\) corresponds to an or
 partition into \(n-k\) nonempty blocks (one coordinate value per block).
 Since an ordered partition into \(m\) blocks is equivalent to a
 surjection onto an \(m\)-element ordered target,
+
 \[
 f_k(\Pi_{n-1}) = (n-k)!\, S(n, n-k),
 \]
+
 with \(S(n,m)\) the Stirling numbers of the second kind —
 [OEIS A019538](https://oeis.org/A019538).
 
