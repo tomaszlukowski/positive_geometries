@@ -1,922 +1,1084 @@
-<!DOCTYPE html><html lang="en">
-  <head><!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71907556-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
 
-		gtag('config', 'UA-71907556-1');
-		
-	</script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>404 - TeXt Theme</title>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A compendium of positive geometries — their definitions, canonical forms, and combinatorics — with a focus on polytopal examples.">
+      
+      
+        <meta name="author" content="Tomasz Lukowski">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="/positive_geometries/assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Positive Geometries</title>
+      
+    
+    
+      <link rel="stylesheet" href="/positive_geometries/assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="/positive_geometries/assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-<meta name="description" content="A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
-">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/404.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
-<meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+4:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Serif 4";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="/positive_geometries/assets/css/extra.css">
+    
+    <script>__md_scope=new URL("/positive_geometries/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-<meta name="theme-color" content="#ffffff">
-<!-- end favicons snippet --><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/main.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" ><!-- start custom head snippets -->
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-<!-- end custom head snippets -->
-<script>(function() {
-  window.isArray = function(val) {
-    return Object.prototype.toString.call(val) === '[object Array]';
-  };
-  window.isString = function(val) {
-    return typeof val === 'string';
-  };
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/positive_geometries/." title="Positive Geometries" class="md-header__button md-logo" aria-label="Positive Geometries" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2v6h2.28l1.29 8H4v6h6v-1.94l5-.01V22h6v-6h-1.83L20 9h2V3h-6v3.53L14.8 8H9.59L8 5.82V2M4 4h2v2H4m14-1h2v2h-2M6.31 8h.8L9 10.59V14h6v-3.09L16.57 9H18l-.84 7H15v2.06h-5V16H7.6m3.4-6h2v2h-2m-5 6h2v2H6m11-2h2v2h-2"/></svg>
 
-  window.hasEvent = function(event) {
-    return 'on'.concat(event) in window.document;
-  };
-
-  window.isOverallScroller = function(node) {
-    return node === document.documentElement || node === document.body || node === window;
-  };
-
-  window.isFormElement = function(node) {
-    var tagName = node.tagName;
-    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
-  };
-
-  window.pageLoad = (function () {
-    var loaded = false, cbs = [];
-    window.addEventListener('load', function () {
-      var i;
-      loaded = true;
-      if (cbs.length > 0) {
-        for (i = 0; i < cbs.length; i++) {
-          cbs[i]();
-        }
-      }
-    });
-    return {
-      then: function(cb) {
-        cb && (loaded ? cb() : (cbs.push(cb)));
-      }
-    };
-  })();
-})();
-(function() {
-  window.throttle = function(func, wait) {
-    var args, result, thisArg, timeoutId, lastCalled = 0;
-
-    function trailingCall() {
-      lastCalled = new Date;
-      timeoutId = null;
-      result = func.apply(thisArg, args);
-    }
-    return function() {
-      var now = new Date,
-        remaining = wait - (now - lastCalled);
-
-      args = arguments;
-      thisArg = this;
-
-      if (remaining <= 0) {
-        clearTimeout(timeoutId);
-        timeoutId = null;
-        lastCalled = now;
-        result = func.apply(thisArg, args);
-      } else if (!timeoutId) {
-        timeoutId = setTimeout(trailingCall, remaining);
-      }
-      return result;
-    };
-  };
-})();
-(function() {
-  var Set = (function() {
-    var add = function(item) {
-      var i, data = this._data;
-      for (i = 0; i < data.length; i++) {
-        if (data[i] === item) {
-          return;
-        }
-      }
-      this.size ++;
-      data.push(item);
-      return data;
-    };
-
-    var Set = function(data) {
-      this.size = 0;
-      this._data = [];
-      var i;
-      if (data.length > 0) {
-        for (i = 0; i < data.length; i++) {
-          add.call(this, data[i]);
-        }
-      }
-    };
-    Set.prototype.add = add;
-    Set.prototype.get = function(index) { return this._data[index]; };
-    Set.prototype.has = function(item) {
-      var i, data = this._data;
-      for (i = 0; i < data.length; i++) {
-        if (this.get(i) === item) {
-          return true;
-        }
-      }
-      return false;
-    };
-    Set.prototype.is = function(map) {
-      if (map._data.length !== this._data.length) { return false; }
-      var i, j, flag, tData = this._data, mData = map._data;
-      for (i = 0; i < tData.length; i++) {
-        for (flag = false, j = 0; j < mData.length; j++) {
-          if (tData[i] === mData[j]) {
-            flag = true;
-            break;
-          }
-        }
-        if (!flag) { return false; }
-      }
-      return true;
-    };
-    Set.prototype.values = function() {
-      return this._data;
-    };
-    return Set;
-  })();
-
-  window.Lazyload = (function(doc) {
-    var queue = {js: [], css: []}, sources = {js: {}, css: {}}, context = this;
-    var createNode = function(name, attrs) {
-      var node = doc.createElement(name), attr;
-      for (attr in attrs) {
-        if (attrs.hasOwnProperty(attr)) {
-          node.setAttribute(attr, attrs[attr]);
-        }
-      }
-      return node;
-    };
-    var end = function(type, url) {
-      var s, q, qi, cbs, i, j, cur, val, flag;
-      if (type === 'js' || type ==='css') {
-        s = sources[type], q = queue[type];
-        s[url] = true;
-        for (i = 0; i < q.length; i++) {
-          cur = q[i];
-          if (cur.urls.has(url)) {
-            qi = cur, val = qi.urls.values();
-            qi && (cbs = qi.callbacks);
-            for (flag = true, j = 0; j < val.length; j++) {
-              cur = val[j];
-              if (!s[cur]) {
-                flag = false;
-              }
-            }
-            if (flag && cbs && cbs.length > 0) {
-              for (j = 0; j < cbs.length; j++) {
-                cbs[j].call(context);
-              }
-              qi.load = true;
-            }
-          }
-        }
-      }
-    };
-    var load = function(type, urls, callback) {
-      var s, q, qi, node, i, cur,
-        _urls = typeof urls === 'string' ? new Set([urls]) : new Set(urls), val, url;
-      if (type === 'js' || type ==='css') {
-        s = sources[type], q = queue[type];
-        for (i = 0; i < q.length; i++) {
-          cur = q[i];
-          if (_urls.is(cur.urls)) {
-            qi = cur;
-            break;
-          }
-        }
-        val = _urls.values();
-        if (qi) {
-          callback && (qi.load || qi.callbacks.push(callback));
-          callback && (qi.load && callback());
-        } else {
-          q.push({
-            urls: _urls,
-            callbacks: callback ? [callback] : [],
-            load: false
-          });
-          for (i = 0; i < val.length; i++) {
-            node = null, url = val[i];
-            if (s[url] === undefined) {
-              (type === 'js' ) && (node = createNode('script', { src: url }));
-              (type === 'css') && (node = createNode('link', { rel: 'stylesheet', href: url }));
-              if (node) {
-                node.onload = (function(type, url) {
-                  return function() {
-                    end(type, url);
-                  };
-                })(type, url);
-                (doc.head || doc.body).appendChild(node);
-                s[url] = false;
-              }
-            }
-          }
-        }
-      }
-    };
-    return {
-      js: function(url, callback) {
-        load('js', url, callback);
-      },
-      css: function(url, callback) {
-        load('css', url, callback);
-      }
-    };
-  })(this.document);
-})();
-</script><script>
-  (function() {
-    var TEXT_VARIABLES = {
-      version: '2.2.6',
-      sources: {
-        font_awesome: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css',
-        jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
-        leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js',
-        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
-        gitalk: {
-          js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
-          css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
-        },
-        valine: 'https://unpkg.com/valine/dist/Valine.min.js',
-        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
-        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
-      },
-      site: {
-        toc: {
-          selectors: 'h1,h2,h3'
-        }
-      },
-      paths: {
-        search_js: '/jekyll-TeXt-theme/assets/search.js'
-      }
-    };
-    window.TEXT_VARIABLES = TEXT_VARIABLES;
-  })();
-</script>
-</head>
-  <body>
-    <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
-
-      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
-      <div class="header__title">
-        <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24">
-<style type="text/css">
-	.st0{fill:#515151;}
-</style>
-<path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
-	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
-</svg>
-<a title="A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
-" href="/jekyll-TeXt-theme/">TeXt Theme</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/jekyll-TeXt-theme/test/">Home</a></li><li class="navigation__item"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Docs</a></li><li class="navigation__item"><a href="/jekyll-TeXt-theme/samples.html">Samples</a></li><li class="navigation__item"><a href="/jekyll-TeXt-theme/archive.html">Archive</a></li><li class="navigation__item"><a href="/jekyll-TeXt-theme/about.html">About</a></li><li class="navigation__item"><a href="https://github.com/kitian616/jekyll-TeXt-theme">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
-      </nav></div>
-  </header>
-</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
-
-              <div class="col-aside d-print-none js-col-aside"></div>
-
-              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
-
-<!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>404</h1></header><meta itemprop="headline" content="404"><meta itemprop="author" content="TeXt"/><div class="js-article-content"><div class="layout--404">
-  <div class="sign">
-    <h1>404</h1>
-    <p>Page not found :(</p>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Positive Geometries
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
-<div align="center" class="my-3">
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- Bottom -->
-  <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-2188963715533895"
-      data-ad-slot="3246761084"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
-<!-- end custom main bottom snippet -->
-</div>
-            </div></div></div><div class="page__footer d-print-none">
-<footer class="footer py-4 js-page-footer">
-  <div class="main"><div itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
-"><div class="footer__author-links"><div class="author-links">
-  <ul class="menu menu--nowrap menu--inline"><li title="Send us an Email.">
-      <a class="button button--circle mail-button" itemprop="email" href="mailto:kitian616@outlook.com" target="_blank">
-        <i class="fas fa-envelope"></i>
-      </a><li title="Follow us on Twitter.">
-        <a class="button button--circle twitter-button" itemprop="sameAs" href="https://twitter.com/kitian616" target="_blank">
-          <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M1024.032 194.432c-37.664 16.704-78.176 28-120.672 33.088 43.36-26.016 76.672-67.168 92.384-116.224-40.608 24.064-85.568 41.568-133.408 50.976-38.336-40.832-92.928-66.336-153.344-66.336-116.032 0-210.08 94.048-210.08 210.08 0 16.48 1.856 32.512 5.44 47.872-174.592-8.768-329.408-92.416-433.024-219.52-18.08 31.04-28.448 67.104-28.448 105.632 0 72.896 37.088 137.184 93.472 174.88-34.432-1.088-66.816-10.528-95.168-26.272-0.032 0.864-0.032 1.76-0.032 2.656 0 101.792 72.416 186.688 168.512 205.984-17.632 4.8-36.192 7.36-55.36 7.36-13.536 0-26.688-1.312-39.52-3.776 26.72 83.456 104.32 144.192 196.256 145.888-71.904 56.352-162.496 89.92-260.928 89.92-16.96 0-33.664-0.992-50.112-2.944 92.96 59.616 203.392 94.4 322.048 94.4 386.432 0 597.728-320.128 597.728-597.76 0-9.12-0.192-18.176-0.608-27.168 41.056-29.632 76.672-66.624 104.832-108.736z" />
-</svg>
-</div>
-        </a>
-      </li><li title="Follow us on Weibo.">
-        <a class="button button--circle weibo-button" itemprop="sameAs" href="https://weibo.com/234695683" target="_blank">
-          <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-	<path d="M769.226164 496.610234c-14.420098-4.330228-24.309277-7.266877-16.746482-26.214823 16.350218-41.133578 18.046881-76.626289 0.307181-101.939024-33.242099-47.500415-124.194284-44.928286-228.44638-1.280945 0-0.056317-32.73525 14.323848-24.371737-11.64523 16.042013-51.54906 13.626547-94.739726-11.332929-119.662341-56.566349-56.601163-206.976479 2.134908-335.954595 131.078209-96.594075 96.61353-152.681222 198.989775-152.681222 287.52035 0 169.337597 217.152361 272.292366 429.593589 272.292366 278.498445 0 463.752111-161.808592 463.752111-290.273715C893.345701 558.867622 827.968378 514.820945 769.226164 496.610234zM430.163922 866.063936c-169.51781 16.728051-315.851649-59.899262-326.864086-171.202185-11.010389-111.275277 117.530505-215.061482 287.031932-231.823323 169.537265-16.761841 315.876224 59.866496 326.86511 171.119247C728.190884 745.495411 599.705282 849.291856 430.163922 866.063936z" />
-	<path d="M954.16753 186.714824c-67.256246-74.565105-166.457264-102.990607-258.020739-83.522502l-0.037886 0c-21.188318 4.535015-34.695065 25.37929-30.159026 46.527675 4.516584 21.166816 25.352668 34.691993 46.54201 30.174385 65.139769-13.832358 135.634727 6.400627 183.442323 59.368863 47.765615 52.96414 60.740938 125.206957 40.282686 188.537431l0.011263 0.012287c-6.666851 20.629249 4.617954 42.698153 25.271777 49.366027 20.570885 6.662755 42.687913-4.607714 49.362955-25.188838 0-0.037886 0-0.116729 0.011263-0.150519C1039.577146 362.756133 1021.443231 261.206205 954.16753 186.714824" />
-	<path d="M850.886125 279.919669c-32.732179-36.315956-81.068126-50.108381-125.685136-40.621609-18.234261 3.885839-29.856965 21.833398-25.946551 40.085067 3.89915 18.173849 21.833398 29.851845 40.024654 25.893307l0 0.037886c21.809848-4.610786 45.459709 2.113405 61.461789 19.83365 16.018463 17.757107 20.323092 41.949655 13.45043 63.178931l0.035838 0c-5.715614 17.717174 3.983113 36.770584 21.717694 42.511796 17.7397 5.677728 36.76956-3.992328 42.493365-21.756603C892.458972 365.691759 883.686907 316.228458 850.886125 279.919669" />
-	<path d="M447.103928 548.691741c-80.666743-20.985579-171.84317 19.215193-206.880229 90.291746-35.685212 72.492657-1.180599 152.963828 80.321676 179.268757 84.41947 27.224424 183.926645-14.492797 218.521364-92.744074C573.187374 649.021137 530.586496 570.268131 447.103928 548.691741zM385.506979 733.819463c-16.398343 26.160554-51.51015 37.623523-77.954335 25.54824-26.066352-11.868448-33.760211-42.248645-17.360844-67.757975 16.197652-25.400793 50.129884-36.716316 76.378497-25.711046C393.129162 677.216253 401.60838 707.401901 385.506979 733.819463zM439.522702 664.493841c-5.929616 10.131852-19.03498 15.010909-29.304039 10.785123-10.096014-4.15411-13.261002-15.495231-7.522862-25.454038 5.906066-9.908634 18.500485-14.747758 28.572948-10.750309C441.502995 642.817105 445.180975 654.283146 439.522702 664.493841z" />
-</svg>
-</div>
-        </a>
-      </li><li title="Follow us on Google+.">
-        <a class="button button--circle googlepluse-button" itemprop="sameAs" href="https://plus.google.com/u/0/101827554735084402671" target="_blank">
-          <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M621.31315 72.459289l-228.995461 0c-60.030212 0-135.601374 8.695033-198.98189 59.797921-47.839565 40.21184-71.180156 95.678106-71.180156 145.682987 0 84.786035 66.730821 170.671101 184.5369 170.671101 11.150968 0 23.341614-1.098008 35.619242-2.167363-5.574972 13.028735-11.122315 23.89113-11.122315 42.407855 0 33.68417 17.73799 54.338582 33.308617 73.894987-50.004881 3.264347-143.401014 8.695033-212.32785 50.005904-65.60416 38.046524-85.59547 93.483114-85.59547 132.624577 0 80.453357 77.794807 155.476027 239.019769 155.476027 191.20988 0 292.377-103.274108 292.377-205.451232 0-75.021647-44.402279-111.99984-93.367481-152.21168l-40.037878-30.447453c-12.219299-9.764388-28.887934-22.821775-28.887934-46.741557 0-23.890107 16.668635-39.142485 31.141254-53.269227 46.654576-35.879162 93.366458-73.925686 93.366458-154.37802 0-82.619696-53.357232-126.096906-78.951143-146.751319l68.926836 0L621.31315 72.459289zM523.497357 737.809909c0 67.367317-56.678884 117.373221-163.419953 117.373221-118.961392 0-195.687868-55.43659-195.687868-132.626623 0-77.18901 71.180156-103.274108 95.619778-111.969141 46.683229-15.223726 106.74107-17.419741 116.765377-17.419741 11.092639 0 16.638959 0 25.536606 1.098008C486.838436 652.994198 523.497357 682.316014 523.497357 737.809909zM434.608887 387.745045c-17.822924 17.36039-47.895847 30.447453-75.658144 30.447453-95.591125 0-138.980331-120.694873-138.980331-193.521528 0-28.281113 5.547343-57.631582 24.496927-80.453357 17.795295-21.75242 48.879244-35.879162 77.794807-35.879162 92.298126 0 140.078339 121.763205 140.078339 200.021569C462.341508 327.916425 460.116841 362.727255 434.608887 387.745045zM842.798567 238.016929 842.798567 127.57763l-55.464219 0 0 110.439298L676.402839 238.016929l0 55.234999 110.930485 0 0 110.438275 55.464219 0L842.797543 293.251927l110.929462 0 0-55.234999L842.798567 238.016929z" />
-</svg>
-</div>
-        </a>
-      </li><li title="Follow us on Github.">
-        <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/kitian616/jekyll-TeXt-theme" target="_blank">
-          <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path class="svgpath" data-index="path_0" fill="#272636" d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
-</svg>
-</div>
-        </a>
-      </li></ul>
-</div>
-</div>
-    </div><div class="site-info mt-2">
-      <div>© TeXt Theme 2021,
-        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tomaszlukowski/positive_geometries" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tomaszlukowski/positive_geometries
+  </div>
+</a>
       </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/positive_geometries/." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/positive_geometries/theory/positive-geometries/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Theory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="/positive_geometries/catalog/simplex/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Catalog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/positive_geometries/data/f-vector-tables/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Data
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/positive_geometries/references/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  References
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/positive_geometries/about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/positive_geometries/." title="Positive Geometries" class="md-nav__button md-logo" aria-label="Positive Geometries" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2v6h2.28l1.29 8H4v6h6v-1.94l5-.01V22h6v-6h-1.83L20 9h2V3h-6v3.53L14.8 8H9.59L8 5.82V2M4 4h2v2H4m14-1h2v2h-2M6.31 8h.8L9 10.59V14h6v-3.09L16.57 9H18l-.84 7H15v2.06h-5V16H7.6m3.4-6h2v2h-2m-5 6h2v2H6m11-2h2v2h-2"/></svg>
+
+    </a>
+    Positive Geometries
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tomaszlukowski/positive_geometries" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tomaszlukowski/positive_geometries
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/theory/positive-geometries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Positive geometries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/theory/canonical-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canonical forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/theory/f-vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    f-vectors and generating functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/theory/physics-motivation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics motivation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catalog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/simplex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simplex
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/hypercube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hypercube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/cross-polytope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-polytope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/associahedron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Associahedron
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/permutohedron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permutohedron
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/hypersimplex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hypersimplex
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/cyclic-polytope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclic polytope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/catalog/generalized-permutohedra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generalized permutohedra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/data/f-vector-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/positive_geometries/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <h1>404 - Not found</h1>
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Tomasz Lukowski
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/tomaszlukowski" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
-</div></div>
-    </div><script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $body = $('body'), $window = $(window);
-    var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
-    var activeCount = 0;
-    function modal(options) {
-      var $root = this, visible, onChange, hideWhenWindowScroll = false;
-      var scrollTop;
-      function setOptions(options) {
-        var _options = options || {};
-        visible = _options.initialVisible === undefined ? false : show;
-        onChange = _options.onChange;
-        hideWhenWindowScroll = _options.hideWhenWindowScroll;
-      }
-      function init() {
-        setState(visible);
-      }
-      function setState(isShow) {
-        if (isShow === visible) {
-          return;
-        }
-        visible = isShow;
-        if (visible) {
-          activeCount++;
-          scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
-          $root.addClass('modal--show');
-          $pageMain.scrollTop(scrollTop);
-          activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
-          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.on('scroll', hide);
-          $window.on('keyup', handleKeyup);
-        } else {
-          activeCount > 0 && activeCount--;
-          $root.removeClass('modal--show');
-          $window.scrollTop(scrollTop);
-          activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
-          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.off('scroll', hide);
-          $window.off('keyup', handleKeyup);
-        }
-        onChange && onChange(visible);
-      }
-      function show() {
-        setState(true);
-      }
-      function hide() {
-        setState(false);
-      }
-      function handleKeyup(e) {
-        // Char Code: 27  ESC
-        if (e.which ===  27) {
-          hide();
-        }
-      }
-      setOptions(options);
-      init();
-      return {
-        show: show,
-        hide: hide,
-        $el: $root
-      };
-    }
-    $.fn.modal = modal;
-  });
-})();
-</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
-(function () {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    // search panel
-    var search = (window.search || (window.search = {}));
-    var useDefaultSearchBox = window.useDefaultSearchBox === undefined ?
-      true : window.useDefaultSearchBox ;
-
-    var $searchModal = $('.js-page-search-modal');
-    var $searchToggle = $('.js-search-toggle');
-    var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
-    var modalVisible = false;
-    search.searchModal = searchModal;
-
-    var $searchBox = null;
-    var $searchInput = null;
-    var $searchClear = null;
-
-    function getModalVisible() {
-      return modalVisible;
-    }
-    search.getModalVisible = getModalVisible;
-
-    function handleModalChange(visible) {
-      modalVisible = visible;
-      if (visible) {
-        search.onShow && search.onShow();
-        useDefaultSearchBox && $searchInput[0] && $searchInput[0].focus();
-      } else {
-        search.onShow && search.onHide();
-        useDefaultSearchBox && $searchInput[0] && $searchInput[0].blur();
-        setTimeout(function() {
-          useDefaultSearchBox && ($searchInput.val(''), $searchBox.removeClass('not-empty'));
-          search.clear && search.clear();
-          window.pageAsideAffix && window.pageAsideAffix.refresh();
-        }, 400);
-      }
-    }
-
-    $searchToggle.on('click', function() {
-      modalVisible ? searchModal.hide() : searchModal.show();
-    });
-    // Char Code: 83  S, 191 /
-    $(window).on('keyup', function(e) {
-      if (!modalVisible && !window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
-        modalVisible || searchModal.show();
-      }
-    });
-
-    if (useDefaultSearchBox) {
-      $searchBox = $('.js-search-box');
-      $searchInput = $searchBox.children('input');
-      $searchClear = $searchBox.children('.js-icon-clear');
-      search.getSearchInput = function() {
-        return $searchInput.get(0);
-      };
-      search.getVal = function() {
-        return $searchInput.val();
-      };
-      search.setVal = function(val) {
-        $searchInput.val(val);
-      };
-
-      $searchInput.on('focus', function() {
-        $(this).addClass('focus');
-      });
-      $searchInput.on('blur', function() {
-        $(this).removeClass('focus');
-      });
-      $searchInput.on('input', window.throttle(function() {
-        var val = $(this).val();
-        if (val === '' || typeof val !== 'string') {
-          search.clear && search.clear();
-        } else {
-          $searchBox.addClass('not-empty');
-          search.onInputNotEmpty && search.onInputNotEmpty(val);
-        }
-      }, 400));
-      $searchClear.on('click', function() {
-        $searchInput.val(''); $searchBox.removeClass('not-empty');
-        search.clear && search.clear();
-      });
-    }
-  });
-})();
-</script><div class="search search--dark">
-  <div class="main">
-    <div class="search__header">Search</div>
-    <div class="search-bar">
-      <div class="search-box js-search-box">
-        <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
-        <input type="text" />
-        <div class="search-box__icon-clear js-icon-clear">
-          <a><i class="fas fa-times"></i></a>
-        </div>
-      </div>
-      <button class="button button--theme-dark button--pill search__cancel js-search-toggle">
-        Cancel</button>
+      
     </div>
-    <div class="search-result js-search-result"></div>
-  </div>
-</div>
-<script>var SOURCES = window.TEXT_VARIABLES.sources;
-var PAHTS = window.TEXT_VARIABLES.paths;
-window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
-  var search = (window.search || (window.search = {}));
-  var searchData = window.TEXT_SEARCH_DATA || {};
-
-  function memorize(f) {
-    var cache = {};
-    return function () {
-      var key = Array.prototype.join.call(arguments, ',');
-      if (key in cache) return cache[key];
-      else return cache[key] = f.apply(this, arguments);
-    };
-  }
-
-  /// search
-  function searchByQuery(query) {
-    var i, j, key, keys, cur, _title, result = {};
-    keys = Object.keys(searchData);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i];
-      for (j = 0; j < searchData[key].length; j++) {
-        cur = searchData[key][j], _title = cur.title;
-        if ((result[key] === undefined || result[key] && result[key].length < 4 )
-          && _title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
-          if (result[key] === undefined) {
-            result[key] = [];
-          }
-          result[key].push(cur);
-        }
-      }
-    }
-    return result;
-  }
-
-  var renderHeader = memorize(function(header) {
-    return $('<p class="search-result__header">' + header + '</p>');
-  });
-
-  var renderItem = function(index, title, url) {
-    return $('<li class="search-result__item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
-  };
-
-  function render(data) {
-    if (!data) { return null; }
-    var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
-    keys = Object.keys(data);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i];
-      $root.append(renderHeader(key));
-      for (j = 0; j < data[key].length; j++) {
-        cur = data[key][j];
-        $root.append(renderItem(itemIndex++, cur.title, cur.url));
-      }
-    }
-    return $root;
-  }
-
-  // search box
-  var $result = $('.js-search-result'), $resultItems;
-  var lastActiveIndex, activeIndex;
-
-  function clear() {
-    $result.html(null);
-    $resultItems = $('.search-result__item'); activeIndex = 0;
-  }
-  function onInputNotEmpty(val) {
-    $result.html(render(searchByQuery(val)));
-    $resultItems = $('.search-result__item'); activeIndex = 0;
-    $resultItems.eq(0).addClass('active');
-  }
-
-  search.clear = clear;
-  search.onInputNotEmpty = onInputNotEmpty;
-
-  function updateResultItems() {
-    lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
-    activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
-  }
-
-  function moveActiveIndex(direction) {
-    var itemsCount = $resultItems ? $resultItems.length : 0;
-    if (itemsCount > 1) {
-      lastActiveIndex = activeIndex;
-      if (direction === 'up') {
-        activeIndex = (activeIndex - 1 + itemsCount) % itemsCount;
-      } else if (direction === 'down') {
-        activeIndex = (activeIndex + 1 + itemsCount) % itemsCount;
-      }
-      updateResultItems();
-    }
-  }
-
-  // Char Code: 13  Enter, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇
-  $(window).on('keyup', function(e) {
-    var modalVisible = search.getModalVisible && search.getModalVisible();
-    if (modalVisible) {
-      if (e.which === 38) {
-        modalVisible && moveActiveIndex('up');
-      } else if (e.which === 40) {
-        modalVisible && moveActiveIndex('down');
-      } else if (e.which === 13) {
-        modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
-      }
-    }
-  });
-
-  $result.on('mouseover', '.search-result__item > a', function() {
-    var itemIndex = $(this).parent().data('index');
-    itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
-  });
-});
-</script>
-</div></div>
-
-
-<script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    function scrollToAnchor(anchor, duration, callback) {
-      var $root = this;
-      $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
-        window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
-        callback && callback();
-      });
-    }
-    $.fn.scrollToAnchor = scrollToAnchor;
-  });
-})();
-(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    function affix(options) {
-      var $root = this, $window = $(window), $scrollTarget, $scroll,
-        offsetBottom = 0, scrollTarget = window, scroll = window.document, disabled = false, isOverallScroller = true,
-        rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop,
-        hasInit = false, curState;
-
-      function setOptions(options) {
-        var _options = options || {};
-        _options.offsetBottom && (offsetBottom = _options.offsetBottom);
-        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
-        _options.scroll && (scroll = _options.scroll);
-        _options.disabled !== undefined && (disabled = _options.disabled);
-        $scrollTarget = $(scrollTarget);
-        isOverallScroller = window.isOverallScroller($scrollTarget[0]);
-        $scroll = $(scroll);
-      }
-      function preCalc() {
-        top();
-        rootHeight = $root.outerHeight();
-        rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
-        rootLeft = $root.offset().left;
-      }
-      function calc(needPreCalc) {
-        needPreCalc && preCalc();
-        scrollBottom = $scroll.outerHeight() - offsetBottom - rootHeight;
-        rootBottomTop = scrollBottom - rootTop;
-      }
-      function top() {
-        if (curState !== 'top') {
-          $root.removeClass('fixed').css({
-            left: 0,
-            top: 0
-          });
-          curState = 'top';
-        }
-      }
-      function fixed() {
-        if (curState !== 'fixed') {
-          $root.addClass('fixed').css({
-            left: rootLeft + 'px',
-            top: 0
-          });
-          curState = 'fixed';
-        }
-      }
-      function bottom() {
-        if (curState !== 'bottom') {
-          $root.removeClass('fixed').css({
-            left: 0,
-            top: rootBottomTop + 'px'
-          });
-          curState = 'bottom';
-        }
-      }
-      function setState() {
-        var scrollTop = $scrollTarget.scrollTop();
-        if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
-          fixed();
-        } else if (scrollTop < rootTop) {
-          top();
-        } else {
-          bottom();
-        }
-      }
-      function init() {
-        if(!hasInit) {
-          var interval, timeout;
-          calc(true); setState();
-          // run calc every 100 millisecond
-          interval = setInterval(function() {
-            calc();
-          }, 100);
-          timeout = setTimeout(function() {
-            clearInterval(interval);
-          }, 45000);
-          window.pageLoad.then(function() {
-            setTimeout(function() {
-              clearInterval(interval);
-              clearTimeout(timeout);
-            }, 3000);
-          });
-          $scrollTarget.on('scroll', function() {
-            disabled || setState();
-          });
-          $window.on('resize', function() {
-            disabled || (calc(true), setState());
-          });
-          hasInit = true;
-        }
-      }
-
-      setOptions(options);
-      if (!disabled) {
-        init();
-      }
-      $window.on('resize', window.throttle(function() {
-        init();
-      }, 200));
-      return {
-        setOptions: setOptions,
-        refresh: function() {
-          calc(true, { animation: false }); setState();
-        }
-      };
-    }
-    $.fn.affix = affix;
-  });
-})();
-(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    function toc(options) {
-      var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc toc--ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
-        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
-        headingsPos, scrolling = false, hasRendered = false, hasInit = false;
-
-      function setOptions(options) {
-        var _options = options || {};
-        _options.selectors && (selectors = _options.selectors);
-        _options.container && (container = _options.container);
-        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
-        _options.scroller && (scroller = _options.scroller);
-        _options.disabled !== undefined && (disabled = _options.disabled);
-        $headings = $(container).find(selectors).filter('[id]');
-        $scrollTarget = $(scrollTarget);
-        $scroller = $(scroller);
-      }
-      function calc() {
-        headingsPos = [];
-        $headings.each(function() {
-          headingsPos.push(Math.floor($(this).position().top));
-        });
-      }
-      function setState(element, disabled) {
-        var scrollTop = $scrollTarget.scrollTop(), i;
-        if (disabled || !headingsPos || headingsPos.length < 1) { return; }
-        if (element) {
-          $activeCur = element;
-        } else {
-          for (i = 0; i < headingsPos.length; i++) {
-            if (scrollTop >= headingsPos[i]) {
-              $activeCur = $tocLi.eq(i);
-            } else {
-              $activeCur || ($activeCur = $tocLi.eq(i));
-              break;
-            }
-          }
-        }
-        $activeLast && $activeLast.removeClass('active');
-        ($activeLast = $activeCur).addClass('active');
-      }
-      function render() {
-        if(!hasRendered) {
-          $root.append($tocUl);
-          $headings.each(function() {
-            var $this = $(this);
-            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
-              .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
-          });
-          $tocLi = $tocUl.children('li');
-          $tocUl.on('click', 'a', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-            scrolling = true;
-            setState($this.parent());
-            $scroller.scrollToAnchor($this.attr('href'), 400, function() {
-              scrolling = false;
-            });
-          });
-        }
-        hasRendered = true;
-      }
-      function init() {
-        var interval, timeout;
-        if(!hasInit) {
-          render(); calc(); setState(null, scrolling);
-          // run calc every 100 millisecond
-          interval = setInterval(function() {
-            calc();
-          }, 100);
-          timeout = setTimeout(function() {
-            clearInterval(interval);
-          }, 45000);
-          window.pageLoad.then(function() {
-            setTimeout(function() {
-              clearInterval(interval);
-              clearTimeout(timeout);
-            }, 3000);
-          });
-          $scrollTarget.on('scroll', function() {
-            disabled || setState(null, scrolling);
-          });
-          $window.on('resize', window.throttle(function() {
-            if (!disabled) {
-              render(); calc(); setState(null, scrolling);
-            }
-          }, 100));
-        }
-        hasInit = true;
-      }
-
-      setOptions(options);
-      if (!disabled) {
-        init();
-      }
-      $window.on('resize', window.throttle(function() {
-        init();
-      }, 200));
-      return {
-        setOptions: setOptions
-      };
-    }
-    $.fn.toc = toc;
-  });
-})();
-/*(function () {
-
-})();*/
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
-    });
-  });
-</script>
-<script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-<script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
-    mermaid.initialize({
-      startOnLoad: true
-    });
-    mermaid.init(undefined, '.language-mermaid');
-  });
-</script>
-
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script>(function () {
-  var $root = document.getElementsByClassName('root')[0];
-  if (window.hasEvent('touchstart')) {
-    $root.dataset.isTouch = true;
-    document.addEventListener('touchstart', function(){}, false);
-  }
-})();
-</script>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "/positive_geometries/", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.action.edit", "content.tabs.link", "search.suggest", "search.highlight"], "search": "/positive_geometries/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="/positive_geometries/assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="/positive_geometries/javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="/positive_geometries/assets/js/polytope-data.js"></script>
+      
+        <script src="/positive_geometries/assets/js/polytope-viewer.js"></script>
+      
+    
   </body>
 </html>
-

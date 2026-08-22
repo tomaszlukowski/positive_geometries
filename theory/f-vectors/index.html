@@ -6,35 +6,37 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A compendium of positive geometries — definitions, canonical forms, and combinatorics, with a focus on polytopes.">
+        <meta name="description" content="A compendium of positive geometries — their definitions, canonical forms, and combinatorics — with a focus on polytopal examples.">
       
       
         <meta name="author" content="Tomasz Lukowski">
       
       
-        <link rel="canonical" href="https://tomaszlukowski.github.io/positive_geometries/">
+        <link rel="canonical" href="https://tomaszlukowski.github.io/positive_geometries/theory/f-vectors/">
       
       
+        <link rel="prev" href="../canonical-forms/">
       
-        <link rel="next" href="theory/positive-geometries/">
+      
+        <link rel="next" href="../physics-motivation/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Positive Geometries - Positive Geometries</title>
+        <title>f-vectors and generating functions - Positive Geometries</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="assets/css/extra.css">
+      <link rel="stylesheet" href="../../assets/css/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#positive-geometries" class="md-skip">
+        <a href="#f-vectors-and-generating-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Positive Geometries" class="md-header__button md-logo" aria-label="Positive Geometries" data-md-component="logo">
+    <a href="../.." title="Positive Geometries" class="md-header__button md-logo" aria-label="Positive Geometries" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2v6h2.28l1.29 8H4v6h6v-1.94l5-.01V22h6v-6h-1.83L20 9h2V3h-6v3.53L14.8 8H9.59L8 5.82V2M4 4h2v2H4m14-1h2v2h-2M6.31 8h.8L9 10.59V14h6v-3.09L16.57 9H18l-.84 7H15v2.06h-5V16H7.6m3.4-6h2v2h-2m-5 6h2v2H6m11-2h2v2h-2"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Positive Geometries
+              f-vectors and generating functions
             
           </span>
         </div>
@@ -225,11 +227,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -246,11 +246,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="theory/positive-geometries/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../positive-geometries/" class="md-tabs__link">
           
   
   
@@ -272,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="catalog/simplex/" class="md-tabs__link">
+        <a href="../../catalog/simplex/" class="md-tabs__link">
           
   
   
@@ -292,7 +294,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="data/f-vector-tables/" class="md-tabs__link">
+      <a href="../../data/f-vector-tables/" class="md-tabs__link">
         
   
   
@@ -311,7 +313,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="references/" class="md-tabs__link">
+      <a href="../../references/" class="md-tabs__link">
         
   
   
@@ -330,7 +332,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -365,7 +367,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Positive Geometries" class="md-nav__button md-logo" aria-label="Positive Geometries" data-md-component="logo">
+    <a href="../.." title="Positive Geometries" class="md-nav__button md-logo" aria-label="Positive Geometries" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2v6h2.28l1.29 8H4v6h6v-1.94l5-.01V22h6v-6h-1.83L20 9h2V3h-6v3.53L14.8 8H9.59L8 5.82V2M4 4h2v2H4m14-1h2v2h-2M6.31 8h.8L9 10.59V14h6v-3.09L16.57 9H18l-.84 7H15v2.06h-5V16H7.6m3.4-6h2v2h-2m-5 6h2v2H6m11-2h2v2h-2"/></svg>
@@ -392,37 +394,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -438,59 +413,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-positive-geometry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is a positive geometry?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#explore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Explore
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-this-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About this site
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -499,8 +421,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -516,19 +440,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -546,7 +473,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -564,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="theory/positive-geometries/" class="md-nav__link">
+      <a href="../positive-geometries/" class="md-nav__link">
         
   
   
@@ -592,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="theory/canonical-forms/" class="md-nav__link">
+      <a href="../canonical-forms/" class="md-nav__link">
         
   
   
@@ -617,10 +544,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="theory/f-vectors/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    f-vectors and generating functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -636,6 +590,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-f-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The f-vector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-f-polynomial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The f-polynomial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-generating-function-is-the-natural-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which generating function is "the" natural one
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -648,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="theory/physics-motivation/" class="md-nav__link">
+      <a href="../physics-motivation/" class="md-nav__link">
         
   
   
@@ -753,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/simplex/" class="md-nav__link">
+      <a href="../../catalog/simplex/" class="md-nav__link">
         
   
   
@@ -781,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/hypercube/" class="md-nav__link">
+      <a href="../../catalog/hypercube/" class="md-nav__link">
         
   
   
@@ -809,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/cross-polytope/" class="md-nav__link">
+      <a href="../../catalog/cross-polytope/" class="md-nav__link">
         
   
   
@@ -837,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/associahedron/" class="md-nav__link">
+      <a href="../../catalog/associahedron/" class="md-nav__link">
         
   
   
@@ -865,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/permutohedron/" class="md-nav__link">
+      <a href="../../catalog/permutohedron/" class="md-nav__link">
         
   
   
@@ -893,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/hypersimplex/" class="md-nav__link">
+      <a href="../../catalog/hypersimplex/" class="md-nav__link">
         
   
   
@@ -921,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/cyclic-polytope/" class="md-nav__link">
+      <a href="../../catalog/cyclic-polytope/" class="md-nav__link">
         
   
   
@@ -949,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="catalog/generalized-permutohedra/" class="md-nav__link">
+      <a href="../../catalog/generalized-permutohedra/" class="md-nav__link">
         
   
   
@@ -984,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data/f-vector-tables/" class="md-nav__link">
+      <a href="../../data/f-vector-tables/" class="md-nav__link">
         
   
   
@@ -1011,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   
@@ -1038,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -1085,10 +1103,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-positive-geometry" class="md-nav__link">
+  <a href="#the-f-vector" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is a positive geometry?
+        The f-vector
       
     </span>
   </a>
@@ -1096,10 +1114,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore" class="md-nav__link">
+  <a href="#the-f-polynomial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Explore
+        The f-polynomial
       
     </span>
   </a>
@@ -1107,10 +1125,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#about-this-site" class="md-nav__link">
+  <a href="#which-generating-function-is-the-natural-one" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About this site
+        Which generating function is "the" natural one
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -1134,7 +1163,7 @@
 
 
   
-    <a href="https://github.com/tomaszlukowski/positive_geometries/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/tomaszlukowski/positive_geometries/edit/main/docs/theory/f-vectors.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1142,63 +1171,70 @@
   
 
 
-<div class="pg-hero">
-<div class="pg-hero__text">
-<h1 id="positive-geometries">Positive Geometries<a class="headerlink" href="#positive-geometries" title="Permanent link">&para;</a></h1>
-<p>A compendium of <strong>positive geometries</strong> — spaces that carry a distinguished
-"positive part" and a canonical differential form determined entirely by
-its boundary structure. This site collects their definitions, catalogs the
-polytopal examples, and works out their combinatorics: f-vectors,
-generating functions, and canonical forms.</p>
-<p><a class="md-button" href="theory/positive-geometries/">Start with the definition</a>
-<a class="md-button md-button--secondary" href="catalog/simplex/">Browse the catalog</a></p>
+<h1 id="f-vectors-and-generating-functions">f-vectors and generating functions<a class="headerlink" href="#f-vectors-and-generating-functions" title="Permanent link">&para;</a></h1>
+<h2 id="the-f-vector">The f-vector<a class="headerlink" href="#the-f-vector" title="Permanent link">&para;</a></h2>
+<p>For a <span class="arithmatex">\(d\)</span>-dimensional convex polytope <span class="arithmatex">\(P\)</span>, the <strong>f-vector</strong>
+<span class="arithmatex">\((f_0, f_1, \dots, f_{d-1})\)</span> records the number <span class="arithmatex">\(f_k\)</span> of
+<span class="arithmatex">\(k\)</span>-dimensional faces — <span class="arithmatex">\(f_0\)</span> vertices, <span class="arithmatex">\(f_1\)</span> edges, <span class="arithmatex">\(f_{d-1}\)</span>
+facets, and so on. It is convenient to set <span class="arithmatex">\(f_{-1} = 1\)</span> (the empty
+face) and <span class="arithmatex">\(f_d = 1\)</span> (the polytope itself), giving the extended f-vector
+that appears in the <strong>Euler relation</strong></p>
+<div class="arithmatex">\[
+\sum_{k=-1}^{d} (-1)^k f_k = 0 \qquad\Longleftrightarrow\qquad
+\sum_{k=0}^{d-1} (-1)^k f_k = 1 - (-1)^d.
+\]</div>
+<p>The f-vector is exactly the data needed to run the recursive definition
+of a <a href="../positive-geometries/">positive geometry</a>: it counts, dimension by
+dimension, the boundary components that the canonical form must have
+simple poles on.</p>
+<h2 id="the-f-polynomial">The f-polynomial<a class="headerlink" href="#the-f-polynomial" title="Permanent link">&para;</a></h2>
+<p>Packaging the f-vector into a single-variable generating function gives
+the <strong>f-polynomial</strong></p>
+<div class="arithmatex">\[
+f_P(y) = \sum_{k=0}^{d-1} f_k\, y^k,
+\]</div>
+<p>so that, e.g., <span class="arithmatex">\(f_P(1)\)</span> counts all proper faces of <span class="arithmatex">\(P\)</span>. Most of the
+families in the <a href="../../catalog/simplex/">catalog</a> are not a single
+polytope but an infinite family <span class="arithmatex">\(P_n\)</span> indexed by a parameter <span class="arithmatex">\(n\)</span>
+(the number of defining points, the dimension, ...), and the natural
+object is then a <strong>two-variable generating function</strong> in <span class="arithmatex">\(x\)</span> (marking
+<span class="arithmatex">\(n\)</span>) and <span class="arithmatex">\(y\)</span> (marking the face dimension <span class="arithmatex">\(k\)</span>):</p>
+<div class="arithmatex">\[
+f(x, y) = \sum_{n} f_{P_n}(y)\, x^n, \qquad\text{or the exponential version}\qquad
+\tilde f(x, y) = \sum_{n} f_{P_n}(y)\, \frac{x^n}{n!}.
+\]</div>
+<p>Every catalog page states <span class="arithmatex">\(f(x,y)\)</span> and/or <span class="arithmatex">\(\tilde f(x,y)\)</span> in closed
+form where one is known, together with the sequence of total face counts
+cross-referenced to its entry in the
+<a href="https://oeis.org">OEIS</a>. The <a href="../../data/f-vector-tables/">data page</a>
+collects all of them side by side.</p>
+<div class="admonition note">
+<p class="admonition-title">Convention</p>
+<p>Both the tables and the generating functions on this site count only
+the <em>proper</em> faces <span class="arithmatex">\(f_0, \dots, f_{d-1}\)</span> (vertices through facets)
+of the <span class="arithmatex">\(d\)</span>-dimensional member of the family — <span class="arithmatex">\(y^k\)</span> marks a face
+of dimension <span class="arithmatex">\(k\)</span>, and <span class="arithmatex">\(f(x,1)\)</span> (or <span class="arithmatex">\(\tilde f(x,1)\)</span>) sums a
+row of the table exactly. Neither the empty face <span class="arithmatex">\(f_{-1}\)</span> nor the
+polytope itself is included.</p>
 </div>
-<div class="pg-hero__viewer">
-<div class="polytope-viewer" data-shape="associahedron">
-<span class="polytope-viewer__label">Associahedron</span>
-<span class="polytope-viewer__hint">drag · scroll</span>
-</div>
-</div>
-</div>
-<h2 id="what-is-a-positive-geometry">What is a positive geometry?<a class="headerlink" href="#what-is-a-positive-geometry" title="Permanent link">&para;</a></h2>
-<p>A positive geometry is a pair <span class="arithmatex">\((X, X_{\geq 0})\)</span> of a complex projective
-variety <span class="arithmatex">\(X\)</span> and an oriented "positive" region <span class="arithmatex">\(X_{\geq 0}\)</span> inside its
-real points, singled out by the existence of a unique rational top-form
-<span class="arithmatex">\(\Omega(X, X_{\geq 0})\)</span> — the <strong>canonical form</strong> — whose residues on
-every boundary reproduce the canonical form of that boundary, recursively
-down to a point. Convex polytopes are the founding example: the positive
-region is the polytope itself, and the canonical form has logarithmic
-singularities exactly on its facets. See
-<a href="theory/positive-geometries/">Positive geometries</a> for the precise
-definition, and <a href="theory/canonical-forms/">Canonical forms</a> for how the
-residue axiom pins the form down uniquely.</p>
-<p>The notion was introduced to explain why scattering amplitudes in certain
-gauge and gravity theories are computed by the volume of an underlying
-geometric object; see <a href="theory/physics-motivation/">Physics motivation</a>.</p>
-<h2 id="explore">Explore<a class="headerlink" href="#explore" title="Permanent link">&para;</a></h2>
-<div class="pg-cards">
-<p><a class="pg-card" href="theory/positive-geometries/">
-<span class="pg-card__title">Theory</span>
-<span class="pg-card__desc">Definitions, the residue axiom, canonical forms, f-vectors, and the physics motivation.</span>
-</a>
-<a class="pg-card" href="catalog/simplex/">
-<span class="pg-card__title">Catalog</span>
-<span class="pg-card__desc">Simplex, hypercube, cross-polytope, associahedron, permutohedron, hypersimplex, cyclic polytope, generalized permutohedra.</span>
-</a>
-<a class="pg-card" href="data/f-vector-tables/">
-<span class="pg-card__title">Data</span>
-<span class="pg-card__desc">f-vector tables, generating functions, and OEIS cross-references for every family in the catalog.</span>
-</a>
-<a class="pg-card" href="references/">
-<span class="pg-card__title">References</span>
-<span class="pg-card__desc">The literature this site draws on.</span>
-</a></p>
-</div>
-<h2 id="about-this-site">About this site<a class="headerlink" href="#about-this-site" title="Permanent link">&para;</a></h2>
-<p>This is a rebuild of a 2021 first attempt at the same idea. See the
-<a href="about/">about page</a> for more, and the
-<a href="https://github.com/tomaszlukowski/positive_geometries">GitHub repository</a>
-to suggest a correction or addition — the catalog is meant to keep growing.</p>
+<h2 id="which-generating-function-is-the-natural-one">Which generating function is "the" natural one<a class="headerlink" href="#which-generating-function-is-the-natural-one" title="Permanent link">&para;</a></h2>
+<p>Whether the ordinary (<span class="arithmatex">\(x^n\)</span>) or exponential (<span class="arithmatex">\(x^n/n!\)</span>) form is the
+clean one depends on how fast <span class="arithmatex">\(f_k(P_n)\)</span> grows with <span class="arithmatex">\(n\)</span>: families
+built from unordered choices (the simplex's vertex subsets, the
+hypercube's coordinate patterns) tend to have rational ordinary
+generating functions, while families built from <em>orderings</em> — the
+permutohedron's vertices are literally the permutations of <span class="arithmatex">\(n\)</span> letters,
+so <span class="arithmatex">\(f_0 = n!\)</span> — grow factorially and only the exponential generating
+function stays well-behaved. The <a href="../../catalog/permutohedron/">permutohedron page</a>
+is the clearest example of this: it has a closed-form <span class="arithmatex">\(\tilde f(x,y)\)</span>
+but no rational <span class="arithmatex">\(f(x,y)\)</span>.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://oeis.org">OEIS</a> — the on-line encyclopedia of integer
+  sequences; every catalog page links its face-count sequence.</li>
+<li>R. Stanley, <em>Enumerative Combinatorics, Vol. 1</em>, for the general theory
+  of f-vectors and generating functions used throughout.</li>
+</ul>
 
 
 
@@ -1256,15 +1292,31 @@ to suggest a correction or addition — the catalog is meant to keep growing.</p
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../canonical-forms/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Canonical forms">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Canonical forms
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="theory/positive-geometries/" class="md-footer__link md-footer__link--next" aria-label="Next: Positive geometries">
+          <a href="../physics-motivation/" class="md-footer__link md-footer__link--next" aria-label="Next: Physics motivation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Positive geometries
+                Physics motivation
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1323,18 +1375,18 @@ to suggest a correction or addition — the catalog is meant to keep growing.</p
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.action.edit", "content.tabs.link", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.action.edit", "content.tabs.link", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="assets/js/polytope-data.js"></script>
+        <script src="../../assets/js/polytope-data.js"></script>
       
-        <script src="assets/js/polytope-viewer.js"></script>
+        <script src="../../assets/js/polytope-viewer.js"></script>
       
     
   </body>

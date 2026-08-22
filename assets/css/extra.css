@@ -1,0 +1,188 @@
+/* ---------------------------------------------------------------------
+   Positive Geometries — custom palette & type
+   Primary: deep ink indigo (algebra/physics feel)
+   Accent:  amber/gold (the "positive" orthant highlight)
+   --------------------------------------------------------------------- */
+
+:root {
+  --pg-ink: #1b1f3b;
+  --pg-ink-light: #2c3266;
+  --pg-gold: #c98a2c;
+  --pg-gold-light: #e3a94a;
+  --pg-paper: #faf8f3;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--pg-ink);
+  --md-primary-fg-color--light: var(--pg-ink-light);
+  --md-primary-fg-color--dark: var(--pg-ink);
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: var(--pg-gold);
+  --md-default-bg-color: var(--pg-paper);
+  --md-typeset-a-color: var(--pg-ink-light);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #12142b;
+  --md-primary-fg-color--light: #1b1f3b;
+  --md-primary-fg-color--dark: #0c0e1f;
+  --md-accent-fg-color: var(--pg-gold-light);
+  --md-default-bg-color: #14162a;
+  --md-default-fg-color--light: #b9bcd6;
+  --md-typeset-a-color: var(--pg-gold-light);
+}
+
+.md-header,
+.md-tabs {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Slightly larger, calmer measure for long-form math prose */
+.md-typeset {
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0.01em;
+}
+
+.md-typeset .arithmatex {
+  overflow-x: auto;
+}
+
+/* ---------------------------------------------------------------------
+   Home hero
+   --------------------------------------------------------------------- */
+
+.pg-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0 3rem;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--pg-ink) 0%, var(--pg-ink-light) 100%);
+  color: #f4f1e8;
+}
+
+.pg-hero__text {
+  flex: 1 1 22rem;
+}
+
+.pg-hero__text h1 {
+  color: #ffffff;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.pg-hero__text p {
+  color: #cfd2ea;
+  font-size: 0.9rem;
+}
+
+.pg-hero__viewer {
+  flex: 1 1 18rem;
+  min-width: 16rem;
+}
+
+.pg-hero .md-button {
+  background-color: var(--pg-gold);
+  border-color: var(--pg-gold);
+  color: #1b1f3b;
+}
+
+.pg-hero .md-button:hover {
+  background-color: var(--pg-gold-light);
+  border-color: var(--pg-gold-light);
+}
+
+.pg-hero .md-button--secondary {
+  background-color: transparent;
+  color: #f4f1e8;
+  border-color: #f4f1e8;
+}
+
+/* ---------------------------------------------------------------------
+   Nav cards on the home page
+   --------------------------------------------------------------------- */
+
+.pg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.pg-card {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  text-decoration: none !important;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.pg-card:hover {
+  border-color: var(--pg-gold);
+  transform: translateY(-2px);
+}
+
+.pg-card__title {
+  display: block;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+  margin-bottom: 0.35rem;
+}
+
+.pg-card__desc {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------------------------------------------------------------------
+   Interactive polytope viewer
+   --------------------------------------------------------------------- */
+
+.polytope-viewer {
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  margin: 1.5rem 0;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, #23264a 0%, #14162a 100%);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.pg-hero__viewer .polytope-viewer {
+  height: 16rem;
+  margin: 0;
+}
+
+.polytope-viewer canvas {
+  display: block;
+}
+
+.polytope-viewer__hint {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.65rem;
+  color: #8d90b3;
+  pointer-events: none;
+}
+
+.polytope-viewer__label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.75rem;
+  font-size: 0.7rem;
+  color: #e3a94a;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
