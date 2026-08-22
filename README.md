@@ -20,3 +20,16 @@ mkdocs serve
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds
 the site with `mkdocs build --strict` and publishes it to the `gh-pages`
 branch via `mkdocs gh-deploy`.
+
+## Verification (not part of the site)
+
+Two independent folders check the site's claims — f-vectors, vertex
+embeddings, volumes, duals, and canonical forms — computationally,
+using two different tools so neither shares the other's bugs. Neither
+is built or served by MkDocs.
+
+- [`verification/`](verification/) — SageMath + TOPCOM (also does
+  regular-triangulation enumeration and secondary polytopes, which
+  Mathematica has no equivalent for).
+- [`mathematica/`](mathematica/) — a Wolfram Language package and a
+  ready-to-run verification notebook.
