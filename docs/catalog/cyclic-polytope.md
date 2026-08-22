@@ -28,6 +28,37 @@ that *are*.
   \(d = 2m\), \(f_{d-1}(C(n,d)) = \binom{n-m}{m} + \binom{n-m-1}{m-1}\);
   for \(d = 2m+1\), \(f_{d-1}(C(n,d)) = 2\binom{n-m-1}{m}\).
 
+## Embeddings by dimension
+
+\(C(n,d)\) is a two-parameter family; fixing \(n = d+3\) (the smallest
+choice with any interesting facet structure) gives a one-parameter
+sequence indexed by dimension, using the integer parameters
+\(t = 1,\dots,n\) on the moment curve \(\gamma(t) = (t,t^2,\dots,t^d)\):
+
+=== "d = 2"
+    \(C(5,2)\): \((1,1)\), \((2,4)\), \((3,9)\), \((4,16)\), \((5,25)\)
+    — any 5 points on a parabola, i.e. a convex pentagon.
+
+=== "d = 3"
+    \(C(6,3)\): \((1,1,1)\), \((2,4,8)\), \((3,9,27)\), \((4,16,64)\),
+    \((5,25,125)\), \((6,36,216)\)
+
+=== "d = 4"
+    \(C(7,4)\): \((1,1,1,1)\), \((2,4,8,16)\), \((3,9,27,81)\),
+    \((4,16,64,256)\), \((5,25,125,625)\), \((6,36,216,1296)\),
+    \((7,49,343,2401)\)
+
+=== "d = 5"
+    \(C(8,5)\): \((1,1,1,1,1)\), \((2,4,8,16,32)\), \((3,9,27,81,243)\),
+    \((4,16,64,256,1024)\), \((5,25,125,625,3125)\),
+    \((6,36,216,1296,7776)\), \((7,49,343,2401,16807)\),
+    \((8,64,512,4096,32768)\)
+
+Coordinates grow fast (the \(d\)-th coordinate is \(t^d\)), which is
+purely a cosmetic feature of the integer-parameter moment curve, not of
+the polytope's combinatorics — any strictly increasing \(t_1 < \dots <
+t_n\) gives the same combinatorial type (see [Definition](#definition)).
+
 ## Why it belongs here
 
 Cyclic polytopes are the extremal case against which every other family

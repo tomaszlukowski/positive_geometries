@@ -84,27 +84,43 @@ coordinates dual to the vertices,
 
 manifestly with a simple pole on each of the \(n\) facets \(\lbrace y_i = 0\rbrace \).
 
-## Verified embedding
+## Embeddings by dimension
 
-For the representative instance shown below, \(S_4^{(0)} = \conv\lbrace e_1,
-e_2, e_3, e_4\rbrace  \subset \RR^4\) — reduced to the affine chart where
-\(y_1, y_2, y_3\) are independent and \(y_4 = 1-y_1-y_2-y_3\) is
-implicit, the chart the canonical form above is stated in:
+Vertices of \(S_n^{(0)}\) in the reduced affine chart the canonical form
+above is stated in (\(y_1,\dots,y_d\) independent, \(y_{d+1} =
+1-\sum_i y_i\) implicit) — always the \(d+1\) standard basis vectors of
+\(\RR^{d+1}\), written in that chart:
 
-| Vertex | \(y_1\) | \(y_2\) | \(y_3\) |
-|---|---|---|---|
-| \(e_1\) | 1 | 0 | 0 |
-| \(e_2\) | 0 | 1 | 0 |
-| \(e_3\) | 0 | 0 | 1 |
-| \(e_4\) | 0 | 0 | 0 |
+=== "d = 1"
+    \(n = 2\): \((1)\), \((0)\)
 
-Volume \(1/6\). The canonical form above was independently re-derived
-from this embedding in SageMath (summing the general bracket formula,
-here trivial since the simplex is its own only triangulation) and
-matches, up to the overall orientation sign built into the definition —
-see
-[verification/results/simplex.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/simplex.md)
-for the full computation.
+=== "d = 2"
+    \(n = 3\): \((1,0)\), \((0,1)\), \((0,0)\)
+
+=== "d = 3"
+    \(n = 4\), the instance shown below: \((1,0,0)\), \((0,1,0)\),
+    \((0,0,1)\), \((0,0,0)\)
+
+    Volume \(1/6\). The canonical form above was independently
+    re-derived from this embedding in SageMath (summing the general
+    bracket formula, here trivial since the simplex is its own only
+    triangulation) and matches, up to the overall orientation sign
+    built into the definition — see
+    [verification/results/simplex.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/simplex.md)
+    for the full computation.
+
+=== "d = 4"
+    \(n = 5\): \((1,0,0,0)\), \((0,1,0,0)\), \((0,0,1,0)\),
+    \((0,0,0,1)\), \((0,0,0,0)\)
+
+=== "d = 5"
+    \(n = 6\): \((1,0,0,0,0)\), \((0,1,0,0,0)\), \((0,0,1,0,0)\),
+    \((0,0,0,1,0)\), \((0,0,0,0,1)\), \((0,0,0,0,0)\)
+
+=== "d = 6"
+    \(n = 7\): \((1,0,0,0,0,0)\), \((0,1,0,0,0,0)\), \((0,0,1,0,0,0)\),
+    \((0,0,0,1,0,0)\), \((0,0,0,0,1,0)\), \((0,0,0,0,0,1)\),
+    \((0,0,0,0,0,0)\)
 
 ## Interactive model
 

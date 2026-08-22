@@ -30,7 +30,7 @@ hyperplane \(\sum_i M(T)_i = \binom{L}{2}\), and their convex hull is
 * Simple polytope: every vertex lies on exactly \(d\) facets, one for
   each of the \(d\) ways to add a single diagonal to the fully
   triangulated \((L{+}1)\)-gon.
-* \(K_3\) is a point, \(K_4\) is a pentagon, \(K_5\) is the familiar
+* \(K_3\) is a segment, \(K_4\) is a pentagon, \(K_5\) is the familiar
   3-dimensional associahedron with 9 facets (6 pentagons and 3 squares) —
   the shape of the [interactive model](#interactive-model) below.
 * A **generalized permutohedron**: see the
@@ -89,6 +89,57 @@ combinatorial polytope — the *kinematic associahedron* of Arkani-Hamed,
 Bai, He and Yan — does have an explicit closed-form canonical form, equal
 to the tree-level biadjoint \(\phi^3\) scattering amplitude; see
 [Physics motivation](../theory/physics-motivation.md).
+
+## Embeddings by dimension
+
+Loday's coordinates (see [Definition](#definition)) for the smallest
+instances, one vertex per binary tree on leaves \(a, b, c, \dots\), with
+the tree shown alongside its coordinate \(M(T)\):
+
+=== "d = 1"
+    \(L = 3\) leaves, in \(\RR^2\):
+
+    * \(a(bc) \to (2, 1)\)
+    * \((ab)c \to (1, 2)\)
+
+=== "d = 2"
+    \(L = 4\) leaves, in \(\RR^3\):
+
+    * \(a(b(cd)) \to (3, 2, 1)\)
+    * \(a((bc)d) \to (3, 1, 2)\)
+    * \((ab)(cd) \to (1, 4, 1)\)
+    * \((a(bc))d \to (2, 1, 3)\)
+    * \(((ab)c)d \to (1, 2, 3)\)
+
+=== "d = 3"
+    \(L = 5\) leaves, in \(\RR^4\) — the instance shown below:
+
+    * \(a(b(c(de))) \to (4, 3, 2, 1)\)
+    * \(a(b((cd)e)) \to (4, 3, 1, 2)\)
+    * \(a((bc)(de)) \to (4, 1, 4, 1)\)
+    * \(a((b(cd))e) \to (4, 2, 1, 3)\)
+    * \(a(((bc)d)e) \to (4, 1, 2, 3)\)
+    * \((ab)(c(de)) \to (1, 6, 2, 1)\)
+    * \((ab)((cd)e) \to (1, 6, 1, 2)\)
+    * \((a(bc))(de) \to (2, 1, 6, 1)\)
+    * \(((ab)c)(de) \to (1, 2, 6, 1)\)
+    * \((a(b(cd)))e \to (3, 2, 1, 4)\)
+    * \((a((bc)d))e \to (3, 1, 2, 4)\)
+    * \(((ab)(cd))e \to (1, 4, 1, 4)\)
+    * \(((a(bc))d)e \to (2, 1, 3, 4)\)
+    * \((((ab)c)d)e \to (1, 2, 3, 4)\)
+
+    14 vertices, matching the [f-vector table](#f-vector) row for
+    \(d=3\).
+
+Every coordinate is a product of two positive integers (leaves left ×
+leaves right of that internal node), so — unlike the other families in
+this catalog — the pattern isn't a simple closed formula to state for
+general \(d\); it's generated the same way for any \(L\) by evaluating
+\(M(T)\) on every binary tree with \(L\) leaves, exactly as
+[polytope-data.js](https://github.com/tomaszlukowski/positive_geometries/blob/main/docs/assets/js/polytope-data.js)
+does (projected to 3D) for the [interactive model](#interactive-model)
+below.
 
 ## Interactive model
 

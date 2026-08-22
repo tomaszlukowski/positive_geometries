@@ -33,6 +33,36 @@ uniform matroid \(U_{k,n}\), and a member of the
   images of its positroid cells give a well-studied polyhedral
   subdivision of it.
 
+## Embeddings by dimension
+
+\(\Delta(k,n)\) is a two-parameter family; fixing \(k=2\) (the smallest
+choice that isn't just the simplex, since \(\Delta(1,n)\) always is —
+see [Properties](#properties)) gives a clean one-parameter sequence
+indexed by dimension \(d = n-1\), vertices \(e_i + e_j\) for every pair
+\(i<j\):
+
+=== "d = 3"
+    \(\Delta(2,4)\), the octahedron shown below: \((1,1,0,0)\),
+    \((1,0,1,0)\), \((1,0,0,1)\), \((0,1,1,0)\), \((0,1,0,1)\),
+    \((0,0,1,1)\)
+
+=== "d = 4"
+    \(\Delta(2,5)\): \((1,1,0,0,0)\), \((1,0,1,0,0)\), \((1,0,0,1,0)\),
+    \((1,0,0,0,1)\), \((0,1,1,0,0)\), \((0,1,0,1,0)\), \((0,1,0,0,1)\),
+    \((0,0,1,1,0)\), \((0,0,1,0,1)\), \((0,0,0,1,1)\)
+
+=== "d = 5"
+    \(\Delta(2,6)\): \((1,1,0,0,0,0)\), \((1,0,1,0,0,0)\),
+    \((1,0,0,1,0,0)\), \((1,0,0,0,1,0)\), \((1,0,0,0,0,1)\),
+    \((0,1,1,0,0,0)\), \((0,1,0,1,0,0)\), \((0,1,0,0,1,0)\),
+    \((0,1,0,0,0,1)\), \((0,0,1,1,0,0)\), \((0,0,1,0,1,0)\),
+    \((0,0,1,0,0,1)\), \((0,0,0,1,1,0)\), \((0,0,0,1,0,1)\),
+    \((0,0,0,0,1,1)\)
+
+Other \(k\) work identically — just every 0/1 vector with exactly \(k\)
+ones instead of 2 — and are what the
+[f-vector](#properties) formula \(\binom{n}{k}\) counts in general.
+
 ## Interactive model
 
 Since \(\Delta(2,4)\) coincides with the octahedron, it reuses that

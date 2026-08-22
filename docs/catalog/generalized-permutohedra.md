@@ -46,6 +46,17 @@ f-vectors, and volumes are all governed uniformly by the submodular
 function \(z\), giving one theory that specializes to every entry in this
 catalog's table.
 
+## Embeddings by dimension
+
+There's no single embedding to list here — a different \(z\) gives a
+genuinely different polytope, that's the whole point of the
+construction — but every embedding in this catalog's other families
+*is* an instance of \(P_z\) for the choices in the table above:
+[Simplex](simplex.md#embeddings-by-dimension),
+[Permutohedron](permutohedron.md#embeddings-by-dimension), and
+[Hypersimplex](hypersimplex.md#embeddings-by-dimension) each give their
+own per-dimension vertex lists directly.
+
 ## References
 
 * A. Postnikov, *Permutohedra, Associahedra, and Beyond*,

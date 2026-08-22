@@ -78,6 +78,33 @@ its canonical form is computed the same way as the
 [simplex forms](simplex.md#canonical-form) via
 [additivity](../theory/canonical-forms.md#triangulation-and-additivity).
 
+## Embeddings by dimension
+
+Vertices of \(\Pi_{n-1}\) — every permutation of \((1,\dots,n)\):
+
+=== "d = 1"
+    \(n = 2\): \((1,2)\), \((2,1)\)
+
+=== "d = 2"
+    \(n = 3\), the hexagon: \((1,2,3)\), \((1,3,2)\), \((2,1,3)\),
+    \((2,3,1)\), \((3,1,2)\), \((3,2,1)\)
+
+=== "d = 3"
+    \(n = 4\), the truncated octahedron shown below — 24 vertices, all
+    permutations of \((1,2,3,4)\):
+
+    \((1,2,3,4)\), \((1,2,4,3)\), \((1,3,2,4)\), \((1,3,4,2)\),
+    \((1,4,2,3)\), \((1,4,3,2)\), \((2,1,3,4)\), \((2,1,4,3)\),
+    \((2,3,1,4)\), \((2,3,4,1)\), \((2,4,1,3)\), \((2,4,3,1)\),
+    \((3,1,2,4)\), \((3,1,4,2)\), \((3,2,1,4)\), \((3,2,4,1)\),
+    \((3,4,1,2)\), \((3,4,2,1)\), \((4,1,2,3)\), \((4,1,3,2)\),
+    \((4,2,1,3)\), \((4,2,3,1)\), \((4,3,1,2)\), \((4,3,2,1)\)
+
+Vertex counts grow factorially (\(n!\); see the
+[f-vector table](#f-vector)), so \(d \geq 4\) — already 120 vertices —
+isn't listed out explicitly here: it's always "every permutation of
+\((1,\dots,n)\)", generated the same way regardless of \(n\).
+
 ## Interactive model
 
 <div class="polytope-viewer" data-shape="permutohedron">

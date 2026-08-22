@@ -73,13 +73,40 @@ form is the product of \(n\) copies of the interval's
 with a simple pole on each of the \(2n\) facets \(\lbrace y_i = 0\rbrace \) and
 \(\lbrace y_i = 1\rbrace \).
 
-## Verified embedding, dual, and triangulations
+## Embeddings by dimension
 
-For \(K_3^{(0)} = [0,1]^3\), the cube shown below, computed
-independently in SageMath + TOPCOM — full computation at
+Vertices of \(K_d^{(0)} = [0,1]^d\) — every length-\(d\) 0/1 string:
+
+=== "d = 1"
+    \((0)\), \((1)\)
+
+=== "d = 2"
+    \((0,0)\), \((1,0)\), \((0,1)\), \((1,1)\)
+
+=== "d = 3"
+    the instance shown below, all 8 points \((x,y,z) \in
+    \lbrace 0,1\rbrace ^3\): \((0,0,0)\), \((1,0,0)\), \((0,1,0)\),
+    \((1,1,0)\), \((0,0,1)\), \((1,0,1)\), \((0,1,1)\), \((1,1,1)\).
+    Volume \(1\) — verified below.
+
+=== "d = 4"
+    all 16 points \((x_1,x_2,x_3,x_4) \in \lbrace 0,1\rbrace ^4\):
+    \((0,0,0,0)\), \((1,0,0,0)\), \((0,1,0,0)\), \((1,1,0,0)\),
+    \((0,0,1,0)\), \((1,0,1,0)\), \((0,1,1,0)\), \((1,1,1,0)\),
+    \((0,0,0,1)\), \((1,0,0,1)\), \((0,1,0,1)\), \((1,1,0,1)\),
+    \((0,0,1,1)\), \((1,0,1,1)\), \((0,1,1,1)\), \((1,1,1,1)\)
+
+For \(d \geq 5\) the pattern is identical — all \(2^d\) length-\(d\)
+0/1 strings — so this site stops listing them out explicitly here; the
+[interactive-model data](https://github.com/tomaszlukowski/positive_geometries/blob/main/docs/assets/js/polytope-data.js)
+generates them the same way for any \(d\).
+
+## Dual and triangulations (verified for d = 3)
+
+For \(K_3^{(0)}\), computed independently in SageMath + TOPCOM — full
+computation at
 [verification/results/hypercube.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/hypercube.md):
 
-- **Vertices**: the 8 points \((x,y,z) \in \lbrace 0,1\rbrace ^3\). Volume \(1\).
 - **Dual**: the polar of the centered cube (vertices \(\lbrace \pm\tfrac12\rbrace ^3\))
   has vertices \((\pm2,0,0)\), \((0,\pm2,0)\), \((0,0,\pm2)\) — f-vector
   \((1,6,12,8,1)\), combinatorially the
