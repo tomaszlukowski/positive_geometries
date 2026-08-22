@@ -1264,13 +1264,13 @@
 <p>The <strong>unit simplex</strong> on <span class="arithmatex">\(n\)</span> vertices is the convex hull of the standard
 basis vectors,
 [
-S_n^{(0)} = \conv{e_1, \dots, e_n} \subset \RR^n,
+S_n^{(0)} = \conv\lbrace e_1, \dots, e_n\rbrace  \subset \RR^n,
 ]
 a polytope of dimension <span class="arithmatex">\(d = n-1\)</span>. Projectively, the <strong>simplex</strong>
 determined by <span class="arithmatex">\(n\)</span> points <span class="arithmatex">\(Z_1, \dots, Z_n \in \PP^{n-1}\)</span> in general
 position is
 [
-S_n = \conv{Z_1, \dots, Z_n}.
+S_n = \conv\lbrace Z_1, \dots, Z_n\rbrace .
 ]
 Every facet of <span class="arithmatex">\(S_n\)</span> is itself a simplex on <span class="arithmatex">\(n-1\)</span> of the <span class="arithmatex">\(Z_i\)</span>, so
 the family is closed under taking boundary components — the simplex is
@@ -1378,7 +1378,7 @@ f(x, y) = \sum_{n \geq 2} x^n \sum_{k=0}^{n-2} \binom{n}{k+1} y^k
 = \frac{e^{x(1+y)} - e^{x} - e^{xy} + 1}{y}.
 \]</div>
 <h2 id="canonical-form">Canonical form<a class="headerlink" href="#canonical-form" title="Permanent link">&para;</a></h2>
-<p>For the projective simplex <span class="arithmatex">\(S_n = \conv\{Z_1,\dots,Z_n\}\)</span>, with
+<p>For the projective simplex <span class="arithmatex">\(S_n = \conv\lbrace Z_1,\dots,Z_n\rbrace \)</span>, with
 <span class="arithmatex">\(Y \in \PP^{n-1}\)</span> the integration variable and <span class="arithmatex">\(\br{\cdot}\)</span> the
 bracket of <span class="arithmatex">\(n\)</span> points in <span class="arithmatex">\(\PP^{n-1}\)</span> (a maximal minor of their
 homogeneous coordinates),</p>
@@ -1392,10 +1392,10 @@ coordinates dual to the vertices,
 [
 \Omega(S_n^{(0)}) = \frac{\br{Y\, d^{n-1}Y}}{y_1 y_2 \cdots y_n},
 ]
-manifestly with a simple pole on each of the <span class="arithmatex">\(n\)</span> facets <span class="arithmatex">\(\{y_i = 0\}\)</span>.</p>
+manifestly with a simple pole on each of the <span class="arithmatex">\(n\)</span> facets <span class="arithmatex">\(\lbrace y_i = 0\rbrace \)</span>.</p>
 <h2 id="verified-embedding">Verified embedding<a class="headerlink" href="#verified-embedding" title="Permanent link">&para;</a></h2>
-<p>For the representative instance shown below, <span class="arithmatex">\(S_4^{(0)} = \conv\{e_1,
-e_2, e_3, e_4\} \subset \RR^4\)</span> — reduced to the affine chart where
+<p>For the representative instance shown below, <span class="arithmatex">\(S_4^{(0)} = \conv\lbrace e_1,
+e_2, e_3, e_4\rbrace  \subset \RR^4\)</span> — reduced to the affine chart where
 <span class="arithmatex">\(y_1, y_2, y_3\)</span> are independent and <span class="arithmatex">\(y_4 = 1-y_1-y_2-y_3\)</span> is
 implicit, the chart the canonical form above is stated in:</p>
 <table>
@@ -1473,7 +1473,7 @@ for the full computation.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 18:26:59 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 18:46:12 UTC">August 22, 2026</span>
   </span>
 
     
