@@ -795,6 +795,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verified-embedding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verified embedding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#interactive-model" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1191,6 +1202,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verified-embedding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verified embedding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#interactive-model" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1371,6 +1393,54 @@ coordinates dual to the vertices,
 \Omega(S_n^{(0)}) = \frac{\br{Y\, d^{n-1}Y}}{y_1 y_2 \cdots y_n},
 ]
 manifestly with a simple pole on each of the <span class="arithmatex">\(n\)</span> facets <span class="arithmatex">\(\{y_i = 0\}\)</span>.</p>
+<h2 id="verified-embedding">Verified embedding<a class="headerlink" href="#verified-embedding" title="Permanent link">&para;</a></h2>
+<p>For the representative instance shown below, <span class="arithmatex">\(S_4^{(0)} = \conv\{e_1,
+e_2, e_3, e_4\} \subset \RR^4\)</span> — reduced to the affine chart where
+<span class="arithmatex">\(y_1, y_2, y_3\)</span> are independent and <span class="arithmatex">\(y_4 = 1-y_1-y_2-y_3\)</span> is
+implicit, the chart the canonical form above is stated in:</p>
+<table>
+<thead>
+<tr>
+<th>Vertex</th>
+<th><span class="arithmatex">\(y_1\)</span></th>
+<th><span class="arithmatex">\(y_2\)</span></th>
+<th><span class="arithmatex">\(y_3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(e_1\)</span></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(e_2\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(e_3\)</span></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(e_4\)</span></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Volume <span class="arithmatex">\(1/6\)</span>. The canonical form above was independently re-derived
+from this embedding in SageMath (summing the general bracket formula,
+here trivial since the simplex is its own only triangulation) and
+matches, up to the overall orientation sign built into the definition —
+see
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/simplex.md">verification/results/simplex.md</a>
+for the full computation.</p>
 <h2 id="interactive-model">Interactive model<a class="headerlink" href="#interactive-model" title="Permanent link">&para;</a></h2>
 <div class="polytope-viewer" data-shape="simplex">
 <span class="polytope-viewer__label">3-simplex (tetrahedron)</span>
@@ -1403,7 +1473,7 @@ manifestly with a simple pole on each of the <span class="arithmatex">\(n\)</spa
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 17:49:36 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 18:26:59 UTC">August 22, 2026</span>
   </span>
 
     
