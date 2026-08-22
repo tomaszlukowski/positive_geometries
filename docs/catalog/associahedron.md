@@ -30,9 +30,8 @@ hyperplane \(\sum_i M(T)_i = \binom{L}{2}\), and their convex hull is
 * Simple polytope: every vertex lies on exactly \(d\) facets, one for
   each of the \(d\) ways to add a single diagonal to the fully
   triangulated \((L{+}1)\)-gon.
-* \(K_3\) is a segment, \(K_4\) is a pentagon, \(K_5\) is the familiar
-  3-dimensional associahedron with 9 facets (6 pentagons and 3 squares) —
-  the shape of the [interactive model](#interactive-model) below.
+* \(K_3\) is a segment, \(K_4\) is a pentagon, \(K_5\) is a
+  3-dimensional associahedron with 9 facets (6 pentagons and 3 squares).
 * A **generalized permutohedron**: see the
   [overview page](generalized-permutohedra.md) for how it sits alongside
   the [permutohedron](permutohedron.md) and [hypersimplex](hypersimplex.md)
@@ -112,7 +111,7 @@ the tree shown alongside its coordinate \(M(T)\):
     * \(((ab)c)d \to (1, 2, 3)\)
 
 === "d = 3"
-    \(L = 5\) leaves, in \(\RR^4\) — the instance shown below:
+    \(L = 5\) leaves, in \(\RR^4\):
 
     * \(a(b(c(de))) \to (4, 3, 2, 1)\)
     * \(a(b((cd)e)) \to (4, 3, 1, 2)\)
@@ -136,17 +135,7 @@ Every coordinate is a product of two positive integers (leaves left ×
 leaves right of that internal node), so — unlike the other families in
 this catalog — the pattern isn't a simple closed formula to state for
 general \(d\); it's generated the same way for any \(L\) by evaluating
-\(M(T)\) on every binary tree with \(L\) leaves, exactly as
-[polytope-data.js](https://github.com/tomaszlukowski/positive_geometries/blob/main/docs/assets/js/polytope-data.js)
-does (projected to 3D) for the [interactive model](#interactive-model)
-below.
-
-## Interactive model
-
-<div class="polytope-viewer" data-shape="associahedron">
-<span class="polytope-viewer__label">K5 (3-dimensional associahedron)</span>
-<span class="polytope-viewer__hint">drag to rotate · scroll to zoom</span>
-</div>
+\(M(T)\) on every binary tree with \(L\) leaves.
 
 ## References
 

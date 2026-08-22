@@ -85,7 +85,7 @@ Vertices of \(X_d\) — \(\pm e_i\) for each of the \(d\) coordinate axes:
     \((1,0)\), \((-1,0)\), \((0,1)\), \((0,-1)\)
 
 === "d = 3"
-    the instance shown below: \((1,0,0)\), \((-1,0,0)\), \((0,1,0)\),
+    the octahedron: \((1,0,0)\), \((-1,0,0)\), \((0,1,0)\),
     \((0,-1,0)\), \((0,0,1)\), \((0,0,-1)\)
 
 === "d = 4"
@@ -102,13 +102,6 @@ Vertices of \(X_d\) — \(\pm e_i\) for each of the \(d\) coordinate axes:
     \((0,-1,0,0,0,0)\), \((0,0,1,0,0,0)\), \((0,0,-1,0,0,0)\),
     \((0,0,0,1,0,0)\), \((0,0,0,-1,0,0)\), \((0,0,0,0,1,0)\),
     \((0,0,0,0,-1,0)\), \((0,0,0,0,0,1)\), \((0,0,0,0,0,-1)\)
-
-## Interactive model
-
-<div class="polytope-viewer" data-shape="cross-polytope">
-<span class="polytope-viewer__label">3-dimensional cross-polytope (octahedron)</span>
-<span class="polytope-viewer__hint">drag to rotate · scroll to zoom</span>
-</div>
 
 ## References
 

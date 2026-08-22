@@ -98,7 +98,7 @@ above is stated in (\(y_1,\dots,y_d\) independent, \(y_{d+1} =
     \(n = 3\): \((1,0)\), \((0,1)\), \((0,0)\)
 
 === "d = 3"
-    \(n = 4\), the instance shown below: \((1,0,0)\), \((0,1,0)\),
+    \(n = 4\), the tetrahedron: \((1,0,0)\), \((0,1,0)\),
     \((0,0,1)\), \((0,0,0)\)
 
     Volume \(1/6\). The canonical form above was independently
@@ -121,13 +121,6 @@ above is stated in (\(y_1,\dots,y_d\) independent, \(y_{d+1} =
     \(n = 7\): \((1,0,0,0,0,0)\), \((0,1,0,0,0,0)\), \((0,0,1,0,0,0)\),
     \((0,0,0,1,0,0)\), \((0,0,0,0,1,0)\), \((0,0,0,0,0,1)\),
     \((0,0,0,0,0,0)\)
-
-## Interactive model
-
-<div class="polytope-viewer" data-shape="simplex">
-<span class="polytope-viewer__label">3-simplex (tetrahedron)</span>
-<span class="polytope-viewer__hint">drag to rotate · scroll to zoom</span>
-</div>
 
 ## References
 

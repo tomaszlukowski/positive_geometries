@@ -28,6 +28,22 @@ that *are*.
   \(d = 2m\), \(f_{d-1}(C(n,d)) = \binom{n-m}{m} + \binom{n-m-1}{m-1}\);
   for \(d = 2m+1\), \(f_{d-1}(C(n,d)) = 2\binom{n-m-1}{m}\).
 
+## f-vector
+
+\(f_0(C(n,d)) = n\) and \(f_{d-1}(C(n,d))\) is given by Motzkin's
+formula above; the intermediate entries follow from the simplicial
+Dehn–Sommerville relations but aren't given a standalone closed form
+here. Exact values for the \(n=d+3\) slice used below (computed
+directly from the vertex sets, not derived by hand):
+
+| \(d\) | \(n\) | \(f_0\) | \(f_1\) | \(f_2\) | \(f_3\) | \(f_4\) | \(f_5\) |
+|---|---|---|---|---|---|---|---|
+| 2 | 5 | 5 | 5 | — | — | — | — |
+| 3 | 6 | 6 | 12 | 8 | — | — | — |
+| 4 | 7 | 7 | 21 | 28 | 14 | — | — |
+| 5 | 8 | 8 | 28 | 52 | 50 | 20 | — |
+| 6 | 9 | 9 | 36 | 84 | 117 | 90 | 30 |
+
 ## Embeddings by dimension
 
 \(C(n,d)\) is a two-parameter family; fixing \(n = d+3\) (the smallest

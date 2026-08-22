@@ -31,8 +31,8 @@
 
 * J.-L. Loday, *Realization of the Stasheff polytope*,
   Archiv der Mathematik 83 (2004), 267–278. The explicit vertex
-  coordinates used on the [associahedron page](catalog/associahedron.md)
-  and in this site's [interactive models](catalog/associahedron.md#interactive-model).
+  coordinates used on the
+  [associahedron page](catalog/associahedron.md#embeddings-by-dimension).
 * A. Postnikov, *Permutohedra, Associahedra, and Beyond*,
   [arXiv:math/0507163](https://arxiv.org/abs/math/0507163). The
   submodular-function construction behind the

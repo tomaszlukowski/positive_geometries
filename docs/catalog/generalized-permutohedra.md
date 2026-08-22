@@ -57,6 +57,14 @@ construction — but every embedding in this catalog's other families
 [Hypersimplex](hypersimplex.md#embeddings-by-dimension) each give their
 own per-dimension vertex lists directly.
 
+## f-vector
+
+Same story as the embeddings above: \(z\) determines the f-vector too
+(that's what "governed uniformly by the submodular function" means), so
+there's no single table for this page — see
+[Simplex](simplex.md#f-vector), [Permutohedron](permutohedron.md#f-vector),
+and [Hypersimplex](hypersimplex.md#f-vector) for the specific cases.
+
 ## References
 
 * A. Postnikov, *Permutohedra, Associahedra, and Beyond*,

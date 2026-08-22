@@ -22,8 +22,8 @@ see the [overview page](generalized-permutohedra.md).
 * Simple polytope with \(2^n - 2\) facets, one for every proper nonempty
   subset \(S \subsetneq \lbrace 1,\dots,n\rbrace \), cut out by
   \(\sum_{i \in S} x_i \geq \binom{|S|+1}{2}\).
-* \(\Pi_2\) is a hexagon, \(\Pi_3\) the truncated octahedron shown below —
-  the unique polytope that tiles \(\RR^3\) by translation among the
+* \(\Pi_2\) is a hexagon, \(\Pi_3\) the truncated octahedron — the
+  unique polytope that tiles \(\RR^3\) by translation among the
   Archimedean solids.
 
 ## f-vector
@@ -90,7 +90,7 @@ Vertices of \(\Pi_{n-1}\) — every permutation of \((1,\dots,n)\):
     \((2,3,1)\), \((3,1,2)\), \((3,2,1)\)
 
 === "d = 3"
-    \(n = 4\), the truncated octahedron shown below — 24 vertices, all
+    \(n = 4\), the truncated octahedron — 24 vertices, all
     permutations of \((1,2,3,4)\):
 
     \((1,2,3,4)\), \((1,2,4,3)\), \((1,3,2,4)\), \((1,3,4,2)\),
@@ -104,13 +104,6 @@ Vertex counts grow factorially (\(n!\); see the
 [f-vector table](#f-vector)), so \(d \geq 4\) — already 120 vertices —
 isn't listed out explicitly here: it's always "every permutation of
 \((1,\dots,n)\)", generated the same way regardless of \(n\).
-
-## Interactive model
-
-<div class="polytope-viewer" data-shape="permutohedron">
-<span class="polytope-viewer__label">Truncated octahedron (order-4 permutohedron)</span>
-<span class="polytope-viewer__hint">drag to rotate · scroll to zoom</span>
-</div>
 
 ## References
 

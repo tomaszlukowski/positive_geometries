@@ -84,10 +84,9 @@ Vertices of \(K_d^{(0)} = [0,1]^d\) — every length-\(d\) 0/1 string:
     \((0,0)\), \((1,0)\), \((0,1)\), \((1,1)\)
 
 === "d = 3"
-    the instance shown below, all 8 points \((x,y,z) \in
-    \lbrace 0,1\rbrace ^3\): \((0,0,0)\), \((1,0,0)\), \((0,1,0)\),
-    \((1,1,0)\), \((0,0,1)\), \((1,0,1)\), \((0,1,1)\), \((1,1,1)\).
-    Volume \(1\) — verified below.
+    all 8 points \((x,y,z) \in \lbrace 0,1\rbrace ^3\): \((0,0,0)\),
+    \((1,0,0)\), \((0,1,0)\), \((1,1,0)\), \((0,0,1)\), \((1,0,1)\),
+    \((0,1,1)\), \((1,1,1)\). Volume \(1\) — verified below.
 
 === "d = 4"
     all 16 points \((x_1,x_2,x_3,x_4) \in \lbrace 0,1\rbrace ^4\):
@@ -97,9 +96,7 @@ Vertices of \(K_d^{(0)} = [0,1]^d\) — every length-\(d\) 0/1 string:
     \((0,0,1,1)\), \((1,0,1,1)\), \((0,1,1,1)\), \((1,1,1,1)\)
 
 For \(d \geq 5\) the pattern is identical — all \(2^d\) length-\(d\)
-0/1 strings — so this site stops listing them out explicitly here; the
-[interactive-model data](https://github.com/tomaszlukowski/positive_geometries/blob/main/docs/assets/js/polytope-data.js)
-generates them the same way for any \(d\).
+0/1 strings — so this site stops listing them out explicitly here.
 
 ## Dual and triangulations (verified for d = 3)
 
@@ -122,13 +119,6 @@ computation at
   triangulations of the cube in total. Their secondary polytope has
   dimension 4 and **74 vertices** — so every one of those 74
   triangulations is regular.
-
-## Interactive model
-
-<div class="polytope-viewer" data-shape="cube">
-<span class="polytope-viewer__label">3-cube</span>
-<span class="polytope-viewer__hint">drag to rotate · scroll to zoom</span>
-</div>
 
 ## References
 
