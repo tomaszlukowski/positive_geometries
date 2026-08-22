@@ -77,6 +77,28 @@ coordinates dual to the vertices,
 \]
 manifestly with a simple pole on each of the \(n\) facets \(\{y_i = 0\}\).
 
+## Verified embedding
+
+For the representative instance shown below, \(S_4^{(0)} = \conv\{e_1,
+e_2, e_3, e_4\} \subset \RR^4\) — reduced to the affine chart where
+\(y_1, y_2, y_3\) are independent and \(y_4 = 1-y_1-y_2-y_3\) is
+implicit, the chart the canonical form above is stated in:
+
+| Vertex | \(y_1\) | \(y_2\) | \(y_3\) |
+|---|---|---|---|
+| \(e_1\) | 1 | 0 | 0 |
+| \(e_2\) | 0 | 1 | 0 |
+| \(e_3\) | 0 | 0 | 1 |
+| \(e_4\) | 0 | 0 | 0 |
+
+Volume \(1/6\). The canonical form above was independently re-derived
+from this embedding in SageMath (summing the general bracket formula,
+here trivial since the simplex is its own only triangulation) and
+matches, up to the overall orientation sign built into the definition —
+see
+[verification/results/simplex.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/simplex.md)
+for the full computation.
+
 ## Interactive model
 
 <div class="polytope-viewer" data-shape="simplex">

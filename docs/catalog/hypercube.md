@@ -69,6 +69,29 @@ form is the product of \(n\) copies of the interval's
 with a simple pole on each of the \(2n\) facets \(\{y_i = 0\}\) and
 \(\{y_i = 1\}\).
 
+## Verified embedding, dual, and triangulations
+
+For \(K_3^{(0)} = [0,1]^3\), the cube shown below, computed
+independently in SageMath + TOPCOM — full computation at
+[verification/results/hypercube.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/hypercube.md):
+
+- **Vertices**: the 8 points \((x,y,z) \in \{0,1\}^3\). Volume \(1\).
+- **Dual**: the polar of the centered cube (vertices \(\{\pm\tfrac12\}^3\))
+  has vertices \((\pm2,0,0)\), \((0,\pm2,0)\), \((0,0,\pm2)\) — f-vector
+  \((1,6,12,8,1)\), combinatorially the
+  [cross-polytope](cross-polytope.md), confirming the duality claimed
+  above.
+- **Canonical form**: re-derived independently by triangulating the cube
+  and summing simplex canonical forms
+  ([triangulation-additivity](../theory/canonical-forms.md#triangulation-and-additivity));
+  matches the closed form above up to overall orientation sign, and
+  a second, unrelated triangulation gives the *exact* same result
+  (triangulation-independence, checked directly rather than assumed).
+- **Triangulations & secondary polytope**: TOPCOM finds **74**
+  triangulations of the cube in total. Their secondary polytope has
+  dimension 4 and **74 vertices** — so every one of those 74
+  triangulations is regular.
+
 ## Interactive model
 
 <div class="polytope-viewer" data-shape="cube">
