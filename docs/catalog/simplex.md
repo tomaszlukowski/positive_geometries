@@ -1,0 +1,91 @@
+# Simplex
+
+## Definition
+
+The **unit simplex** on \(n\) vertices is the convex hull of the standard
+basis vectors,
+\[
+S_n^{(0)} = \conv\{e_1, \dots, e_n\} \subset \RR^n,
+\]
+a polytope of dimension \(d = n-1\). Projectively, the **simplex**
+determined by \(n\) points \(Z_1, \dots, Z_n \in \PP^{n-1}\) in general
+position is
+\[
+S_n = \conv\{Z_1, \dots, Z_n\}.
+\]
+Every facet of \(S_n\) is itself a simplex on \(n-1\) of the \(Z_i\), so
+the family is closed under taking boundary components — the simplex is
+the simplest possible positive geometry after a point.
+
+## Properties
+
+* Dimension \(d = n - 1\).
+* \(n\) vertices, \(\binom{n}{2}\) edges, and in general
+  \(\binom{n}{k+1}\) faces of dimension \(k\).
+* Every proper subset of vertices spans a face: the simplex is the
+  polytope with the maximum possible number of faces for its vertex
+  count, and its boundary complex is the full simplicial complex on
+  \(n\) vertices.
+* Self-dual.
+
+## f-vector
+
+\(f_k(S_n)\) is the number of \(k\)-dimensional faces of the
+\((n-1)\)-simplex, \(f_k = \binom{n}{k+1}\) — Pascal's triangle,
+[OEIS A007318](https://oeis.org/A007318).
+
+| \(d\) | \(n\) | \(f_0\) | \(f_1\) | \(f_2\) | \(f_3\) | \(f_4\) | \(f_5\) |
+|---|---|---|---|---|---|---|---|
+| 1 | 2 | 2 | — | — | — | — | — |
+| 2 | 3 | 3 | 3 | — | — | — | — |
+| 3 | 4 | 4 | 6 | 4 | — | — | — |
+| 4 | 5 | 5 | 10 | 10 | 5 | — | — |
+| 5 | 6 | 6 | 15 | 20 | 15 | 6 | — |
+| 6 | 7 | 7 | 21 | 35 | 35 | 21 | 7 |
+
+## Generating functions
+
+Summing \(k\) from \(0\) to \(d-1 = n-2\), matching the table row for
+each \(n\) exactly (see the [convention note](../theory/f-vectors.md)):
+
+\[
+f(x, y) = \sum_{n \geq 2} x^n \sum_{k=0}^{n-2} \binom{n}{k+1} y^k
+= \frac{x}{(1-x)(1 - x - xy)} - \frac{x}{1-xy},
+\]
+
+\[
+\tilde f(x, y) = \sum_{n \geq 2} \frac{x^n}{n!} \sum_{k=0}^{n-2} \binom{n}{k+1} y^k
+= \frac{e^{x(1+y)} - e^{x} - e^{xy} + 1}{y}.
+\]
+
+## Canonical form
+
+For the projective simplex \(S_n = \conv\{Z_1,\dots,Z_n\}\), with
+\(Y \in \PP^{n-1}\) the integration variable and \(\br{\cdot}\) the
+bracket of \(n\) points in \(\PP^{n-1}\) (a maximal minor of their
+homogeneous coordinates),
+
+\[
+\Omega(S_n) = \frac{\br{Z_1 \cdots Z_n}^{\,n-1}\, \br{Y\, d^{n-1}Y}}
+{(n-1)! \; \br{Y Z_1 \cdots Z_{n-1}}\, \br{Y Z_2 \cdots Z_n} \cdots \br{Y Z_n Z_1 \cdots Z_{n-2}}},
+\]
+the denominator running cyclically over the \(n\) facets. In the affine
+chart of the unit simplex, with \(y_1, \dots, y_n\) the barycentric-type
+coordinates dual to the vertices,
+\[
+\Omega(S_n^{(0)}) = \frac{\br{Y\, d^{n-1}Y}}{y_1 y_2 \cdots y_n},
+\]
+manifestly with a simple pole on each of the \(n\) facets \(\{y_i = 0\}\).
+
+## Interactive model
+
+<div class="polytope-viewer" data-shape="simplex">
+<span class="polytope-viewer__label">3-simplex (tetrahedron)</span>
+<span class="polytope-viewer__hint">drag to rotate · scroll to zoom</span>
+</div>
+
+## References
+
+* N. Arkani-Hamed, Y. Bai, T. Lam, *Positive Geometries and Canonical
+  Forms*, [arXiv:1703.04541](https://arxiv.org/abs/1703.04541), §3.
+* [OEIS A007318](https://oeis.org/A007318) — Pascal's triangle.

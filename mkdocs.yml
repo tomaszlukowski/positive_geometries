@@ -1,0 +1,109 @@
+site_name: Positive Geometries
+site_description: >-
+  A compendium of positive geometries — their definitions, canonical forms,
+  and combinatorics — with a focus on polytopal examples.
+site_author: Tomasz Lukowski
+site_url: https://tomaszlukowski.github.io/positive_geometries/
+repo_url: https://github.com/tomaszlukowski/positive_geometries
+repo_name: tomaszlukowski/positive_geometries
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; Tomasz Lukowski
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Source Serif 4
+    code: JetBrains Mono
+  icon:
+    logo: material/vector-polygon
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.action.edit
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - assets/css/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - assets/js/polytope-data.js
+  - assets/js/polytope-viewer.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: date
+      fallback_to_build_date: true
+
+nav:
+  - Home: index.md
+  - Theory:
+      - theory/positive-geometries.md
+      - theory/canonical-forms.md
+      - theory/f-vectors.md
+      - theory/physics-motivation.md
+  - Catalog:
+      - catalog/simplex.md
+      - catalog/hypercube.md
+      - catalog/cross-polytope.md
+      - catalog/associahedron.md
+      - catalog/permutohedron.md
+      - catalog/hypersimplex.md
+      - catalog/cyclic-polytope.md
+      - catalog/generalized-permutohedra.md
+  - Data: data/f-vector-tables.md
+  - References: references.md
+  - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tomaszlukowski
