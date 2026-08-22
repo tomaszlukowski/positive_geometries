@@ -930,6 +930,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#embeddings-by-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embeddings by dimension
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-it-belongs-here" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1125,6 +1136,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#embeddings-by-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embeddings by dimension
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-it-belongs-here" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1198,6 +1220,38 @@ that <em>are</em>.</p>
   <span class="arithmatex">\(d = 2m\)</span>, <span class="arithmatex">\(f_{d-1}(C(n,d)) = \binom{n-m}{m} + \binom{n-m-1}{m-1}\)</span>;
   for <span class="arithmatex">\(d = 2m+1\)</span>, <span class="arithmatex">\(f_{d-1}(C(n,d)) = 2\binom{n-m-1}{m}\)</span>.</li>
 </ul>
+<h2 id="embeddings-by-dimension">Embeddings by dimension<a class="headerlink" href="#embeddings-by-dimension" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(C(n,d)\)</span> is a two-parameter family; fixing <span class="arithmatex">\(n = d+3\)</span> (the smallest
+choice with any interesting facet structure) gives a one-parameter
+sequence indexed by dimension, using the integer parameters
+<span class="arithmatex">\(t = 1,\dots,n\)</span> on the moment curve <span class="arithmatex">\(\gamma(t) = (t,t^2,\dots,t^d)\)</span>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">d = 2</label><label for="__tabbed_1_2">d = 3</label><label for="__tabbed_1_3">d = 4</label><label for="__tabbed_1_4">d = 5</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(C(5,2)\)</span>: <span class="arithmatex">\((1,1)\)</span>, <span class="arithmatex">\((2,4)\)</span>, <span class="arithmatex">\((3,9)\)</span>, <span class="arithmatex">\((4,16)\)</span>, <span class="arithmatex">\((5,25)\)</span>
+— any 5 points on a parabola, i.e. a convex pentagon.</p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(C(6,3)\)</span>: <span class="arithmatex">\((1,1,1)\)</span>, <span class="arithmatex">\((2,4,8)\)</span>, <span class="arithmatex">\((3,9,27)\)</span>, <span class="arithmatex">\((4,16,64)\)</span>,
+<span class="arithmatex">\((5,25,125)\)</span>, <span class="arithmatex">\((6,36,216)\)</span></p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(C(7,4)\)</span>: <span class="arithmatex">\((1,1,1,1)\)</span>, <span class="arithmatex">\((2,4,8,16)\)</span>, <span class="arithmatex">\((3,9,27,81)\)</span>,
+<span class="arithmatex">\((4,16,64,256)\)</span>, <span class="arithmatex">\((5,25,125,625)\)</span>, <span class="arithmatex">\((6,36,216,1296)\)</span>,
+<span class="arithmatex">\((7,49,343,2401)\)</span></p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(C(8,5)\)</span>: <span class="arithmatex">\((1,1,1,1,1)\)</span>, <span class="arithmatex">\((2,4,8,16,32)\)</span>, <span class="arithmatex">\((3,9,27,81,243)\)</span>,
+<span class="arithmatex">\((4,16,64,256,1024)\)</span>, <span class="arithmatex">\((5,25,125,625,3125)\)</span>,
+<span class="arithmatex">\((6,36,216,1296,7776)\)</span>, <span class="arithmatex">\((7,49,343,2401,16807)\)</span>,
+<span class="arithmatex">\((8,64,512,4096,32768)\)</span></p>
+</div>
+</div>
+</div>
+<p>Coordinates grow fast (the <span class="arithmatex">\(d\)</span>-th coordinate is <span class="arithmatex">\(t^d\)</span>), which is
+purely a cosmetic feature of the integer-parameter moment curve, not of
+the polytope's combinatorics — any strictly increasing <span class="arithmatex">\(t_1 &lt; \dots &lt;
+t_n\)</span> gives the same combinatorial type (see <a href="#definition">Definition</a>).</p>
 <h2 id="why-it-belongs-here">Why it belongs here<a class="headerlink" href="#why-it-belongs-here" title="Permanent link">&para;</a></h2>
 <p>Cyclic polytopes are the extremal case against which every other family
 in this catalog can be measured: the
@@ -1234,7 +1288,7 @@ no shortcut to the canonical form itself, only to the face count.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 17:49:36 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 19:06:33 UTC">August 22, 2026</span>
   </span>
 
     

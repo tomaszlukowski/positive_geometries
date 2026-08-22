@@ -902,6 +902,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#embeddings-by-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embeddings by dimension
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#interactive-model" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1125,6 +1136,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#embeddings-by-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embeddings by dimension
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#interactive-model" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1201,14 +1223,44 @@ uniform matroid <span class="arithmatex">\(U_{k,n}\)</span>, and a member of the
   images of its positroid cells give a well-studied polyhedral
   subdivision of it.</li>
 </ul>
+<h2 id="embeddings-by-dimension">Embeddings by dimension<a class="headerlink" href="#embeddings-by-dimension" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(\Delta(k,n)\)</span> is a two-parameter family; fixing <span class="arithmatex">\(k=2\)</span> (the smallest
+choice that isn't just the simplex, since <span class="arithmatex">\(\Delta(1,n)\)</span> always is —
+see <a href="#properties">Properties</a>) gives a clean one-parameter sequence
+indexed by dimension <span class="arithmatex">\(d = n-1\)</span>, vertices <span class="arithmatex">\(e_i + e_j\)</span> for every pair
+<span class="arithmatex">\(i&lt;j\)</span>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">d = 3</label><label for="__tabbed_1_2">d = 4</label><label for="__tabbed_1_3">d = 5</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\Delta(2,4)\)</span>, the octahedron shown below: <span class="arithmatex">\((1,1,0,0)\)</span>,
+<span class="arithmatex">\((1,0,1,0)\)</span>, <span class="arithmatex">\((1,0,0,1)\)</span>, <span class="arithmatex">\((0,1,1,0)\)</span>, <span class="arithmatex">\((0,1,0,1)\)</span>,
+<span class="arithmatex">\((0,0,1,1)\)</span></p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\Delta(2,5)\)</span>: <span class="arithmatex">\((1,1,0,0,0)\)</span>, <span class="arithmatex">\((1,0,1,0,0)\)</span>, <span class="arithmatex">\((1,0,0,1,0)\)</span>,
+<span class="arithmatex">\((1,0,0,0,1)\)</span>, <span class="arithmatex">\((0,1,1,0,0)\)</span>, <span class="arithmatex">\((0,1,0,1,0)\)</span>, <span class="arithmatex">\((0,1,0,0,1)\)</span>,
+<span class="arithmatex">\((0,0,1,1,0)\)</span>, <span class="arithmatex">\((0,0,1,0,1)\)</span>, <span class="arithmatex">\((0,0,0,1,1)\)</span></p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\Delta(2,6)\)</span>: <span class="arithmatex">\((1,1,0,0,0,0)\)</span>, <span class="arithmatex">\((1,0,1,0,0,0)\)</span>,
+<span class="arithmatex">\((1,0,0,1,0,0)\)</span>, <span class="arithmatex">\((1,0,0,0,1,0)\)</span>, <span class="arithmatex">\((1,0,0,0,0,1)\)</span>,
+<span class="arithmatex">\((0,1,1,0,0,0)\)</span>, <span class="arithmatex">\((0,1,0,1,0,0)\)</span>, <span class="arithmatex">\((0,1,0,0,1,0)\)</span>,
+<span class="arithmatex">\((0,1,0,0,0,1)\)</span>, <span class="arithmatex">\((0,0,1,1,0,0)\)</span>, <span class="arithmatex">\((0,0,1,0,1,0)\)</span>,
+<span class="arithmatex">\((0,0,1,0,0,1)\)</span>, <span class="arithmatex">\((0,0,0,1,1,0)\)</span>, <span class="arithmatex">\((0,0,0,1,0,1)\)</span>,
+<span class="arithmatex">\((0,0,0,0,1,1)\)</span></p>
+</div>
+</div>
+</div>
+<p>Other <span class="arithmatex">\(k\)</span> work identically — just every 0/1 vector with exactly <span class="arithmatex">\(k\)</span>
+ones instead of 2 — and are what the
+<a href="#properties">f-vector</a> formula <span class="arithmatex">\(\binom{n}{k}\)</span> counts in general.</p>
 <h2 id="interactive-model">Interactive model<a class="headerlink" href="#interactive-model" title="Permanent link">&para;</a></h2>
 <p>Since <span class="arithmatex">\(\Delta(2,4)\)</span> coincides with the octahedron, it reuses that
 viewer:</p>
-<div class="polytope-viewer" data-shape="cross-polytope">
+<p><div class="polytope-viewer" data-shape="cross-polytope">
 <span class="polytope-viewer__label">&Delta;(2,4)</span>
 <span class="polytope-viewer__hint">drag to rotate · scroll to zoom</span>
-</div>
-
+</div></p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li>A. Postnikov, <em>Permutohedra, Associahedra, and Beyond</em>,
@@ -1237,7 +1289,7 @@ viewer:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 18:52:17 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 19:06:33 UTC">August 22, 2026</span>
   </span>
 
     
