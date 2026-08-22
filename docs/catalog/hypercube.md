@@ -66,8 +66,8 @@ form is the product of \(n\) copies of the interval's
 \[
 \Omega(K_n^{(0)}) = \frac{dy_1 \wedge \cdots \wedge dy_n}{\prod_{i=1}^n y_i \, (y_i - 1)},
 \]
-with a simple pole on each of the \(2n\) facets \(\{y_i = 0\}\) and
-\(\{y_i = 1\}\).
+with a simple pole on each of the \(2n\) facets \(\lbrace y_i = 0\rbrace \) and
+\(\lbrace y_i = 1\rbrace \).
 
 ## Verified embedding, dual, and triangulations
 
@@ -75,8 +75,8 @@ For \(K_3^{(0)} = [0,1]^3\), the cube shown below, computed
 independently in SageMath + TOPCOM — full computation at
 [verification/results/hypercube.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/hypercube.md):
 
-- **Vertices**: the 8 points \((x,y,z) \in \{0,1\}^3\). Volume \(1\).
-- **Dual**: the polar of the centered cube (vertices \(\{\pm\tfrac12\}^3\))
+- **Vertices**: the 8 points \((x,y,z) \in \lbrace 0,1\rbrace ^3\). Volume \(1\).
+- **Dual**: the polar of the centered cube (vertices \(\lbrace \pm\tfrac12\rbrace ^3\))
   has vertices \((\pm2,0,0)\), \((0,\pm2,0)\), \((0,0,\pm2)\) — f-vector
   \((1,6,12,8,1)\), combinatorially the
   [cross-polytope](cross-polytope.md), confirming the duality claimed

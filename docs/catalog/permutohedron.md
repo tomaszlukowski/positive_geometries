@@ -5,7 +5,7 @@
 The **permutohedron** of order \(n\) is the convex hull of all
 permutations of \((1, 2, \dots, n)\), viewed as points in \(\RR^n\):
 \[
-\Pi_{n-1} = \conv\{ (\sigma(1), \dots, \sigma(n)) : \sigma \in S_n \}.
+\Pi_{n-1} = \conv\lbrace  (\sigma(1), \dots, \sigma(n)) : \sigma \in S_n \rbrace .
 \]
 All \(n!\) points lie in the hyperplane \(\sum_i x_i = \binom{n+1}{2}\),
 so \(\Pi_{n-1}\) has dimension \(n-1\) — the subscript records this
@@ -18,7 +18,7 @@ see the [overview page](generalized-permutohedra.md).
   vertices joined by an edge exactly when the permutations differ by a
   transposition of adjacent values.
 * Simple polytope with \(2^n - 2\) facets, one for every proper nonempty
-  subset \(S \subsetneq \{1,\dots,n\}\), cut out by
+  subset \(S \subsetneq \lbrace 1,\dots,n\rbrace \), cut out by
   \(\sum_{i \in S} x_i \geq \binom{|S|+1}{2}\).
 * \(\Pi_2\) is a hexagon, \(\Pi_3\) the truncated octahedron shown below —
   the unique polytope that tiles \(\RR^3\) by translation among the
@@ -27,7 +27,7 @@ see the [overview page](generalized-permutohedra.md).
 ## f-vector
 
 Faces of \(\Pi_{n-1}\) are in bijection with **ordered set partitions**
-of \(\{1,\dots,n\}\): a face of dimension \(k\) corresponds to an ordered
+of \(\lbrace 1,\dots,n\rbrace \): a face of dimension \(k\) corresponds to an ordered
 partition into \(n-k\) nonempty blocks (one coordinate value per block).
 Since an ordered partition into \(m\) blocks is equivalent to a
 surjection onto an \(m\)-element ordered target,

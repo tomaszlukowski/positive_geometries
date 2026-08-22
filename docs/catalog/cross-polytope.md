@@ -5,10 +5,10 @@
 The **\(n\)-dimensional cross-polytope** (or *orthoplex*, or generalized
 octahedron) is the convex hull of the \(n\) coordinate axis pairs,
 \[
-X_n = \conv\{\pm e_1, \dots, \pm e_n\} \subset \RR^n,
+X_n = \conv\lbrace \pm e_1, \dots, \pm e_n\rbrace  \subset \RR^n,
 \]
 equivalently the unit ball of the \(\ell_1\) norm,
-\(X_n = \{x \in \RR^n : |x_1| + \cdots + |x_n| \leq 1\}\), a polytope of
+\(X_n = \lbrace x \in \RR^n : |x_1| + \cdots + |x_n| \leq 1\rbrace \), a polytope of
 dimension \(n\). It is the **polar dual** of the [hypercube](hypercube.md):
 facets of one correspond to vertices of the other.
 
@@ -61,10 +61,10 @@ positive geometries, so its canonical form has no single-formula
 shortcut. It follows directly from
 [triangulation-additivity](../theory/canonical-forms.md#triangulation-and-additivity):
 coning the boundary from the origin splits \(X_n\) into \(2^n\) simplices,
-one per sign pattern \(s \in \{\pm1\}^n\), each spanned by the origin and
-\(\{s_i e_i\}_{i=1}^n\), and
+one per sign pattern \(s \in \lbrace \pm1\rbrace ^n\), each spanned by the origin and
+\(\lbrace s_i e_i\rbrace _{i=1}^n\), and
 \[
-\Omega(X_n) = \sum_{s \in \{\pm 1\}^n} \Omega\big(\conv\{0, s_1 e_1, \dots, s_n e_n\}\big),
+\Omega(X_n) = \sum_{s \in \lbrace \pm 1\rbrace ^n} \Omega\big(\conv\lbrace 0, s_1 e_1, \dots, s_n e_n\rbrace \big),
 \]
 with each summand the simplex canonical form from the
 [simplex page](simplex.md).

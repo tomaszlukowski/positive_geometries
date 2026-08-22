@@ -5,13 +5,13 @@
 The **unit simplex** on \(n\) vertices is the convex hull of the standard
 basis vectors,
 \[
-S_n^{(0)} = \conv\{e_1, \dots, e_n\} \subset \RR^n,
+S_n^{(0)} = \conv\lbrace e_1, \dots, e_n\rbrace  \subset \RR^n,
 \]
 a polytope of dimension \(d = n-1\). Projectively, the **simplex**
 determined by \(n\) points \(Z_1, \dots, Z_n \in \PP^{n-1}\) in general
 position is
 \[
-S_n = \conv\{Z_1, \dots, Z_n\}.
+S_n = \conv\lbrace Z_1, \dots, Z_n\rbrace .
 \]
 Every facet of \(S_n\) is itself a simplex on \(n-1\) of the \(Z_i\), so
 the family is closed under taking boundary components — the simplex is
@@ -60,7 +60,7 @@ f(x, y) = \sum_{n \geq 2} x^n \sum_{k=0}^{n-2} \binom{n}{k+1} y^k
 
 ## Canonical form
 
-For the projective simplex \(S_n = \conv\{Z_1,\dots,Z_n\}\), with
+For the projective simplex \(S_n = \conv\lbrace Z_1,\dots,Z_n\rbrace \), with
 \(Y \in \PP^{n-1}\) the integration variable and \(\br{\cdot}\) the
 bracket of \(n\) points in \(\PP^{n-1}\) (a maximal minor of their
 homogeneous coordinates),
@@ -75,12 +75,12 @@ coordinates dual to the vertices,
 \[
 \Omega(S_n^{(0)}) = \frac{\br{Y\, d^{n-1}Y}}{y_1 y_2 \cdots y_n},
 \]
-manifestly with a simple pole on each of the \(n\) facets \(\{y_i = 0\}\).
+manifestly with a simple pole on each of the \(n\) facets \(\lbrace y_i = 0\rbrace \).
 
 ## Verified embedding
 
-For the representative instance shown below, \(S_4^{(0)} = \conv\{e_1,
-e_2, e_3, e_4\} \subset \RR^4\) — reduced to the affine chart where
+For the representative instance shown below, \(S_4^{(0)} = \conv\lbrace e_1,
+e_2, e_3, e_4\rbrace  \subset \RR^4\) — reduced to the affine chart where
 \(y_1, y_2, y_3\) are independent and \(y_4 = 1-y_1-y_2-y_3\) is
 implicit, the chart the canonical form above is stated in:
 

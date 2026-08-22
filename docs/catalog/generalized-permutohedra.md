@@ -9,10 +9,10 @@ their outward normal directions. Equivalently — Postnikov's formulation —
 it is any polytope whose edges are all parallel to some \(e_i - e_j\), or
 the polytope
 \[
-P_z = \Big\{ x \in \RR^n : \sum_i x_i = z(\{1,\dots,n\}),\ \sum_{i \in S} x_i \leq z(S)\ \ \forall S \subsetneq \{1,\dots,n\} \Big\}
+P_z = \Big\lbrace  x \in \RR^n : \sum_i x_i = z(\lbrace 1,\dots,n\rbrace ),\ \sum_{i \in S} x_i \leq z(S)\ \ \forall S \subsetneq \lbrace 1,\dots,n\rbrace  \Big\rbrace 
 \]
 associated to any **submodular function** \(z\) on subsets of
-\(\{1,\dots,n\}\).
+\(\lbrace 1,\dots,n\rbrace \).
 
 ## Why this page exists
 

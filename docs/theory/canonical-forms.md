@@ -12,7 +12,7 @@ with simple poles exactly on the boundary components \(C_i\) of
 \]
 
 along each. Locally, near a smooth point of \(C_i\) cut out by
-\(\{\phi_i = 0\}\), this means
+\(\lbrace \phi_i = 0\rbrace \), this means
 
 \[
 \Omega(X, X_{\geq 0}) = \frac{d\phi_i}{\phi_i} \wedge \Omega(C_i,(C_i)_{\geq 0}) + (\text{regular}),
