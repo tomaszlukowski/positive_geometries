@@ -8,8 +8,8 @@ This folder is **not** part of the website (it's outside `docs/`, so
 
 **Every check in this folder has actually been run**, in the WSL2 +
 SageMath 10.9 + TOPCOM environment set up on this machine. Current
-results: `run_all.sage` **76/76**, `vertex_sum_canonical_forms.sage`
-**14/14**, `general_canonical_forms.sage` **26/26**, and all ten
+results: `run_all.sage` **82/82**, `vertex_sum_canonical_forms.sage`
+**14/14**, `general_canonical_forms.sage` **26/26**, and all eleven
 `*_explorer.ipynb` notebooks executed headlessly end-to-end with zero
 errors (see the table under **Contents** below for exactly how far each
 one goes, and why).
@@ -22,13 +22,18 @@ been removed; see git history if either is ever needed for reference.
 
 - **`common.sage`** — the shared foundation everything else in this
   folder builds on:
-  - vertex generators for all ten catalog families, including
+  - vertex generators for all eleven catalog families, including
     `graph_associahedron_vertices` (Devadoss's construction from any
     connected graph, arXiv:math/0612530) and its `cyclohedron_vertices`
-    / `stellohedron_vertices` specializations, and
+    / `stellohedron_vertices` specializations,
     `order_polytope_vertices` / `chain_polytope_vertices` (Stanley's two
     poset polytopes, delegating to Sage's own `Poset.order_polytope()` /
-    `.chain_polytope()`);
+    `.chain_polytope()`), and `birkhoff_vertices` (the n! permutation
+    matrices);
+  - `reduce_full_dim`, a general-codimension counterpart to
+    `reduce_codim1` (via `Polyhedron.affine_hull_projection()`) needed
+    for the Birkhoff polytope's codimension-(2n-1) natural embedding,
+    where dropping just one coordinate isn't enough;
   - `reduce_codim1`, for families whose natural embedding lives in a
     hyperplane of a higher ambient space (permutohedron, associahedron,
     hypersimplex);
@@ -93,12 +98,13 @@ been removed; see git history if either is ever needed for reference.
 - **`simplex.sage`, `hypercube.sage`, `cross_polytope.sage`,
   `permutohedron.sage`, `associahedron.sage`, `hypersimplex.sage`,
   `cyclic_polytope.sage`, `cyclohedron.sage`, `stellohedron.sage`,
-  `order_chain_polytopes.sage`** —
+  `order_chain_polytopes.sage`, `birkhoff.sage`** —
   one script per family, each covering that family's n=1,2,3 instances
   (or the
   family-appropriate equivalent — L for the associahedron, n=d+3 for
   cyclic polytopes, the k=2 slice for the hypersimplex, four example
-  posets for order/chain polytopes). Each is
+  posets for order/chain polytopes, n=2,3,4 for the Birkhoff polytope).
+  Each is
   runnable on its own (`sage simplex.sage`) — it auto-loads
   `common.sage` if it hasn't been already.
 - **`run_all.sage`** — loads every family script in one session and
@@ -120,7 +126,7 @@ been removed; see git history if either is ever needed for reference.
   `general_canonical_forms.sage` to confirm the two methods agree
   exactly on the families where both apply.
 - **`*_explorer.ipynb`** — one Jupyter notebook per catalog family (all
-  ten now built), each walking through: vertices, canonical form (with
+  eleven now built), each walking through: vertices, canonical form (with
   pole-structure check), projective dual, the **volume conjecture**
   (canonical form vs. the volume of the projective dual, taken at the
   centroid — see `simplex_explorer.ipynb`'s n=1 section for why it has
@@ -145,6 +151,7 @@ been removed; see git history if either is ever needed for reference.
   | hypersimplex | n = 4–9 / d = 3–8 (n=8,9 skip the volume conjecture specifically — see below) | n = 4–5 only (n=6 exceeded 45s) |
   | cyclic polytope | d = 2–4 only (d=5 exceeded 60s) | d = 2–4 (all fine) |
   | order/chain polytopes | all 4 example posets, both O(P) and C(P) | all 4 example posets, both O(P) and C(P) (all fine — the most expensive pair, the 6-element "double diamond", still finished in well under a minute) |
+  | Birkhoff polytope | n = 2-3 (n=4 took ~80s, canonical form only) | n = 2-3 only (n=4's triangulation enumeration didn't finish in reasonable time) |
 
   Two genuinely different bottlenecks show up here, not one: triangulation
   enumeration (via `secondary_polytope_data`'s internal-engine

@@ -101,6 +101,7 @@ nav:
       - catalog/generalized-permutohedra.md
       - catalog/graph-associahedra.md
       - catalog/order-chain-polytopes.md
+      - catalog/birkhoff.md
   - Data: data/f-vector-tables.md
   - Notebooks: notebooks.md
   - References: references.md

@@ -16,6 +16,7 @@ load("cyclic_polytope.sage")
 load("cyclohedron.sage")
 load("stellohedron.sage")
 load("order_chain_polytopes.sage")
+load("birkhoff.sage")
 
 print()
 print("############################################")

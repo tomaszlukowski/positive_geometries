@@ -238,6 +238,27 @@ def chain_polytope_vertices(poset):
     docs/catalog/order-chain-polytopes.md."""
     return [tuple(QQ(c) for c in v) for v in poset.chain_polytope().vertices()]
 
+def birkhoff_vertices(n):
+    """Vertices of the Birkhoff polytope B_n (the n x n doubly stochastic
+    matrices), flattened row-major into R^{n^2}: one vertex per n x n
+    permutation matrix, n! of them total (Birkhoff-von Neumann theorem).
+    Lives in codimension 2n-1 of R^{n^2} (n row-sum-1 and n
+    column-sum-1 constraints, minus one redundancy) -- see
+    reduce_full_dim below to get a genuinely full-dimensional chart."""
+    return [tuple(1 if p[i] == j else 0 for i in range(n) for j in range(n))
+            for p in itertools.permutations(range(n))]
+
+def reduce_full_dim(pts):
+    """Given a point set that affinely spans a proper subspace of its
+    ambient R^N of ANY codimension (unlike reduce_codim1, which only
+    handles codimension 1 -- not enough for the Birkhoff polytope's
+    codimension 2n-1), returns an equivalent full-dimensional point set
+    via Polyhedron.affine_hull_projection(). Exact (stays over ZZ for
+    these integer vertex sets, confirmed) -- needed before
+    general_canonical_form_density, which requires its input to already
+    be full-dimensional in its own ambient space."""
+    return [tuple(v) for v in Polyhedron(vertices=pts).affine_hull_projection().vertices_list()]
+
 # ---------------------------------------------------------------------
 # Canonical forms -- Brown-Dupont Proposition 6.7 (general nbc-sum
 # method; see the module docstring and general_canonical_forms.sage

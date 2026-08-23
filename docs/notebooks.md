@@ -69,11 +69,12 @@ not estimated:
 | [Hypersimplex](catalog/hypersimplex.md) | [`hypersimplex_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/hypersimplex_explorer.ipynb) | \(n=4\)–\(9\) (volume conjecture only for \(n=4\)–\(7\) — it needs a second, costlier computation) | \(n=4\)–\(5\) only |
 | [Cyclic polytope](catalog/cyclic-polytope.md) | [`cyclic_polytope_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cyclic_polytope_explorer.ipynb) | \(d=2\)–\(4\) only | \(d=2\)–\(4\) (all feasible) |
 | [Order/chain polytopes](catalog/order-chain-polytopes.md) | [`order_chain_polytopes_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/order_chain_polytopes_explorer.ipynb) | all 4 example posets, both \(O(P)\) and \(C(P)\) | all 4 example posets, both \(O(P)\) and \(C(P)\) (all feasible) |
+| [Birkhoff polytope](catalog/birkhoff.md) | [`birkhoff_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/birkhoff_explorer.ipynb) | \(n=2\)–\(3\) (\(n=4\) exceeded 60s) | \(n=2\)–\(3\) only (\(n=4\) infeasible) |
 
 Beyond `*_explorer.ipynb`, the same `sagemath/` folder has one `.sage`
 script per family checking f-vectors, volumes, and duals directly (no
-Jupyter needed — `run_all.sage` runs all ten in one pass, currently
-76/76 passing), plus `general_canonical_forms.sage` and
+Jupyter needed — `run_all.sage` runs all eleven in one pass, currently
+82/82 passing), plus `general_canonical_forms.sage` and
 `vertex_sum_canonical_forms.sage`, the two independently-implemented
 canonical-form methods the notebooks are built on.
 
