@@ -169,6 +169,38 @@ wsl -d Ubuntu --cd /mnt/c/Users/<you>/pg_sage_sync -- /opt/miniforge3/envs/sage/
 or use the full `/opt/miniforge3/envs/sage/bin/sage` path as above,
 which works regardless of shell activation.)
 
+## Running interactively: Jupyter notebook
+
+The conda-forge `sage` environment already bundles JupyterLab and a
+registered `sagemath` kernel — nothing extra to install. There's a
+starter notebook, **`general_canonical_forms.ipynb`**, that `load`s
+`general_canonical_forms.sage` and `vertex_sum_canonical_forms.sage`
+and shows how to call their functions directly (a new polytope, a
+vertex-by-vertex nbc/flag inspection, a Prop. 6.7 vs Prop. 6.10
+cross-check) — sync it to the local folder along with everything else
+(step 1 above), then:
+
+```powershell
+wsl -d Ubuntu -- /opt/miniforge3/envs/sage/bin/jupyter lab --no-browser --ip=127.0.0.1 --port=8888 --notebook-dir=/mnt/c/Users/<you>/pg_sage_sync --ServerApp.token='' --ServerApp.password=''
+```
+
+Leave that running (it's a server, not a one-shot command — run it with
+`run_in_background`-style tooling, or in its own terminal), then open
+**http://127.0.0.1:8888/lab** in a normal Windows browser — WSL2
+forwards `localhost` ports to Windows automatically, no extra setup.
+Open `general_canonical_forms.ipynb` from the file browser there; if it
+doesn't already show "SageMath 10.9" in the top right, pick it via
+Kernel → Change Kernel → sagemath. `load(...)` calls inside the notebook
+resolve relative to wherever you launched Jupyter from (matching
+`--notebook-dir` above), so keep the notebook in the same synced folder
+as the `.sage` files.
+
+The `--ServerApp.token=''` / `--ServerApp.password=''` flags disable
+Jupyter's usual auth prompt — fine here since `--ip=127.0.0.1` means the
+server only ever accepts connections from this machine, but drop those
+two flags (and use the token Jupyter prints on startup instead) if
+that's not a guarantee you want to rely on.
+
 ## What "verification" means here
 
 Every expected value each script checks against was worked out
