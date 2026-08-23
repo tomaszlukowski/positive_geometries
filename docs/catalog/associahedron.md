@@ -163,6 +163,15 @@ this catalog — the pattern isn't a simple closed formula to state for
 general \(d\); it's generated the same way for any \(L\) by evaluating
 \(M(T)\) on every binary tree with \(L\) leaves.
 
+## Verification notebook
+
+Every claim on this page is checked computationally in
+[`sagemath/associahedron_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/associahedron_explorer.ipynb) —
+vertices, canonical form, dual, and the volume conjecture for
+\(L=3\) through \(6\); triangulations and the secondary polytope for
+\(L=3\) and \(4\) only. See [Verification notebooks](../notebooks.md)
+for what's in it and how to run it yourself.
+
 ## References
 
 * J.-L. Loday, *Realization of the Stasheff polytope*,

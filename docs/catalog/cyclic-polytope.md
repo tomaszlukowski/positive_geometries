@@ -126,6 +126,15 @@ in this catalog can be measured: the
 says no \(d\)-polytope with \(n\) vertices has a larger f-vector,
 entrywise, than \(C(n,d)\)'s.
 
+## Verification notebook
+
+Every claim on this page is checked computationally in
+[`sagemath/cyclic_polytope_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cyclic_polytope_explorer.ipynb) —
+vertices, canonical form, dual, the volume conjecture, triangulations,
+and the secondary polytope, for \(d=2\) through \(4\). See
+[Verification notebooks](../notebooks.md) for what's in it and how to
+run it yourself.
+
 ## References
 
 * B. Grünbaum, *Convex Polytopes*, 2nd ed. (Ziegler, ed.), Ch. 4 and 8.

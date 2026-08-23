@@ -142,6 +142,14 @@ above is stated in (\(y_1,\dots,y_d\) independent, \(y_{d+1} =
     \((0,0,0,1,0,0)\), \((0,0,0,0,1,0)\), \((0,0,0,0,0,1)\),
     \((0,0,0,0,0,0)\)
 
+## Verification notebook
+
+Every claim on this page is checked computationally in
+[`sagemath/simplex_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/simplex_explorer.ipynb) —
+vertices, canonical form, dual, and the volume conjecture, for
+\(n=1\) through \(6\). See [Verification notebooks](../notebooks.md)
+for what's in it and how to run it yourself.
+
 ## References
 
 * N. Arkani-Hamed, Y. Bai, T. Lam, *Positive Geometries and Canonical

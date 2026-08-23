@@ -128,6 +128,17 @@ Other \(k\) work identically — just every 0/1 vector with exactly \(k\)
 ones instead of 2 — and are what the [f-vector](#f-vector) formula
 \(\binom{n}{k}\) counts in general.
 
+## Verification notebook
+
+Every claim on this page is checked computationally in
+[`sagemath/hypersimplex_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/hypersimplex_explorer.ipynb) —
+vertices, canonical form, and dual for \(\Delta(2,n)\), \(n=4\) through
+\(9\); the volume conjecture for \(n=4\) through \(7\) only (it needs a
+second, costlier computation); triangulations and the secondary
+polytope for \(n=4\) and \(5\) only. See
+[Verification notebooks](../notebooks.md) for what's in it and how to
+run it yourself.
+
 ## References
 
 * A. Postnikov, *Permutohedra, Associahedra, and Beyond*,

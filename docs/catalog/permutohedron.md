@@ -130,6 +130,17 @@ Vertex counts grow factorially (\(n!\); see the
 isn't listed out explicitly here: it's always "every permutation of
 \((1,\dots,n)\)", generated the same way regardless of \(n\).
 
+## Verification notebook
+
+Every claim on this page is checked computationally in
+[`sagemath/permutohedron_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/permutohedron_explorer.ipynb) —
+vertices, canonical form, dual, and the volume conjecture for order
+\(2\) through \(4\); triangulations and the secondary polytope for
+order \(2\) and \(3\) only (order 4's triangulation count was measured
+too large to enumerate in reasonable time). See
+[Verification notebooks](../notebooks.md) for what's in it and how to
+run it yourself.
+
 ## References
 
 * R. Stanley, *Enumerative Combinatorics, Vol. 1* — ordered set

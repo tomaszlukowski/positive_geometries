@@ -59,6 +59,10 @@ geometric object; see [Physics motivation](theory/physics-motivation.md).
 <span class="pg-card__title">Data</span>
 <span class="pg-card__desc">f-vector tables, generating functions, and OEIS cross-references for every family in the catalog.</span>
 </a>
+<a class="pg-card" href="notebooks/">
+<span class="pg-card__title">Notebooks</span>
+<span class="pg-card__desc">Jupyter notebooks that verify every catalog claim computationally, and how to run them yourself.</span>
+</a>
 <a class="pg-card" href="references/">
 <span class="pg-card__title">References</span>
 <span class="pg-card__desc">The literature this site draws on.</span>

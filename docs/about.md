@@ -21,7 +21,9 @@ version stayed close to four examples (simplex, hypercube, associahedron,
 permutohedron); this one keeps those, fills in the theory that was
 missing, adds more of the catalog (the cross-polytope, hypersimplex,
 cyclic polytope, and the generalized-permutohedron picture that ties them
-together), and adds interactive models for the low-dimensional cases.
+together), and backs every family with a
+[Jupyter notebook](notebooks.md) that verifies its claims computationally
+rather than asking you to take them on faith.
 
 ## Contributing
 

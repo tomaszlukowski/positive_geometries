@@ -140,6 +140,15 @@ for the current verification scripts and notebooks:
   other 4 vertices into 4 tetrahedra around it — confirmed directly from
   each triangulation's GKZ vector, not assumed.
 
+## Verification notebook
+
+Every claim on this page is checked computationally in
+[`sagemath/cross_polytope_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cross_polytope_explorer.ipynb) —
+vertices, canonical form, dual, the volume conjecture, triangulations,
+and the secondary polytope, for \(d=1\) through \(4\). See
+[Verification notebooks](../notebooks.md) for what's in it and how to
+run it yourself.
+
 ## References
 
 * N. Arkani-Hamed, Y. Bai, T. Lam, *Positive Geometries and Canonical
