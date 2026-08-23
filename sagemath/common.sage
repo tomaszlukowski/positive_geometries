@@ -215,6 +215,29 @@ def stellohedron_vertices(n):
     associahedron of the star graph on n+1 nodes (1 center + n leaves)."""
     return graph_associahedron_vertices(graphs.StarGraph(n))
 
+def order_polytope_vertices(poset):
+    """Vertices of Stanley's order polytope O(P) (R. Stanley, 'Two poset
+    polytopes', Discrete Comput. Geom. 1 (1986) 9-23): the set of
+    order-preserving maps P -> [0,1], {x in R^P : 0 <= x_p <= 1,
+    x_p <= x_q whenever p <=_P q}. Its vertices are exactly the indicator
+    vectors of the order filters (up-sets) of P. Delegates to Sage's own
+    Poset.order_polytope() rather than re-deriving the up-set/down-set
+    convention by hand -- cross-checked (not just assumed) against
+    poset.linear_extensions() in order_chain_polytopes.sage: Stanley's
+    theorem vol(O(P)) = |linear extensions of P| / |P|! is verified there
+    for every example poset this family uses."""
+    return [tuple(QQ(c) for c in v) for v in poset.order_polytope().vertices()]
+
+def chain_polytope_vertices(poset):
+    """Vertices of Stanley's chain polytope C(P): {x in R^P : x_p >= 0,
+    sum_{p in C} x_p <= 1 for every chain C of P}. Its vertices are
+    exactly the indicator vectors of the antichains of P -- same count as
+    O(P)'s vertices, and same volume (see order_polytope_vertices above),
+    but in general C(P) and O(P) are *not* combinatorially equivalent
+    (their f-vectors can differ beyond f_0) -- see
+    docs/catalog/order-chain-polytopes.md."""
+    return [tuple(QQ(c) for c in v) for v in poset.chain_polytope().vertices()]
+
 # ---------------------------------------------------------------------
 # Canonical forms -- Brown-Dupont Proposition 6.7 (general nbc-sum
 # method; see the module docstring and general_canonical_forms.sage
