@@ -29,6 +29,46 @@ window.MathJax = {
   // document$ hook below first fires (see typesetMath()).
 };
 
+// The page's main content (.md-content) starts hidden -- see the CSS
+// rule in extra.css -- so a visitor never sees a flash of raw,
+// unrendered \(...\) source before MathJax gets to it. markMathReady()
+// is what reveals it, by adding "pg-math-ready"; it's called from every
+// path below, success or failure, so a broken/slow/blocked MathJax load
+// never leaves the page hidden longer than the pure-CSS 2.5s fallback
+// animation in extra.css (which needs no JavaScript at all, and so is
+// the only thing that saves a visitor with JavaScript disabled).
+function markMathReady() {
+  var content = document.querySelector(".md-content");
+  if (content) {
+    content.classList.add("pg-math-ready");
+  }
+}
+
+function hideMathContent() {
+  var content = document.querySelector(".md-content");
+  if (content) {
+    content.classList.remove("pg-math-ready");
+  }
+}
+
+// On the very first page load, MathJax.startup.promise usually doesn't
+// exist yet the first time this fires (tex-mml-chtml.js hasn't finished
+// loading) -- so typesetMath() below can't chain onto it directly. This
+// polls for the promise to appear and reveals the page as soon as it
+// resolves, rather than falling all the way back to the flat 2.5s CSS
+// timeout in that case (which would otherwise make a normal slow-ish
+// load look broken). Gives up after ~3s of polling; the CSS fallback
+// still guarantees a reveal from there regardless.
+function revealWhenMathJaxSettles(attemptsLeft) {
+  if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
+    MathJax.startup.promise.then(markMathReady).catch(markMathReady);
+  } else if (attemptsLeft > 0) {
+    setTimeout(function () {
+      revealWhenMathJaxSettles(attemptsLeft - 1);
+    }, 30);
+  }
+}
+
 // Material's `document$` observable fires once for the initial page and
 // again on every "instant" navigation (navigation.instant is enabled in
 // mkdocs.yml), which swaps in new page content without a full reload —
@@ -47,15 +87,21 @@ window.MathJax = {
 //     processed" state from the previous page can't cause elements to be
 //     skipped or mis-rendered.
 function typesetMath() {
+  hideMathContent();
   if (!(window.MathJax && MathJax.startup && MathJax.startup.promise)) {
     // Library not ready yet -- its own automatic startup typeset (the
     // default) will cover the very first render once it finishes.
+    revealWhenMathJaxSettles(100);
     return;
   }
   MathJax.startup.promise = MathJax.startup.promise
     .then(() => MathJax.typesetClear())
     .then(() => MathJax.typesetPromise())
-    .catch((err) => console.error("MathJax typeset failed:", err));
+    .then(markMathReady)
+    .catch((err) => {
+      console.error("MathJax typeset failed:", err);
+      markMathReady(); // reveal anyway -- an error here shouldn't hide the page
+    });
 }
 
 document$.subscribe(typesetMath);

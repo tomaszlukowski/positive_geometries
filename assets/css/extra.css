@@ -54,6 +54,37 @@
 }
 
 /* ---------------------------------------------------------------------
+   Hide page content until MathJax has finished typesetting it, so
+   visitors never see a flash of raw, unrendered \(...\) source. Paired
+   with javascripts/mathjax.js, which adds "pg-math-ready" once MathJax
+   settles (success or failure) on every page load and every "instant"
+   navigation.
+
+   The animation below is a pure-CSS fallback, independent of the
+   JavaScript reveal: content is shown after 2.5s regardless, even if
+   JavaScript is disabled entirely or MathJax fails to load -- so a
+   broken script can never leave the page permanently blank, only
+   briefly unrendered (the same as before this change).
+   --------------------------------------------------------------------- */
+
+.md-content {
+  opacity: 0;
+  animation: pg-reveal-fallback 0.01s 2.5s forwards;
+}
+
+.md-content.pg-math-ready {
+  animation: none;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+}
+
+@keyframes pg-reveal-fallback {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------------------------------------------------------------------
    Home hero
    --------------------------------------------------------------------- */
 
