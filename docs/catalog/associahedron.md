@@ -78,16 +78,42 @@ underlying \(D(p,k)\) itself — so this site states it row by row; see the
 ## Canonical form
 
 Loday's coordinates realize \(K_L\) combinatorially but not with any
-particular physical meaning; its canonical form is then computed like
-any polytope's, by triangulating and summing
-[simplex forms](simplex.md#canonical-form) via
-[additivity](../theory/canonical-forms.md#triangulation-and-additivity) —
-there is no single-formula shortcut analogous to the simplex or
-hypercube. A different, kinematics-based realization of the same
-combinatorial polytope — the *kinematic associahedron* of Arkani-Hamed,
-Bai, He and Yan — does have an explicit closed-form canonical form, equal
-to the tree-level biadjoint \(\phi^3\) scattering amplitude; see
+particular physical meaning, and there is no single-formula shortcut
+analogous to the simplex or hypercube — but \(K_L\) is simple, which is
+exactly what Brown–Dupont's vertex-sum formula needs (F. Brown,
+C. Dupont, *Positive geometries and canonical forms via mixed Hodge
+theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202),
+Proposition 6.10): at each vertex \(v\), exactly \(d\) facets
+\(f_1,\dots,f_d\) meet (affine functions, \(f_i \geq 0\) on \(K_L\),
+\(f_i = 0\) exactly on the facet through \(v\)), and
+
+\[
+\Omega(K_L) = (-1)^{d(d+1)/2} \sum_{v} \frac{|\det A_v|}
+{f_1(y) \cdots f_d(y)}\; dy_1 \wedge \cdots \wedge dy_d,
+\]
+
+with \(A_v\) the \(d\times d\) matrix of the \(f_i\)'s linear
+coefficients — one term per vertex, no triangulation needed. Checked
+directly against the defining pole-structure property in
+[sagemath/vertex_sum_canonical_forms.sage](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/vertex_sum_canonical_forms.sage)
+for \(L=3,4,5\); see
+[associahedron_explorer.ipynb](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/associahedron_explorer.ipynb)
+for the term-by-term breakdown at every vertex, up to \(L=6\).
+
+A different, kinematics-based realization of the same combinatorial
+polytope — the *kinematic associahedron* of Arkani-Hamed, Bai, He and
+Yan — does have an explicit closed-form canonical form, equal to the
+tree-level biadjoint \(\phi^3\) scattering amplitude; see
 [Physics motivation](../theory/physics-motivation.md).
+
+**Volume conjecture.** The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals \(\pm\, d!\) times the volume of
+\(K_L\)'s own projective dual taken at that same centroid — for the
+pentagon (\(L=4\)), the centroid value is \(-5\) and
+\(2!\cdot\mathrm{Vol}(\text{dual}) = 2\cdot\tfrac{5}{2} = 5\), matching
+up to the same overall orientation sign the canonical form is only ever
+defined up to (see the note on [simplex.md](simplex.md#canonical-form)
+for why the reference point has to be the centroid specifically).
 
 ## Embeddings by dimension
 
@@ -144,5 +170,9 @@ general \(d\); it's generated the same way for any \(L\) by evaluating
 * N. Arkani-Hamed, Y. Bai, S. He, G. Yan, *Scattering Forms and the
   Positive Geometry of Kinematics, Color and the Worldsheet*,
   [arXiv:1711.09102](https://arxiv.org/abs/1711.09102).
+* F. Brown, C. Dupont, *Positive geometries and canonical forms via
+  mixed Hodge theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202) —
+  Proposition 6.10, the vertex-sum method behind the canonical form
+  above.
 * [OEIS A033282](https://oeis.org/A033282) — Kirkman–Cayley numbers.
 * [OEIS A001003](https://oeis.org/A001003) — little Schröder numbers.

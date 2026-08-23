@@ -84,6 +84,26 @@ coordinates dual to the vertices,
 
 manifestly with a simple pole on each of the \(n\) facets \(\lbrace y_i = 0\rbrace \).
 
+**Volume conjecture.** The canonical form is also related to the volume
+of the simplex's own **projective dual** — not the simplex's own volume
+— evaluated at a specific, canonically determined point rather than an
+arbitrary one. Translate \(S_n^{(0)}\) so its centroid sits at the
+origin, and re-express \(\Omega\) in that chart; then
+
+\[
+\phi_{\text{centroid}}(0) = \pm\, d!\cdot \mathrm{Vol}\big({S_n^{(0)}}^{\circ}_{\text{centroid}}\big),
+\]
+
+with the dual taken with respect to that same centroid (an arbitrary
+choice of reference point does *not* satisfy this — the centroid is
+load-bearing, checked directly rather than assumed). For \(d=3\):
+\(\phi_{\text{centroid}}(0) = 256\) and
+\(3!\cdot\mathrm{Vol}(\text{dual}) = 6 \cdot \tfrac{128}{3} = 256\),
+matching exactly — see
+[sagemath/simplex_explorer.ipynb](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/simplex_explorer.ipynb)
+for the derivation and the demonstration of why it has to be the
+centroid.
+
 ## Embeddings by dimension
 
 Vertices of \(S_n^{(0)}\) in the reduced affine chart the canonical form
@@ -126,4 +146,8 @@ above is stated in (\(y_1,\dots,y_d\) independent, \(y_{d+1} =
 
 * N. Arkani-Hamed, Y. Bai, T. Lam, *Positive Geometries and Canonical
   Forms*, [arXiv:1703.04541](https://arxiv.org/abs/1703.04541), §3.
+* F. Brown, C. Dupont, *Positive geometries and canonical forms via
+  mixed Hodge theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202) —
+  Proposition 6.10, the vertex-sum method used to compute and verify the
+  canonical form and the volume-conjecture identity above.
 * [OEIS A007318](https://oeis.org/A007318) — Pascal's triangle.

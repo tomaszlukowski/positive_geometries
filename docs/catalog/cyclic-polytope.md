@@ -75,20 +75,63 @@ purely a cosmetic feature of the integer-parameter moment curve, not of
 the polytope's combinatorics — any strictly increasing \(t_1 < \dots <
 t_n\) gives the same combinatorial type (see [Definition](#definition)).
 
+## Canonical form
+
+Neighborliness gives no shortcut to the canonical form itself, only to
+the face count — and cyclic polytopes are not simple for \(d \geq 4\)
+(more than \(d\) facets can meet at a single vertex), so the
+[simplex's](simplex.md) and [permutohedron's](permutohedron.md#canonical-form)
+one-term-per-vertex shortcut (Brown–Dupont's Proposition 6.10) doesn't
+apply in general — the fully general formula does (F. Brown, C. Dupont,
+*Positive geometries and canonical forms via mixed Hodge theory*,
+[arXiv:2501.03202](https://arxiv.org/abs/2501.03202), Proposition 6.7):
+at each vertex, sum over every **non-broken-circuit** subset of the
+facets through it (a combinatorial condition from matroid theory on the
+facets' own linear dependencies) whose associated flag survives an
+iterated boundary map. At \(d=3\), \(C(6,3)\) happens to still be simple
+(it's combinatorially the octahedron, matching the vertex/edge/facet
+counts in the [f-vector table](#f-vector) above); the non-simple
+structure this general method is actually needed for shows up from
+\(d=4\) on, where a single vertex of \(C(7,4)\) can lie on as many as 8
+facets, with 5–6 nbc terms surviving there. Checked directly against the
+defining pole-structure property in
+[sagemath/general_canonical_forms.sage](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/general_canonical_forms.sage)
+for \(d=2,3,4\); see
+[cyclic_polytope_explorer.ipynb](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cyclic_polytope_explorer.ipynb)
+for the term-by-term breakdown at every vertex.
+
+**Volume conjecture.** The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals \(\pm\, d!\) times the volume of
+\(C(n,d)\)'s own projective dual taken at that same centroid — for
+\(C(6,3)\), \(3!\cdot\mathrm{Vol}(\text{dual}) = 6\cdot\tfrac{147}{1000}
+= \tfrac{441}{500}\), matching the centroid value exactly (see the note
+on [simplex.md](simplex.md#canonical-form) for why the reference point
+has to be the centroid specifically).
+
+## Dual and triangulations (verified for d = 3)
+
+- **Dual**: f-vector \((1,8,12,6,1)\), combinatorially the
+  [hypercube](hypercube.md) — following from \(C(6,3)\) itself being
+  combinatorially the octahedron (see [Canonical form](#canonical-form)
+  above).
+- **Triangulations & secondary polytope**: **6** triangulations in
+  total, all regular — secondary polytope of dimension 2 with 6
+  vertices.
+
 ## Why it belongs here
 
 Cyclic polytopes are the extremal case against which every other family
 in this catalog can be measured: the
 [Upper Bound Theorem](https://en.wikipedia.org/wiki/Upper_bound_theorem)
 says no \(d\)-polytope with \(n\) vertices has a larger f-vector,
-entrywise, than \(C(n,d)\)'s. Concretely, their canonical forms are
-computed the same way as the [associahedron's](associahedron.md) and
-[permutohedron's](permutohedron.md) — by triangulating and summing
-[simplex forms](simplex.md#canonical-form) — since neighborliness gives
-no shortcut to the canonical form itself, only to the face count.
+entrywise, than \(C(n,d)\)'s.
 
 ## References
 
 * B. Grünbaum, *Convex Polytopes*, 2nd ed. (Ziegler, ed.), Ch. 4 and 8.
 * G. Ziegler, *Lectures on Polytopes*, Ch. 8 — Gale's evenness condition
   and the Upper Bound Theorem.
+* F. Brown, C. Dupont, *Positive geometries and canonical forms via
+  mixed Hodge theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202) —
+  Proposition 6.7, the general nbc-sum method behind the canonical form
+  above.

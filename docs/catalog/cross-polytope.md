@@ -74,6 +74,27 @@ one per sign pattern \(s \in \lbrace \pm1\rbrace ^n\), each spanned by the origi
 with each summand the simplex canonical form from the
 [simplex page](simplex.md).
 
+This coning triangulation gives \(2^n\) terms — one per sign pattern.
+It's not the only way to decompose \(\Omega(X_n)\): Brown–Dupont's
+general vertex-by-vertex formula (F. Brown, C. Dupont, *Positive
+geometries and canonical forms via mixed Hodge theory*,
+[arXiv:2501.03202](https://arxiv.org/abs/2501.03202), Proposition 6.7 —
+needed here rather than the simpler Proposition 6.10, since \(X_n\) is
+*not* simple: each vertex lies on \(2^{n-1}\) facets, not just \(n\))
+gives a *different* decomposition, summing several competing terms at
+each of the \(2n\) vertices instead of one term at each of the \(2^n\)
+cone points, yet reproduces the exact same \(\Omega(X_n)\) — an
+independent check of the formula above, computed and verified in
+[sagemath/cross_polytope_explorer.ipynb](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cross_polytope_explorer.ipynb),
+which also breaks the sum down term by term at every vertex.
+
+**Volume conjecture.** The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals \(\pm\, n!\) times the volume of
+\(X_n\)'s own projective dual taken at that same centroid — for \(n=3\),
+\(3!\cdot\mathrm{Vol}(\text{dual}) = 6\cdot 8 = 48\), matching the
+centroid value exactly (see the note on [simplex.md](simplex.md#canonical-form)
+for why the reference point has to be the centroid specifically).
+
 ## Embeddings by dimension
 
 Vertices of \(X_d\) — \(\pm e_i\) for each of the \(d\) coordinate axes:
@@ -103,8 +124,28 @@ Vertices of \(X_d\) — \(\pm e_i\) for each of the \(d\) coordinate axes:
     \((0,0,0,1,0,0)\), \((0,0,0,-1,0,0)\), \((0,0,0,0,1,0)\),
     \((0,0,0,0,-1,0)\), \((0,0,0,0,0,1)\), \((0,0,0,0,0,-1)\)
 
+## Dual and triangulations (verified for d = 3)
+
+For the octahedron \(X_3\), computed in SageMath — see
+[`sagemath/`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/README.md)
+for the current verification scripts and notebooks:
+
+- **Dual**: \((\pm2,0,0)\), \((0,\pm2,0)\), \((0,0,\pm2)\) — f-vector
+  \((1,8,12,6,1)\), combinatorially the [hypercube](hypercube.md),
+  confirming the duality claimed above.
+- **Triangulations & secondary polytope**: **3** triangulations in
+  total, all regular — secondary polytope of dimension 2 with 3
+  vertices. Each corresponds to picking one of the octahedron's 3 long
+  diagonals (a pair of opposite vertices \(e_i, -e_i\)) and fanning the
+  other 4 vertices into 4 tetrahedra around it — confirmed directly from
+  each triangulation's GKZ vector, not assumed.
+
 ## References
 
 * N. Arkani-Hamed, Y. Bai, T. Lam, *Positive Geometries and Canonical
   Forms*, [arXiv:1703.04541](https://arxiv.org/abs/1703.04541), §3.
+* F. Brown, C. Dupont, *Positive geometries and canonical forms via
+  mixed Hodge theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202) —
+  Proposition 6.7, the general vertex-by-vertex method cross-checked
+  against the coning formula above.
 * [OEIS A038207](https://oeis.org/A038207) — the dual hypercube triangle.

@@ -51,6 +51,53 @@ formula:
 | 5 | 6 | 15 | 60 | 80 | 45 | 12 | — |
 | 6 | 7 | 21 | 105 | 175 | 140 | 63 | 14 |
 
+## Canonical form
+
+\(\Delta(k,n)\) is simplicial but, for \(1<k<n-1\), **not simple**: at a
+vertex \(e_S\), the facets through it are the \(x_i \geq 0\) and
+\(x_i \leq 1\) inequalities for \(i \notin S\) and \(i \in S\)
+respectively that happen to touch it, and there are more than \(d=n-1\)
+of them in general (for \(\Delta(2,4)\), every vertex lies on 4 facets,
+not 3 — the same non-simple structure as the
+[octahedron](cross-polytope.md#canonical-form), which \(\Delta(2,4)\) is
+combinatorially identical to). So the [simplex's](simplex.md) and
+[permutohedron's](permutohedron.md#canonical-form) one-term-per-vertex
+shortcut (Proposition 6.10) doesn't apply here; the fully general
+formula does (F. Brown, C. Dupont, *Positive geometries and canonical
+forms via mixed Hodge theory*,
+[arXiv:2501.03202](https://arxiv.org/abs/2501.03202), Proposition 6.7):
+at each vertex, sum over every **non-broken-circuit** subset of the
+facets through it (a combinatorial condition from matroid theory on the
+facets' own linear dependencies) whose associated flag survives an
+iterated boundary map — collapsing to exactly one nbc set per vertex
+automatically whenever the vertex happens to be simple, but potentially
+several at a non-simple one, as here. Checked directly against the
+defining pole-structure property in
+[sagemath/general_canonical_forms.sage](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/general_canonical_forms.sage)
+for \(\Delta(2,n)\), \(n=4,\dots,9\); see
+[hypersimplex_explorer.ipynb](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/hypersimplex_explorer.ipynb)
+for the term-by-term breakdown at every vertex (2 competing nbc terms
+per vertex throughout \(\Delta(2,4)\), for instance).
+
+**Volume conjecture.** The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals \(\pm\, d!\) times the volume of
+\(\Delta(k,n)\)'s own projective dual taken at that same centroid — for
+\(\Delta(2,4)\), \(3!\cdot\mathrm{Vol}(\text{dual}) = 6\cdot 16 = 96\),
+matching the centroid value exactly (see the note on
+[simplex.md](simplex.md#canonical-form) for why the reference point has
+to be the centroid specifically).
+
+## Dual and triangulations (verified for d = 3)
+
+- **Dual**: f-vector \((1,8,12,6,1)\), combinatorially the
+  [hypercube](hypercube.md) — as expected, since \(\Delta(2,4)\) is
+  itself combinatorially the octahedron, and the two families are
+  mutual duals.
+- **Triangulations & secondary polytope**: **3** triangulations in
+  total, all regular — secondary polytope of dimension 2 with 3
+  vertices (the same numbers as the [octahedron](cross-polytope.md#dual-and-triangulations-verified-for-d-3),
+  for the same reason).
+
 ## Embeddings by dimension
 
 \(\Delta(k,n)\) is a two-parameter family; fixing \(k=2\) (the smallest
@@ -88,3 +135,7 @@ ones instead of 2 — and are what the [f-vector](#f-vector) formula
 * A. Postnikov, D. Speyer, L. Williams, *Matching Polytopes,
   Toric Geometry, and the Non-negative Part of the Grassmannian*,
   [arXiv:0706.2501](https://arxiv.org/abs/0706.2501).
+* F. Brown, C. Dupont, *Positive geometries and canonical forms via
+  mixed Hodge theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202) —
+  Proposition 6.7, the general nbc-sum method behind the canonical form
+  above.

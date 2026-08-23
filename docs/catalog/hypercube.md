@@ -109,19 +109,31 @@ for the current verification scripts and notebooks:
   \((1,6,12,8,1)\), combinatorially the
   [cross-polytope](cross-polytope.md), confirming the duality claimed
   above.
-- **Canonical form**: re-derived independently by triangulating the cube
-  and summing simplex canonical forms
-  ([triangulation-additivity](../theory/canonical-forms.md#triangulation-and-additivity));
-  matches the closed form above up to overall orientation sign, and
-  a second, unrelated triangulation gives the *exact* same result
-  (triangulation-independence, checked directly rather than assumed).
-- **Triangulations & secondary polytope**: TOPCOM finds **74**
-  triangulations of the cube in total. Their secondary polytope has
-  dimension 4 and **74 vertices** — so every one of those 74
+- **Canonical form**: re-derived independently as a sum over vertices
+  (F. Brown, C. Dupont, *Positive geometries and canonical forms via
+  mixed Hodge theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202),
+  Proposition 6.10 — valid since the cube is simple: one bracket term per
+  vertex, no triangulation needed); matches the closed form above up to
+  overall orientation sign.
+- **Volume conjecture**: the canonical form, evaluated at the centroid
+  (in a chart re-centered there), equals \(\pm\, n!\) times the volume
+  of the cube's own projective dual taken at that same centroid —
+  \(3!\cdot\mathrm{Vol}(\text{dual}) = 6\cdot\tfrac{32}{3} = 64\), matching
+  the centroid value exactly. See the note on
+  [simplex.md](simplex.md#canonical-form) for why the reference point has
+  to be the centroid specifically.
+- **Triangulations & secondary polytope**: **74** triangulations of the
+  cube in total (re-confirmed via SageMath's internal triangulation
+  engine, not just the original TOPCOM pass). Their secondary polytope
+  has dimension 4 and **74 vertices** — so every one of those 74
   triangulations is regular.
 
 ## References
 
 * N. Arkani-Hamed, Y. Bai, T. Lam, *Positive Geometries and Canonical
   Forms*, [arXiv:1703.04541](https://arxiv.org/abs/1703.04541), §3.
+* F. Brown, C. Dupont, *Positive geometries and canonical forms via
+  mixed Hodge theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202) —
+  Proposition 6.10, the vertex-sum method used in the re-derivation
+  above.
 * [OEIS A038207](https://oeis.org/A038207).
