@@ -4,7 +4,6 @@ description: A compendium of positive geometries — definitions, canonical form
 ---
 
 <div class="pg-hero" markdown>
-<div class="pg-hero__text" markdown>
 
 # Positive Geometries
 
@@ -17,13 +16,6 @@ generating functions, and canonical forms.
 [Start with the definition](theory/positive-geometries.md){ .md-button }
 [Browse the catalog](catalog/simplex.md){ .md-button .md-button--secondary }
 
-</div>
-<div class="pg-hero__viewer" markdown>
-<div class="polytope-viewer" data-shape="associahedron">
-<span class="polytope-viewer__label">Associahedron</span>
-<span class="polytope-viewer__hint">drag · scroll</span>
-</div>
-</div>
 </div>
 
 ## What is a positive geometry?
