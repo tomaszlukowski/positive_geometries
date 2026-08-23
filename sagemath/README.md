@@ -17,7 +17,8 @@ same kinds of claims.
 SageMath 10.9 + TOPCOM environment set up on this machine earlier in
 this project (unlike `../mathematica/`, which is ready-to-run but
 untested since there's no Mathematica installation here). Current
-result: **42/42 checks pass**.
+results: `run_all.sage` **42/42**, `vertex_sum_canonical_forms.sage`
+**14/14**, `general_canonical_forms.sage` **26/26**.
 
 ## Contents
 
@@ -48,6 +49,24 @@ result: **42/42 checks pass**.
   result is checked against the *defining* property of a canonical
   form — simple poles on exactly the polytope's own facets, nothing
   else — which is how a real bug in `common.sage` got caught; see below.
+- **`general_canonical_forms.sage`** — the fully general version, for
+  **any** convex polytope, simple or not, via Proposition 6.7 of the
+  same paper: a sum over "non-broken-circuit" (nbc) sets of the facet
+  hyperplane arrangement, with a coefficient given by an iterated
+  boundary map (nonzero exactly when a set of facets forms a genuine
+  flag — facet ⊃ ridge ⊃ ... ⊃ vertex — in the polytope's face lattice).
+  Circuits and nbc sets are computed via Sage's own `Matroid` class
+  (treating each facet as a vector in the affine functionals' coefficient
+  space) rather than hand-rolled combinatorics. Covers the cross-polytope,
+  hypersimplex, and cyclic polytope — the non-simple families this
+  catalog's Prop. 6.10 script above can't reach — plus the simple
+  families too (it reduces to exactly the same answer there, checked
+  directly). The script **reproduces the paper's own square-pyramid
+  example (Section 6.7) term by term, exactly** — not just up to overall
+  sign — which is the strongest evidence of correctness in this whole
+  project: 26/26 checks pass, including that exact match, pole-structure
+  verification on every non-simple family at every tested dimension, and
+  agreement with `vertex_sum_canonical_forms.sage` wherever both apply.
 
 ## ⚠ A real bug found in `common.sage`, while building the script above
 
