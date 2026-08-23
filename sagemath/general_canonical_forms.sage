@@ -1,17 +1,24 @@
 r"""
 general_canonical_forms.sage
 
-Computes the canonical form of ANY full-dimensional convex polytope --
-simple or not -- as a sum over "non-broken-circuit" (nbc) contributions,
-using
+Derivation, worked-example reproduction, and self-test suite for the
+canonical-form method every script and notebook in this folder actually
+uses: general_canonical_form_density, implemented in common.sage (see
+its docstring for a short summary). This file adds no new functions of
+its own -- it's documentation plus tests. Run standalone with
+'sage general_canonical_forms.sage'.
+
+The method computes the canonical form of ANY full-dimensional convex
+polytope -- simple or not -- as a sum over "non-broken-circuit" (nbc)
+contributions, using
 
     F. Brown, C. Dupont, "Positive geometries and canonical forms via
     mixed Hodge theory", arXiv:2501.03202, Section 6 (Proposition 6.7,
     specialized to a bounded region as in Section 6.7 "Convex polyhedra").
 
 This generalizes vertex_sum_canonical_forms.sage (Proposition 6.10),
-which only covers SIMPLE polytopes. Run standalone with
-'sage general_canonical_forms.sage'.
+which only covers SIMPLE polytopes and is kept separately as an
+independent cross-check.
 
 -----------------------------------------------------------------------
 The method
@@ -76,109 +83,15 @@ exists. Since sign(det(A_I)) * det(A_I) = |det(A_I)|, this collapses to
                  |det(A_I)(y)| / prod_{i in I} f_i(y),
 
 exactly generalizing Proposition 6.10's formula (which is the special
-case where every vertex contributes exactly one term).
+case where every vertex contributes exactly one term). See common.sage
+for the implementation (general_canonical_form_density, and its helpers
+facet_data, vertex_local_indices, local_matroid, nbc_bases, flag_sign).
 """
 
 try:
     check_fvector
 except NameError:
     load("common.sage")
-
-
-def facet_data(P, order=None):
-    r"""List of (b_i, a_i, Hrepresentation_object) for each facet of P, in
-    a fixed order (Sage's own order by default, or 'order': an explicit
-    list of Hrepresentation objects, e.g. to match a paper's labeling)."""
-    hreps = order if order is not None else list(P.Hrepresentation())
-    return [(h.b(), vector(QQ, h.A()), h) for h in hreps]
-
-
-def vertex_local_indices(v, fdata):
-    r"""Positions (into fdata) of the facets containing vertex v."""
-    incident = set(v.incident())
-    return [i for i, (b, a, h) in enumerate(fdata) if h in incident]
-
-
-def local_matroid(fdata, S_v):
-    r"""Linear matroid on the homogeneous vectors (b_i,a_i), i in S_v."""
-    cols = [vector(QQ, [fdata[i][0]] + list(fdata[i][1])) for i in S_v]
-    return Matroid(matrix=matrix(QQ, cols).transpose())
-
-
-def nbc_bases(fdata, S_v):
-    r"""n-element subsets of S_v (as sorted tuples of GLOBAL indices) that
-    are bases of the local matroid and contain no broken circuit."""
-    mat = local_matroid(fdata, S_v)
-    local_to_global = dict(enumerate(S_v))
-    broken = [frozenset(sorted((local_to_global[i] for i in c),
-                                key=lambda g: g)[1:])
-              for c in mat.circuits()]
-    result = []
-    for B in mat.bases():
-        B_global = frozenset(local_to_global[i] for i in B)
-        if not any(bc <= B_global for bc in broken):
-            result.append(tuple(sorted(B_global)))
-    return result
-
-
-def flag_sign(P, I_sorted, fdata):
-    r"""I_sorted: increasing tuple of n global facet indices. Processes
-    them largest-to-smallest, requiring each step to drop the dimension
-    by exactly 1 (a genuine facet of the previous piece). Returns
-    sign(det(A_I)) if the flag survives all the way to a point, else 0."""
-    Q = P
-    for idx in reversed(I_sorted):
-        b, a, h = fdata[idx]
-        newQ = Q.intersection(Polyhedron(eqns=[[b] + list(a)]))
-        if newQ.dimension() != Q.dimension() - 1:
-            return 0
-        Q = newQ
-    if Q.dimension() != 0:
-        return 0
-    A = matrix(QQ, [fdata[i][1] for i in I_sorted])
-    d = A.det()
-    return 1 if d > 0 else (-1 if d < 0 else 0)
-
-
-def general_canonical_form_density(P, y_vars, order=None):
-    r"""Proposition 6.7: canonical-form density of ANY full-dimensional
-    convex polytope P (simple or not), as a sum over nbc sets with
-    nonzero iterated-boundary coefficient."""
-    n = P.dimension()
-    if len(y_vars) != n:
-        raise ValueError(f"P has dimension {n} but {len(y_vars)} y-variables were given")
-    fdata = facet_data(P, order=order)
-    total = SR(0)
-    for v in P.vertex_generator():
-        S_v = vertex_local_indices(v, fdata)
-        for I in nbc_bases(fdata, S_v):
-            if flag_sign(P, I, fdata) == 0:
-                continue
-            A = matrix(QQ, [fdata[i][1] for i in I])
-            det_abs = abs(A.det())
-            f_list = [fdata[i][0] + sum(QQ(fdata[i][1][j]) * y_vars[j] for j in range(n))
-                      for i in I]
-            total += det_abs / prod(f_list)
-    sign_const = (-1) ** (n * (n + 1) // 2)
-    return (sign_const * total).simplify_full()
-
-
-def reduce_codim1(pts):
-    r"""Drop the last ambient coordinate -- see vertex_sum_canonical_forms.sage."""
-    N = len(pts[0])
-    return [tuple(p[:N - 1]) for p in pts]
-
-
-def verify_pole_structure(label, phi, P, y_vars):
-    r"""The defining property of a canonical form: simple poles exactly
-    on P's own facets, nothing else."""
-    R = PolynomialRing(QQ, [str(v) for v in y_vars])
-    _, den = phi.numerator_denominator()
-    factors = list(R(den).factor())
-    ok = (len(factors) == P.n_facets()) and all(m == 1 for _, m in factors)
-    print(f"[{'PASS' if ok else 'FAIL'}] {label}: {len(factors)} pole factors "
-          f"(expected {P.n_facets()} facets), all simple: {all(m == 1 for _, m in factors)}")
-    return ok
 
 
 if True:

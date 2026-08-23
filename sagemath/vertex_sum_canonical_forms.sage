@@ -7,10 +7,13 @@ collection as a sum over its vertices, using the closed formula given in
     F. Brown, C. Dupont, "Positive geometries and canonical forms via
     mixed Hodge theory", arXiv:2501.03202, Section 6.6, Proposition 6.10.
 
-This is a genuinely different method from the triangulation-additivity
-approach used elsewhere in this project (common.sage's
-canonical_form_density): no triangulation, no TOPCOM -- just the
-polytope's own facet inequalities, one small determinant per vertex. Run
+This is a genuinely different method from the general nbc-sum approach
+in common.sage (general_canonical_form_density, Proposition 6.7): no
+matroid combinatorics, no flag/boundary-map bookkeeping -- just the
+polytope's own facet inequalities, one small determinant per vertex,
+valid only for SIMPLE polytopes. Kept here as an independent cross-check
+of the general method (see general_canonical_forms.sage, which loads
+this file and compares the two on the simplex and hypercube). Run
 standalone with 'sage vertex_sum_canonical_forms.sage'.
 
 -----------------------------------------------------------------------
@@ -97,33 +100,9 @@ def vertex_canonical_form_density(P, y_vars):
         f_list = [h.b() + sum(QQ(h.A()[j]) * y_vars[j] for j in range(n)) for h in incident]
         total += det_abs / prod(f_list)
     sign = (-1) ** (n * (n + 1) // 2)
-    return (sign * total).simplify_full()
-
-
-def reduce_codim1(pts):
-    r"""If pts affinely span a hyperplane of R^N (dimension N-1, e.g. the
-    permutohedron's and associahedron's natural embeddings, which live in
-    a sum=const hyperplane), drop the last ambient coordinate to get an
-    equivalent full-dimensional point set in R^{N-1}. Valid whenever the
-    hyperplane's defining equation has a nonzero coefficient on the
-    dropped coordinate -- true for every family in this collection."""
-    N = len(pts[0])
-    return [tuple(p[:N - 1]) for p in pts]
-
-
-def verify_pole_structure(label, phi, P, y_vars):
-    r"""Check the defining property of a canonical form directly: simple
-    poles exactly on P's own facets, nothing else."""
-    R = PolynomialRing(QQ, [str(v) for v in y_vars])
-    _, den = phi.numerator_denominator()
-    factors = list(R(den).factor())
-    n_factors = len(factors)
-    all_simple = all(m == 1 for _, m in factors)
-    expected = P.n_facets()
-    ok = (n_factors == expected) and all_simple
-    print(f"[{'PASS' if ok else 'FAIL'}] {label}: {n_factors} pole factors "
-          f"(expected {expected} facets), all simple: {all_simple}")
-    return ok
+    # Factored denominator for display -- see the same note on
+    # general_canonical_form_density in common.sage.
+    return (sign * total).simplify_full().factor()
 
 
 if __name__ == "__main__" or True:
@@ -189,7 +168,6 @@ if __name__ == "__main__" or True:
         print(f"  -> {e}")
     print("Proposition 6.10 doesn't directly apply to these; the paper's fully")
     print("general Proposition 6.7 (a sum over 'nbc' sets of a hyperplane")
-    print("arrangement, with iterated-boundary-map coefficients) does, but is")
-    print("not implemented here. common.sage's triangulation-based")
-    print("canonical_form_density covers these families instead -- see this")
-    print("folder's README for an important caveat about that method.")
+    print("arrangement, with iterated-boundary-map coefficients) does, and IS")
+    print("implemented for all of them -- see common.sage's")
+    print("general_canonical_form_density and general_canonical_forms.sage.")

@@ -19,22 +19,22 @@ mkdocs serve
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds
 the site with `mkdocs build --strict` and publishes it to the `gh-pages`
-branch via `mkdocs gh-deploy`.
+branch via `mkdocs gh-deploy`. That CI build is also the actual gate for
+"did this change break the site" — this project has no standing local
+Python/mkdocs install, so changes are typically checked by pushing and
+watching the Action, not `mkdocs build --strict` run locally.
 
 ## Verification (not part of the site)
 
-Three independent folders check the site's claims — f-vectors, vertex
-embeddings, volumes, duals, and canonical forms — computationally, none
-built or served by MkDocs.
+[`sagemath/`](sagemath/) independently checks the site's claims —
+f-vectors, vertex embeddings, volumes, duals, canonical forms,
+triangulations, secondary polytopes — computationally, via SageMath +
+TOPCOM in a WSL2 environment. Not built or served by MkDocs. See its own
+README for what's in there and exactly how to run it (including a full
+from-scratch reinstall recipe).
 
-- [`sagemath/`](sagemath/) — one script per catalog family, all seven,
-  covering the n=1,2,3 (or family-appropriate) instances; **actually run**
-  in this project's WSL2 + SageMath + TOPCOM environment (42/42 checks
-  pass) — see its README for exactly how to run these locally.
-- [`verification/`](verification/) — an earlier, smaller pass over two
-  families (simplex, hypercube), also with regular-triangulation
-  enumeration and secondary polytopes via TOPCOM, which Mathematica has
-  no equivalent for.
-- [`mathematica/`](mathematica/) — a Wolfram Language package and a
-  ready-to-run (but, absent a Mathematica install here, not yet
-  actually run) verification notebook, as a second, independent tool.
+Two earlier, now-removed folders (`mathematica/`, a Wolfram Language
+package never actually run since no Mathematica install exists on this
+machine; `verification/`, a smaller two-family pass superseded by
+`sagemath/`) covered the same ground with less coverage and are gone —
+see git history if either is ever needed for reference.

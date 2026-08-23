@@ -100,9 +100,9 @@ For \(d \geq 5\) the pattern is identical — all \(2^d\) length-\(d\)
 
 ## Dual and triangulations (verified for d = 3)
 
-For \(K_3^{(0)}\), computed independently in SageMath + TOPCOM — full
-computation at
-[verification/results/hypercube.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/hypercube.md):
+For \(K_3^{(0)}\), computed independently in SageMath + TOPCOM — see
+[`sagemath/`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/README.md)
+for the current verification scripts and notebooks:
 
 - **Dual**: the polar of the centered cube (vertices \(\lbrace \pm\tfrac12\rbrace ^3\))
   has vertices \((\pm2,0,0)\), \((0,\pm2,0)\), \((0,0,\pm2)\) — f-vector

@@ -102,11 +102,11 @@ above is stated in (\(y_1,\dots,y_d\) independent, \(y_{d+1} =
     \((0,0,1)\), \((0,0,0)\)
 
     Volume \(1/6\). The canonical form above was independently
-    re-derived from this embedding in SageMath (summing the general
-    bracket formula, here trivial since the simplex is its own only
+    re-derived from this embedding in SageMath (the general nbc-sum
+    formula, here trivial since the simplex is its own only
     triangulation) and matches, up to the overall orientation sign
     built into the definition — see
-    [verification/results/simplex.md](https://github.com/tomaszlukowski/positive_geometries/blob/main/verification/results/simplex.md)
+    [sagemath/simplex_explorer.ipynb](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/simplex_explorer.ipynb)
     for the full computation.
 
 === "d = 4"
