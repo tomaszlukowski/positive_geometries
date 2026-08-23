@@ -63,10 +63,6 @@
   align-items: center;
   gap: 2rem;
   margin: 1rem 0 3rem;
-  padding: 2.5rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(135deg, var(--pg-ink) 0%, var(--pg-ink-light) 100%);
-  color: #f4f1e8;
 }
 
 .pg-hero__text {
@@ -74,36 +70,12 @@
 }
 
 .pg-hero__text h1 {
-  color: #ffffff;
   margin-top: 0;
-  font-size: 2rem;
-}
-
-.pg-hero__text p {
-  color: #cfd2ea;
-  font-size: 0.9rem;
 }
 
 .pg-hero__viewer {
   flex: 1 1 18rem;
   min-width: 16rem;
-}
-
-.pg-hero .md-button {
-  background-color: var(--pg-gold);
-  border-color: var(--pg-gold);
-  color: #1b1f3b;
-}
-
-.pg-hero .md-button:hover {
-  background-color: var(--pg-gold-light);
-  border-color: var(--pg-gold-light);
-}
-
-.pg-hero .md-button--secondary {
-  background-color: transparent;
-  color: #f4f1e8;
-  border-color: #f4f1e8;
 }
 
 /* ---------------------------------------------------------------------
