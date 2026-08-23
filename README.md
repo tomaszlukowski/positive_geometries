@@ -23,13 +23,18 @@ branch via `mkdocs gh-deploy`.
 
 ## Verification (not part of the site)
 
-Two independent folders check the site's claims — f-vectors, vertex
-embeddings, volumes, duals, and canonical forms — computationally,
-using two different tools so neither shares the other's bugs. Neither
-is built or served by MkDocs.
+Three independent folders check the site's claims — f-vectors, vertex
+embeddings, volumes, duals, and canonical forms — computationally, none
+built or served by MkDocs.
 
-- [`verification/`](verification/) — SageMath + TOPCOM (also does
-  regular-triangulation enumeration and secondary polytopes, which
-  Mathematica has no equivalent for).
+- [`sagemath/`](sagemath/) — one script per catalog family, all seven,
+  covering the n=1,2,3 (or family-appropriate) instances; **actually run**
+  in this project's WSL2 + SageMath + TOPCOM environment (42/42 checks
+  pass) — see its README for exactly how to run these locally.
+- [`verification/`](verification/) — an earlier, smaller pass over two
+  families (simplex, hypercube), also with regular-triangulation
+  enumeration and secondary polytopes via TOPCOM, which Mathematica has
+  no equivalent for.
 - [`mathematica/`](mathematica/) — a Wolfram Language package and a
-  ready-to-run verification notebook.
+  ready-to-run (but, absent a Mathematica install here, not yet
+  actually run) verification notebook, as a second, independent tool.
