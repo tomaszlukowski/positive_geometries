@@ -14,6 +14,7 @@ load("associahedron.sage")
 load("hypersimplex.sage")
 load("cyclic_polytope.sage")
 load("cyclohedron.sage")
+load("stellohedron.sage")
 
 print()
 print("############################################")

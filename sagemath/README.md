@@ -8,8 +8,8 @@ This folder is **not** part of the website (it's outside `docs/`, so
 
 **Every check in this folder has actually been run**, in the WSL2 +
 SageMath 10.9 + TOPCOM environment set up on this machine. Current
-results: `run_all.sage` **50/50**, `vertex_sum_canonical_forms.sage`
-**14/14**, `general_canonical_forms.sage` **26/26**, and all eight
+results: `run_all.sage` **55/55**, `vertex_sum_canonical_forms.sage`
+**14/14**, `general_canonical_forms.sage` **26/26**, and all nine
 `*_explorer.ipynb` notebooks executed headlessly end-to-end with zero
 errors (see the table under **Contents** below for exactly how far each
 one goes, and why).
@@ -22,7 +22,7 @@ been removed; see git history if either is ever needed for reference.
 
 - **`common.sage`** — the shared foundation everything else in this
   folder builds on:
-  - vertex generators for all eight catalog families, including
+  - vertex generators for all nine catalog families, including
     `graph_associahedron_vertices` (Devadoss's construction from any
     connected graph, arXiv:math/0612530) and its `cyclohedron_vertices`
     / `stellohedron_vertices` specializations;
@@ -89,8 +89,9 @@ been removed; see git history if either is ever needed for reference.
     for a final summary.
 - **`simplex.sage`, `hypercube.sage`, `cross_polytope.sage`,
   `permutohedron.sage`, `associahedron.sage`, `hypersimplex.sage`,
-  `cyclic_polytope.sage`, `cyclohedron.sage`** — one script per family,
-  each covering that family's n=1,2,3 instances (or the
+  `cyclic_polytope.sage`, `cyclohedron.sage`, `stellohedron.sage`** —
+  one script per family, each covering that family's n=1,2,3 instances
+  (or the
   family-appropriate equivalent — L for the associahedron, n=d+3 for
   cyclic polytopes, the k=2 slice for the hypersimplex). Each is
   runnable on its own (`sage simplex.sage`) — it auto-loads
@@ -114,7 +115,7 @@ been removed; see git history if either is ever needed for reference.
   `general_canonical_forms.sage` to confirm the two methods agree
   exactly on the families where both apply.
 - **`*_explorer.ipynb`** — one Jupyter notebook per catalog family (all
-  eight now built), each walking through: vertices, canonical form (with
+  nine now built), each walking through: vertices, canonical form (with
   pole-structure check), projective dual, the **volume conjecture**
   (canonical form vs. the volume of the projective dual, taken at the
   centroid — see `simplex_explorer.ipynb`'s n=1 section for why it has
@@ -135,6 +136,7 @@ been removed; see git history if either is ever needed for reference.
   | permutohedron | order = 2–4 / d = 1–3 (order 5 exceeded 90s) | order = 2–3 only (order 4 exceeded 45s) |
   | associahedron | L = 3–6 / d = 1–4 (L=7 exceeded 45s) | L = 3–4 only (L=5 exceeded 45s) |
   | cyclohedron | n = 2–5 / d = 1–4 (n=6 exceeded 60s) | n = 2–3 only (n=4 exceeded 90s) |
+  | stellohedron | n = 1–4 (n=5 exceeded 60s) | n = 1–2 only (n=3 exceeded 90s) |
   | hypersimplex | n = 4–9 / d = 3–8 (n=8,9 skip the volume conjecture specifically — see below) | n = 4–5 only (n=6 exceeded 45s) |
   | cyclic polytope | d = 2–4 only (d=5 exceeded 60s) | d = 2–4 (all fine) |
 

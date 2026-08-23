@@ -95,9 +95,11 @@ nav:
       - catalog/associahedron.md
       - catalog/cyclohedron.md
       - catalog/permutohedron.md
+      - catalog/stellohedron.md
       - catalog/hypersimplex.md
       - catalog/cyclic-polytope.md
       - catalog/generalized-permutohedra.md
+      - catalog/graph-associahedra.md
   - Data: data/f-vector-tables.md
   - Notebooks: notebooks.md
   - References: references.md
