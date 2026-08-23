@@ -122,6 +122,100 @@ def reduce_codim1(pts):
     return [tuple(p[:N - 1]) for p in pts]
 
 # ---------------------------------------------------------------------
+# Graph associahedra (Devadoss, "A realization of graph-associahedra",
+# arXiv:math/0612530) -- a single construction, from any finite connected
+# graph G, that specializes to several families at once: the complete
+# graph gives the permutohedron, the path gives an (independent, not
+# Loday's) realization of the associahedron, the cycle gives the
+# cyclohedron, and the star gives the stellohedron. All graph
+# associahedra are simple polytopes.
+#
+# A "tube" is a proper, nonempty, connected subset of G's nodes. Two
+# tubes are compatible if they're nested, or disjoint with a
+# disconnected (non-tube) union. A "tubing" is a set of pairwise
+# compatible tubes; a maximal tubing of a connected n-node graph always
+# has exactly n-1 tubes, and these are in bijection with the polytope's
+# vertices. Given a maximal tubing U, Devadoss's Theorem 1 (Sec. 2.2,
+# proved Sec. 4.2) pins down a point in R^n via one linear equation per
+# tube in U (sum of coordinates over the tube = 3^(|tube|-2), or =0 for
+# a singleton tube) plus one ambient equation (sum over all n
+# coordinates = 3^(n-2)) -- exactly n equations in n unknowns, solved
+# here directly as a linear system rather than via the paper's
+# recursive-by-hand procedure (simpler to get right, and just as easy to
+# verify). Checked against the paper's own worked examples (the n=3
+# permutohedron and n=3 associahedron, matching every listed vertex
+# exactly) and against the site's own already-published associahedron
+# f-vector (path graph on 4 nodes reproduces the L=5 associahedron's
+# f-vector (1,14,21,9,1) exactly) before use.
+
+def _graph_tubes(G):
+    """Every tube of G: a proper, nonempty, connected subset of nodes."""
+    nodes = list(G.vertices())
+    n = len(nodes)
+    tubes = []
+    for k in range(1, n):
+        for S in itertools.combinations(nodes, k):
+            if G.subgraph(S).is_connected():
+                tubes.append(frozenset(S))
+    return tubes
+
+def _tubes_compatible(G, u1, u2):
+    if u1 <= u2 or u2 <= u1:
+        return True
+    if u1 & u2:
+        return False
+    return not G.subgraph(u1 | u2).is_connected()
+
+def maximal_tubings(G):
+    """Every maximal tubing of a connected graph G, as a list of
+    frozensets of tubes (each a frozenset of nodes). Found via Sage's
+    own maximum-clique search on the "compatibility graph" whose
+    vertices are G's tubes and whose edges join compatible pairs --
+    maximal tubings are exactly its maximum cliques."""
+    tubes = _graph_tubes(G)
+    H = Graph()
+    H.add_vertices(range(len(tubes)))
+    for i in range(len(tubes)):
+        for j in range(i + 1, len(tubes)):
+            if _tubes_compatible(G, tubes[i], tubes[j]):
+                H.add_edge(i, j)
+    return [frozenset(tubes[i] for i in c) for c in H.cliques_maximum()]
+
+def graph_associahedron_vertex(G, tubing):
+    """The single vertex of the graph-associahedron of G corresponding
+    to one maximal tubing (Devadoss Theorem 1 / Section 4.2)."""
+    nodes = list(G.vertices())
+    n = len(nodes)
+    idx = {v: i for i, v in enumerate(nodes)}
+    rows, rhs = [], []
+    for tube in tubing:
+        row = [0] * n
+        for v in tube:
+            row[idx[v]] = 1
+        rows.append(row)
+        rhs.append(3 ** (len(tube) - 2) if len(tube) >= 2 else 0)
+    rows.append([1] * n)
+    rhs.append(3 ** (n - 2))
+    A = matrix(QQ, rows)
+    b = vector(QQ, rhs)
+    return tuple(A.solve_right(b))
+
+def graph_associahedron_vertices(G):
+    """All vertices of the graph-associahedron of a connected graph G."""
+    return [graph_associahedron_vertex(G, U) for U in maximal_tubings(G)]
+
+def cyclohedron_vertices(n):
+    """Vertices of the (n-1)-dimensional cyclohedron, as the graph-
+    associahedron of the n-node cycle graph -- same size convention as
+    permutohedron_vertices(n) (order n, dimension n-1)."""
+    return graph_associahedron_vertices(graphs.CycleGraph(n))
+
+def stellohedron_vertices(n):
+    """Vertices of the n-dimensional stellohedron, as the graph-
+    associahedron of the star graph on n+1 nodes (1 center + n leaves)."""
+    return graph_associahedron_vertices(graphs.StarGraph(n))
+
+# ---------------------------------------------------------------------
 # Canonical forms -- Brown-Dupont Proposition 6.7 (general nbc-sum
 # method; see the module docstring and general_canonical_forms.sage
 # for the full derivation)

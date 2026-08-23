@@ -64,13 +64,14 @@ not estimated:
 | [Cross-polytope](catalog/cross-polytope.md) | [`cross_polytope_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cross_polytope_explorer.ipynb) | \(d=1\)–\(4\) | \(d=1\)–\(4\) (all feasible) |
 | [Permutohedron](catalog/permutohedron.md) | [`permutohedron_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/permutohedron_explorer.ipynb) | order \(2\)–\(4\) | order \(2\)–\(3\) only |
 | [Associahedron](catalog/associahedron.md) | [`associahedron_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/associahedron_explorer.ipynb) | \(L=3\)–\(6\) | \(L=3\)–\(4\) only |
+| [Cyclohedron](catalog/cyclohedron.md) | [`cyclohedron_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cyclohedron_explorer.ipynb) | \(n=2\)–\(5\) | \(n=2\)–\(3\) only |
 | [Hypersimplex](catalog/hypersimplex.md) | [`hypersimplex_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/hypersimplex_explorer.ipynb) | \(n=4\)–\(9\) (volume conjecture only for \(n=4\)–\(7\) — it needs a second, costlier computation) | \(n=4\)–\(5\) only |
 | [Cyclic polytope](catalog/cyclic-polytope.md) | [`cyclic_polytope_explorer.ipynb`](https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cyclic_polytope_explorer.ipynb) | \(d=2\)–\(4\) only | \(d=2\)–\(4\) (all feasible) |
 
 Beyond `*_explorer.ipynb`, the same `sagemath/` folder has one `.sage`
 script per family checking f-vectors, volumes, and duals directly (no
-Jupyter needed — `run_all.sage` runs all seven in one pass, currently
-44/44 passing), plus `general_canonical_forms.sage` and
+Jupyter needed — `run_all.sage` runs all eight in one pass, currently
+50/50 passing), plus `general_canonical_forms.sage` and
 `vertex_sum_canonical_forms.sage`, the two independently-implemented
 canonical-form methods the notebooks are built on.
 

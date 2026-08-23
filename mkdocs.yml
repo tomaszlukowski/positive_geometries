@@ -93,6 +93,7 @@ nav:
       - catalog/hypercube.md
       - catalog/cross-polytope.md
       - catalog/associahedron.md
+      - catalog/cyclohedron.md
       - catalog/permutohedron.md
       - catalog/hypersimplex.md
       - catalog/cyclic-polytope.md

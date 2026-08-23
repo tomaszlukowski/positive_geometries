@@ -13,6 +13,7 @@ load("permutohedron.sage")
 load("associahedron.sage")
 load("hypersimplex.sage")
 load("cyclic_polytope.sage")
+load("cyclohedron.sage")
 
 print()
 print("############################################")
