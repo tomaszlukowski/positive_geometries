@@ -26,6 +26,31 @@ docs/catalog/simplex.md. For a general polytope, phi is the sum of this
 over any triangulation into simplices (triangulation-additivity,
 docs/theory/canonical-forms.md); TOPCOM's placing triangulation is used
 here via PointConfiguration, same as the earlier verification/ scripts.
+
+KNOWN ISSUE (found while adding vertex_sum_canonical_forms.sage): this
+sum-with-|det| approach was checked against known closed forms for the
+simplex and hypercube and passed, but a later, independent cross-check
+(comparing canonical_form_density's output against the pole-structure
+of Brown-Dupont's vertex-sum formula -- see vertex_sum_canonical_forms.sage)
+found it produces spurious EXTRA poles, along internal triangulation
+diagonals that should cancel but don't, for polygons needing more than
+~2-3 triangles -- confirmed on two different hexagons (a regular-ish
+generic hexagon and the reduced-chart permutohedron n=3), regardless of
+which vertex the fan triangulation is taken from. It is NOT simply a
+question of abs() discarding a sign -- using the signed determinant
+directly (no abs) reproduces the exact same spurious factors, checked
+with exact polynomial-ring arithmetic, not just symbolic .simplify_full()
+(which can fail to spot cancellation on its own, but that was ruled out
+here). The root cause has not been pinned down; it is NOT present for
+every input (the square via 2 triangles, the cube via 6 tetrahedra from
+one vertex, and the single-simplex case are all confirmed correct), so
+existing results computed with this file (e.g. the simplex/hypercube
+canonical-form checks reported elsewhere as passing) are NOT invalidated
+-- but treat canonical_form_density with real caution on anything more
+combinatorially complex than what's already been checked, until this is
+properly root-caused and fixed. For SIMPLE polytopes, prefer
+vertex_sum_canonical_forms.sage's independently-implemented (and,
+critically, pole-structure-verified) method instead.
 """
 
 import itertools

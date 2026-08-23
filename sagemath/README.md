@@ -34,6 +34,46 @@ result: **42/42 checks pass**.
 - **`run_all.sage`** — loads every family script in one session and
   prints one combined summary at the end (this is what produced the
   42/42 result above).
+- **`vertex_sum_canonical_forms.sage`** — a second, independent way to
+  compute canonical forms, using the closed formula from F. Brown,
+  C. Dupont, *Positive geometries and canonical forms via mixed Hodge
+  theory*, [arXiv:2501.03202](https://arxiv.org/abs/2501.03202),
+  Proposition 6.10: for a **simple** polytope, sum one term per vertex —
+  no triangulation, no TOPCOM, just the polytope's own facet
+  inequalities. Covers the simplex, hypercube, permutohedron, and
+  associahedron (the simple families in this catalog) at d=1,2,3;
+  cross-polytope/hypersimplex/cyclic polytope are simplicial rather than
+  simple, so this formula doesn't directly apply to them (the script
+  says so explicitly rather than giving a silently wrong answer). Every
+  result is checked against the *defining* property of a canonical
+  form — simple poles on exactly the polytope's own facets, nothing
+  else — which is how a real bug in `common.sage` got caught; see below.
+
+## ⚠ A real bug found in `common.sage`, while building the script above
+
+`canonical_form_density` (the triangulation-based method used by every
+other script in this folder) was cross-checked against
+`vertex_sum_canonical_forms.sage`'s independent, pole-structure-verified
+results, and the two **disagree** for polygons needing more than a
+couple of triangles — confirmed on two unrelated hexagons (a generic
+one and the reduced-chart permutohedron n=3), regardless of which vertex
+the fan triangulation starts from. `canonical_form_density` produces
+spurious extra poles along internal triangulation diagonals that should
+cancel but don't. This was checked with exact polynomial-ring
+arithmetic, not just `.simplify_full()` (which can fail to spot
+cancellation on its own — that possibility was specifically ruled out).
+
+The simplex/hypercube canonical-form checks reported elsewhere in this
+project as passing are **not** affected — those specific cases (a
+single simplex needing no triangulation at all, and the cube's fan
+triangulation from one vertex) are confirmed correct — but treat
+`canonical_form_density` with caution on anything more combinatorially
+complex than what's already been checked, until this is properly
+root-caused. The root cause is not yet known: it is not simply the
+`abs()` in the numerator discarding a sign (using the signed determinant
+directly reproduces the exact same spurious factors). For simple
+polytopes, prefer `vertex_sum_canonical_forms.sage` instead. See the
+`KNOWN ISSUE` comment at the top of `common.sage` for the full writeup.
 
 ## One-time environment setup
 
