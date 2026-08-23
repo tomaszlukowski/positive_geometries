@@ -50,11 +50,16 @@ been removed; see git history if either is ever needed for reference.
     compete) and each surviving nbc term's own small, factored
     contribution. Summing every term reproduces
     `general_canonical_form_density`'s answer exactly (checked directly
-    wherever this is used). Used in the three non-simple-family
-    notebooks (`cross_polytope_explorer.ipynb`,
-    `hypersimplex_explorer.ipynb`, `cyclic_polytope_explorer.ipynb`) —
-    not the simple families, where the whole-polytope expression already
-    *is* one clean term per vertex;
+    wherever this is used). Used in every `*_explorer.ipynb` notebook's
+    "Canonical form, broken down by vertex" section, right after the
+    whole-polytope expression: most illuminating on the non-simple
+    families (`cross_polytope_explorer.ipynb`,
+    `hypersimplex_explorer.ipynb`, `cyclic_polytope_explorer.ipynb`),
+    where a vertex can have several surviving nbc terms; on the simple
+    families (simplex, hypercube, permutohedron, associahedron) it
+    collapses to exactly one term per vertex, still worth showing as a
+    direct, visible confirmation that the general method reduces to
+    Proposition 6.10's one-term-per-vertex formula there;
   - `verify_pole_structure` — the model-independent correctness check
     used throughout: a canonical form is *defined* by having simple
     poles exactly on the polytope's own facets and nowhere else, so
