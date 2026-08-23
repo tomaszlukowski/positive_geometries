@@ -1371,6 +1371,23 @@ coordinates dual to the vertices,</p>
 \Omega(S_n^{(0)}) = \frac{\br{Y\, d^{n-1}Y}}{y_1 y_2 \cdots y_n},
 \]</div>
 <p>manifestly with a simple pole on each of the <span class="arithmatex">\(n\)</span> facets <span class="arithmatex">\(\lbrace y_i = 0\rbrace \)</span>.</p>
+<p><strong>Volume conjecture.</strong> The canonical form is also related to the volume
+of the simplex's own <strong>projective dual</strong> — not the simplex's own volume
+— evaluated at a specific, canonically determined point rather than an
+arbitrary one. Translate <span class="arithmatex">\(S_n^{(0)}\)</span> so its centroid sits at the
+origin, and re-express <span class="arithmatex">\(\Omega\)</span> in that chart; then</p>
+<div class="arithmatex">\[
+\phi_{\text{centroid}}(0) = \pm\, d!\cdot \mathrm{Vol}\big({S_n^{(0)}}^{\circ}_{\text{centroid}}\big),
+\]</div>
+<p>with the dual taken with respect to that same centroid (an arbitrary
+choice of reference point does <em>not</em> satisfy this — the centroid is
+load-bearing, checked directly rather than assumed). For <span class="arithmatex">\(d=3\)</span>:
+<span class="arithmatex">\(\phi_{\text{centroid}}(0) = 256\)</span> and
+<span class="arithmatex">\(3!\cdot\mathrm{Vol}(\text{dual}) = 6 \cdot \tfrac{128}{3} = 256\)</span>,
+matching exactly — see
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/simplex_explorer.ipynb">sagemath/simplex_explorer.ipynb</a>
+for the derivation and the demonstration of why it has to be the
+centroid.</p>
 <h2 id="embeddings-by-dimension">Embeddings by dimension<a class="headerlink" href="#embeddings-by-dimension" title="Permanent link">&para;</a></h2>
 <p>Vertices of <span class="arithmatex">\(S_n^{(0)}\)</span> in the reduced affine chart the canonical form
 above is stated in (<span class="arithmatex">\(y_1,\dots,y_d\)</span> independent, <span class="arithmatex">\(y_{d+1} =
@@ -1414,6 +1431,10 @@ for the full computation.</p>
 <ul>
 <li>N. Arkani-Hamed, Y. Bai, T. Lam, <em>Positive Geometries and Canonical
   Forms</em>, <a href="https://arxiv.org/abs/1703.04541">arXiv:1703.04541</a>, §3.</li>
+<li>F. Brown, C. Dupont, <em>Positive geometries and canonical forms via
+  mixed Hodge theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a> —
+  Proposition 6.10, the vertex-sum method used to compute and verify the
+  canonical form and the volume-conjecture identity above.</li>
 <li><a href="https://oeis.org/A007318">OEIS A007318</a> — Pascal's triangle.</li>
 </ul>
 
@@ -1436,7 +1457,7 @@ for the full computation.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2026 16:35:18 UTC">August 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2026 17:01:41 UTC">August 23, 2026</span>
   </span>
 
     

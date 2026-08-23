@@ -1364,11 +1364,33 @@ function for the <strong>ordered Bell (Fubini) numbers</strong>
 counting all faces of every dimension at once.</p>
 <h2 id="canonical-form">Canonical form<a class="headerlink" href="#canonical-form" title="Permanent link">&para;</a></h2>
 <p><span class="arithmatex">\(\Pi_{n-1}\)</span> is a simple polytope with <span class="arithmatex">\(2^n-2\)</span> facets but, unlike the
-simplex or hypercube, no product or single-orbit structure to exploit —
-its canonical form is computed the same way as the
-<a href="../associahedron/#canonical-form">associahedron's</a>: triangulate and sum
-<a href="../simplex/#canonical-form">simplex forms</a> via
-<a href="../../theory/canonical-forms/#triangulation-and-additivity">additivity</a>.</p>
+simplex or hypercube, no product or single-orbit structure to exploit.
+Being simple is exactly what Brown–Dupont's vertex-sum formula needs
+(F. Brown, C. Dupont, <em>Positive geometries and canonical forms via mixed
+Hodge theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a>,
+Proposition 6.10): at each vertex <span class="arithmatex">\(v\)</span>, exactly <span class="arithmatex">\(d\)</span> facets
+<span class="arithmatex">\(f_1,\dots,f_d\)</span> meet (affine functions, <span class="arithmatex">\(f_i \geq 0\)</span> on
+<span class="arithmatex">\(\Pi_{n-1}\)</span>, <span class="arithmatex">\(f_i = 0\)</span> exactly on the facet through <span class="arithmatex">\(v\)</span>), and</p>
+<div class="arithmatex">\[
+\Omega(\Pi_{n-1}) = (-1)^{d(d+1)/2} \sum_{v} \frac{|\det A_v|}
+{f_1(y) \cdots f_d(y)}\; dy_1 \wedge \cdots \wedge dy_d,
+\]</div>
+<p>with <span class="arithmatex">\(A_v\)</span> the <span class="arithmatex">\(d\times d\)</span> matrix of the <span class="arithmatex">\(f_i\)</span>'s linear
+coefficients — one term per vertex, no triangulation needed. Checked
+directly against the defining pole-structure property (not just a known
+closed form, since there isn't one to compare against here) in
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/vertex_sum_canonical_forms.sage">sagemath/vertex_sum_canonical_forms.sage</a>
+for order <span class="arithmatex">\(2,3,4\)</span>; see
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/permutohedron_explorer.ipynb">permutohedron_explorer.ipynb</a>
+for the term-by-term breakdown at every vertex.</p>
+<p><strong>Volume conjecture.</strong> The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals <span class="arithmatex">\(\pm\, d!\)</span> times the volume of
+<span class="arithmatex">\(\Pi_{n-1}\)</span>'s own projective dual taken at that same centroid — for
+the hexagon (<span class="arithmatex">\(n=3\)</span>), the centroid value is <span class="arithmatex">\(-6\)</span> and
+<span class="arithmatex">\(2!\cdot\mathrm{Vol}(\text{dual}) = 2\cdot 3 = 6\)</span>, matching up to the
+same overall orientation sign the canonical form is only ever defined up
+to (see the note on <a href="../simplex/#canonical-form">simplex.md</a> for why the
+reference point has to be the centroid specifically).</p>
 <h2 id="embeddings-by-dimension">Embeddings by dimension<a class="headerlink" href="#embeddings-by-dimension" title="Permanent link">&para;</a></h2>
 <p>Vertices of <span class="arithmatex">\(\Pi_{n-1}\)</span> — every permutation of <span class="arithmatex">\((1,\dots,n)\)</span>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">d = 1</label><label for="__tabbed_1_2">d = 2</label><label for="__tabbed_1_3">d = 3</label></div>
@@ -1400,6 +1422,10 @@ isn't listed out explicitly here: it's always "every permutation of
 <ul>
 <li>R. Stanley, <em>Enumerative Combinatorics, Vol. 1</em> — ordered set
   partitions and Stirling numbers of the second kind.</li>
+<li>F. Brown, C. Dupont, <em>Positive geometries and canonical forms via
+  mixed Hodge theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a> —
+  Proposition 6.10, the vertex-sum method behind the canonical form
+  above.</li>
 <li><a href="https://oeis.org/A019538">OEIS A019538</a>, <a href="https://oeis.org/A000670">A000670</a>.</li>
 </ul>
 
@@ -1422,7 +1448,7 @@ isn't listed out explicitly here: it's always "every permutation of
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 19:25:22 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2026 17:01:41 UTC">August 23, 2026</span>
   </span>
 
     

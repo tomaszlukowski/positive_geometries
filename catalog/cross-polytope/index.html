@@ -862,6 +862,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dual-and-triangulations-verified-for-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual and triangulations (verified for d = 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1202,6 +1213,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dual-and-triangulations-verified-for-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual and triangulations (verified for d = 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1358,6 +1380,25 @@ one per sign pattern <span class="arithmatex">\(s \in \lbrace \pm1\rbrace ^n\)</
 \]</div>
 <p>with each summand the simplex canonical form from the
 <a href="../simplex/">simplex page</a>.</p>
+<p>This coning triangulation gives <span class="arithmatex">\(2^n\)</span> terms — one per sign pattern.
+It's not the only way to decompose <span class="arithmatex">\(\Omega(X_n)\)</span>: Brown–Dupont's
+general vertex-by-vertex formula (F. Brown, C. Dupont, <em>Positive
+geometries and canonical forms via mixed Hodge theory</em>,
+<a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a>, Proposition 6.7 —
+needed here rather than the simpler Proposition 6.10, since <span class="arithmatex">\(X_n\)</span> is
+<em>not</em> simple: each vertex lies on <span class="arithmatex">\(2^{n-1}\)</span> facets, not just <span class="arithmatex">\(n\)</span>)
+gives a <em>different</em> decomposition, summing several competing terms at
+each of the <span class="arithmatex">\(2n\)</span> vertices instead of one term at each of the <span class="arithmatex">\(2^n\)</span>
+cone points, yet reproduces the exact same <span class="arithmatex">\(\Omega(X_n)\)</span> — an
+independent check of the formula above, computed and verified in
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cross_polytope_explorer.ipynb">sagemath/cross_polytope_explorer.ipynb</a>,
+which also breaks the sum down term by term at every vertex.</p>
+<p><strong>Volume conjecture.</strong> The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals <span class="arithmatex">\(\pm\, n!\)</span> times the volume of
+<span class="arithmatex">\(X_n\)</span>'s own projective dual taken at that same centroid — for <span class="arithmatex">\(n=3\)</span>,
+<span class="arithmatex">\(3!\cdot\mathrm{Vol}(\text{dual}) = 6\cdot 8 = 48\)</span>, matching the
+centroid value exactly (see the note on <a href="../simplex/#canonical-form">simplex.md</a>
+for why the reference point has to be the centroid specifically).</p>
 <h2 id="embeddings-by-dimension">Embeddings by dimension<a class="headerlink" href="#embeddings-by-dimension" title="Permanent link">&para;</a></h2>
 <p>Vertices of <span class="arithmatex">\(X_d\)</span> — <span class="arithmatex">\(\pm e_i\)</span> for each of the <span class="arithmatex">\(d\)</span> coordinate axes:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">d = 1</label><label for="__tabbed_1_2">d = 2</label><label for="__tabbed_1_3">d = 3</label><label for="__tabbed_1_4">d = 4</label><label for="__tabbed_1_5">d = 5</label><label for="__tabbed_1_6">d = 6</label></div>
@@ -1389,10 +1430,29 @@ one per sign pattern <span class="arithmatex">\(s \in \lbrace \pm1\rbrace ^n\)</
 </div>
 </div>
 </div>
+<h2 id="dual-and-triangulations-verified-for-d-3">Dual and triangulations (verified for d = 3)<a class="headerlink" href="#dual-and-triangulations-verified-for-d-3" title="Permanent link">&para;</a></h2>
+<p>For the octahedron <span class="arithmatex">\(X_3\)</span>, computed in SageMath — see
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/README.md"><code>sagemath/</code></a>
+for the current verification scripts and notebooks:</p>
+<ul>
+<li><strong>Dual</strong>: <span class="arithmatex">\((\pm2,0,0)\)</span>, <span class="arithmatex">\((0,\pm2,0)\)</span>, <span class="arithmatex">\((0,0,\pm2)\)</span> — f-vector
+  <span class="arithmatex">\((1,8,12,6,1)\)</span>, combinatorially the <a href="../hypercube/">hypercube</a>,
+  confirming the duality claimed above.</li>
+<li><strong>Triangulations &amp; secondary polytope</strong>: <strong>3</strong> triangulations in
+  total, all regular — secondary polytope of dimension 2 with 3
+  vertices. Each corresponds to picking one of the octahedron's 3 long
+  diagonals (a pair of opposite vertices <span class="arithmatex">\(e_i, -e_i\)</span>) and fanning the
+  other 4 vertices into 4 tetrahedra around it — confirmed directly from
+  each triangulation's GKZ vector, not assumed.</li>
+</ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li>N. Arkani-Hamed, Y. Bai, T. Lam, <em>Positive Geometries and Canonical
   Forms</em>, <a href="https://arxiv.org/abs/1703.04541">arXiv:1703.04541</a>, §3.</li>
+<li>F. Brown, C. Dupont, <em>Positive geometries and canonical forms via
+  mixed Hodge theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a> —
+  Proposition 6.7, the general vertex-by-vertex method cross-checked
+  against the coning formula above.</li>
 <li><a href="https://oeis.org/A038207">OEIS A038207</a> — the dual hypercube triangle.</li>
 </ul>
 
@@ -1415,7 +1475,7 @@ one per sign pattern <span class="arithmatex">\(s \in \lbrace \pm1\rbrace ^n\)</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 19:25:22 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2026 17:01:41 UTC">August 23, 2026</span>
   </span>
 
     

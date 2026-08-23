@@ -1350,16 +1350,38 @@ underlying <span class="arithmatex">\(D(p,k)\)</span> itself — so this site st
 <a href="../../data/f-vector-tables/">data page</a>.</p>
 <h2 id="canonical-form">Canonical form<a class="headerlink" href="#canonical-form" title="Permanent link">&para;</a></h2>
 <p>Loday's coordinates realize <span class="arithmatex">\(K_L\)</span> combinatorially but not with any
-particular physical meaning; its canonical form is then computed like
-any polytope's, by triangulating and summing
-<a href="../simplex/#canonical-form">simplex forms</a> via
-<a href="../../theory/canonical-forms/#triangulation-and-additivity">additivity</a> —
-there is no single-formula shortcut analogous to the simplex or
-hypercube. A different, kinematics-based realization of the same
-combinatorial polytope — the <em>kinematic associahedron</em> of Arkani-Hamed,
-Bai, He and Yan — does have an explicit closed-form canonical form, equal
-to the tree-level biadjoint <span class="arithmatex">\(\phi^3\)</span> scattering amplitude; see
+particular physical meaning, and there is no single-formula shortcut
+analogous to the simplex or hypercube — but <span class="arithmatex">\(K_L\)</span> is simple, which is
+exactly what Brown–Dupont's vertex-sum formula needs (F. Brown,
+C. Dupont, <em>Positive geometries and canonical forms via mixed Hodge
+theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a>,
+Proposition 6.10): at each vertex <span class="arithmatex">\(v\)</span>, exactly <span class="arithmatex">\(d\)</span> facets
+<span class="arithmatex">\(f_1,\dots,f_d\)</span> meet (affine functions, <span class="arithmatex">\(f_i \geq 0\)</span> on <span class="arithmatex">\(K_L\)</span>,
+<span class="arithmatex">\(f_i = 0\)</span> exactly on the facet through <span class="arithmatex">\(v\)</span>), and</p>
+<div class="arithmatex">\[
+\Omega(K_L) = (-1)^{d(d+1)/2} \sum_{v} \frac{|\det A_v|}
+{f_1(y) \cdots f_d(y)}\; dy_1 \wedge \cdots \wedge dy_d,
+\]</div>
+<p>with <span class="arithmatex">\(A_v\)</span> the <span class="arithmatex">\(d\times d\)</span> matrix of the <span class="arithmatex">\(f_i\)</span>'s linear
+coefficients — one term per vertex, no triangulation needed. Checked
+directly against the defining pole-structure property in
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/vertex_sum_canonical_forms.sage">sagemath/vertex_sum_canonical_forms.sage</a>
+for <span class="arithmatex">\(L=3,4,5\)</span>; see
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/associahedron_explorer.ipynb">associahedron_explorer.ipynb</a>
+for the term-by-term breakdown at every vertex, up to <span class="arithmatex">\(L=6\)</span>.</p>
+<p>A different, kinematics-based realization of the same combinatorial
+polytope — the <em>kinematic associahedron</em> of Arkani-Hamed, Bai, He and
+Yan — does have an explicit closed-form canonical form, equal to the
+tree-level biadjoint <span class="arithmatex">\(\phi^3\)</span> scattering amplitude; see
 <a href="../../theory/physics-motivation/">Physics motivation</a>.</p>
+<p><strong>Volume conjecture.</strong> The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals <span class="arithmatex">\(\pm\, d!\)</span> times the volume of
+<span class="arithmatex">\(K_L\)</span>'s own projective dual taken at that same centroid — for the
+pentagon (<span class="arithmatex">\(L=4\)</span>), the centroid value is <span class="arithmatex">\(-5\)</span> and
+<span class="arithmatex">\(2!\cdot\mathrm{Vol}(\text{dual}) = 2\cdot\tfrac{5}{2} = 5\)</span>, matching
+up to the same overall orientation sign the canonical form is only ever
+defined up to (see the note on <a href="../simplex/#canonical-form">simplex.md</a>
+for why the reference point has to be the centroid specifically).</p>
 <h2 id="embeddings-by-dimension">Embeddings by dimension<a class="headerlink" href="#embeddings-by-dimension" title="Permanent link">&para;</a></h2>
 <p>Loday's coordinates (see <a href="#definition">Definition</a>) for the smallest
 instances, one vertex per binary tree on leaves <span class="arithmatex">\(a, b, c, \dots\)</span>, with
@@ -1418,6 +1440,10 @@ general <span class="arithmatex">\(d\)</span>; it's generated the same way for a
 <li>N. Arkani-Hamed, Y. Bai, S. He, G. Yan, <em>Scattering Forms and the
   Positive Geometry of Kinematics, Color and the Worldsheet</em>,
   <a href="https://arxiv.org/abs/1711.09102">arXiv:1711.09102</a>.</li>
+<li>F. Brown, C. Dupont, <em>Positive geometries and canonical forms via
+  mixed Hodge theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a> —
+  Proposition 6.10, the vertex-sum method behind the canonical form
+  above.</li>
 <li><a href="https://oeis.org/A033282">OEIS A033282</a> — Kirkman–Cayley numbers.</li>
 <li><a href="https://oeis.org/A001003">OEIS A001003</a> — little Schröder numbers.</li>
 </ul>
@@ -1441,7 +1467,7 @@ general <span class="arithmatex">\(d\)</span>; it's generated the same way for a
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 19:25:22 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2026 17:01:41 UTC">August 23, 2026</span>
   </span>
 
     

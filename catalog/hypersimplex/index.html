@@ -913,6 +913,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canonical form
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-and-triangulations-verified-for-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual and triangulations (verified for d = 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#embeddings-by-dimension" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1147,6 +1169,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canonical form
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-and-triangulations-verified-for-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual and triangulations (verified for d = 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#embeddings-by-dimension" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1288,6 +1332,50 @@ formula:</p>
 </tr>
 </tbody>
 </table>
+<h2 id="canonical-form">Canonical form<a class="headerlink" href="#canonical-form" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(\Delta(k,n)\)</span> is simplicial but, for <span class="arithmatex">\(1&lt;k&lt;n-1\)</span>, <strong>not simple</strong>: at a
+vertex <span class="arithmatex">\(e_S\)</span>, the facets through it are the <span class="arithmatex">\(x_i \geq 0\)</span> and
+<span class="arithmatex">\(x_i \leq 1\)</span> inequalities for <span class="arithmatex">\(i \notin S\)</span> and <span class="arithmatex">\(i \in S\)</span>
+respectively that happen to touch it, and there are more than <span class="arithmatex">\(d=n-1\)</span>
+of them in general (for <span class="arithmatex">\(\Delta(2,4)\)</span>, every vertex lies on 4 facets,
+not 3 — the same non-simple structure as the
+<a href="../cross-polytope/#canonical-form">octahedron</a>, which <span class="arithmatex">\(\Delta(2,4)\)</span> is
+combinatorially identical to). So the <a href="../simplex/">simplex's</a> and
+<a href="../permutohedron/#canonical-form">permutohedron's</a> one-term-per-vertex
+shortcut (Proposition 6.10) doesn't apply here; the fully general
+formula does (F. Brown, C. Dupont, <em>Positive geometries and canonical
+forms via mixed Hodge theory</em>,
+<a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a>, Proposition 6.7):
+at each vertex, sum over every <strong>non-broken-circuit</strong> subset of the
+facets through it (a combinatorial condition from matroid theory on the
+facets' own linear dependencies) whose associated flag survives an
+iterated boundary map — collapsing to exactly one nbc set per vertex
+automatically whenever the vertex happens to be simple, but potentially
+several at a non-simple one, as here. Checked directly against the
+defining pole-structure property in
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/general_canonical_forms.sage">sagemath/general_canonical_forms.sage</a>
+for <span class="arithmatex">\(\Delta(2,n)\)</span>, <span class="arithmatex">\(n=4,\dots,9\)</span>; see
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/hypersimplex_explorer.ipynb">hypersimplex_explorer.ipynb</a>
+for the term-by-term breakdown at every vertex (2 competing nbc terms
+per vertex throughout <span class="arithmatex">\(\Delta(2,4)\)</span>, for instance).</p>
+<p><strong>Volume conjecture.</strong> The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals <span class="arithmatex">\(\pm\, d!\)</span> times the volume of
+<span class="arithmatex">\(\Delta(k,n)\)</span>'s own projective dual taken at that same centroid — for
+<span class="arithmatex">\(\Delta(2,4)\)</span>, <span class="arithmatex">\(3!\cdot\mathrm{Vol}(\text{dual}) = 6\cdot 16 = 96\)</span>,
+matching the centroid value exactly (see the note on
+<a href="../simplex/#canonical-form">simplex.md</a> for why the reference point has
+to be the centroid specifically).</p>
+<h2 id="dual-and-triangulations-verified-for-d-3">Dual and triangulations (verified for d = 3)<a class="headerlink" href="#dual-and-triangulations-verified-for-d-3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Dual</strong>: f-vector <span class="arithmatex">\((1,8,12,6,1)\)</span>, combinatorially the
+  <a href="../hypercube/">hypercube</a> — as expected, since <span class="arithmatex">\(\Delta(2,4)\)</span> is
+  itself combinatorially the octahedron, and the two families are
+  mutual duals.</li>
+<li><strong>Triangulations &amp; secondary polytope</strong>: <strong>3</strong> triangulations in
+  total, all regular — secondary polytope of dimension 2 with 3
+  vertices (the same numbers as the <a href="../cross-polytope/#dual-and-triangulations-verified-for-d-3">octahedron</a>,
+  for the same reason).</li>
+</ul>
 <h2 id="embeddings-by-dimension">Embeddings by dimension<a class="headerlink" href="#embeddings-by-dimension" title="Permanent link">&para;</a></h2>
 <p><span class="arithmatex">\(\Delta(k,n)\)</span> is a two-parameter family; fixing <span class="arithmatex">\(k=2\)</span> (the smallest
 choice that isn't just the simplex, since <span class="arithmatex">\(\Delta(1,n)\)</span> always is —
@@ -1326,6 +1414,10 @@ ones instead of 2 — and are what the <a href="#f-vector">f-vector</a> formula
 <li>A. Postnikov, D. Speyer, L. Williams, <em>Matching Polytopes,
   Toric Geometry, and the Non-negative Part of the Grassmannian</em>,
   <a href="https://arxiv.org/abs/0706.2501">arXiv:0706.2501</a>.</li>
+<li>F. Brown, C. Dupont, <em>Positive geometries and canonical forms via
+  mixed Hodge theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a> —
+  Proposition 6.7, the general nbc-sum method behind the canonical form
+  above.</li>
 </ul>
 
 
@@ -1347,7 +1439,7 @@ ones instead of 2 — and are what the <a href="#f-vector">f-vector</a> formula
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 19:25:22 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2026 17:01:41 UTC">August 23, 2026</span>
   </span>
 
     

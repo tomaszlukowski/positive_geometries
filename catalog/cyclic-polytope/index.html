@@ -952,6 +952,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canonical form
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-and-triangulations-verified-for-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual and triangulations (verified for d = 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-it-belongs-here" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1169,6 +1191,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canonical form
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-and-triangulations-verified-for-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual and triangulations (verified for d = 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-it-belongs-here" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1346,21 +1390,61 @@ sequence indexed by dimension, using the integer parameters
 purely a cosmetic feature of the integer-parameter moment curve, not of
 the polytope's combinatorics — any strictly increasing <span class="arithmatex">\(t_1 &lt; \dots &lt;
 t_n\)</span> gives the same combinatorial type (see <a href="#definition">Definition</a>).</p>
+<h2 id="canonical-form">Canonical form<a class="headerlink" href="#canonical-form" title="Permanent link">&para;</a></h2>
+<p>Neighborliness gives no shortcut to the canonical form itself, only to
+the face count — and cyclic polytopes are not simple for <span class="arithmatex">\(d \geq 4\)</span>
+(more than <span class="arithmatex">\(d\)</span> facets can meet at a single vertex), so the
+<a href="../simplex/">simplex's</a> and <a href="../permutohedron/#canonical-form">permutohedron's</a>
+one-term-per-vertex shortcut (Brown–Dupont's Proposition 6.10) doesn't
+apply in general — the fully general formula does (F. Brown, C. Dupont,
+<em>Positive geometries and canonical forms via mixed Hodge theory</em>,
+<a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a>, Proposition 6.7):
+at each vertex, sum over every <strong>non-broken-circuit</strong> subset of the
+facets through it (a combinatorial condition from matroid theory on the
+facets' own linear dependencies) whose associated flag survives an
+iterated boundary map. At <span class="arithmatex">\(d=3\)</span>, <span class="arithmatex">\(C(6,3)\)</span> happens to still be simple
+(it's combinatorially the octahedron, matching the vertex/edge/facet
+counts in the <a href="#f-vector">f-vector table</a> above); the non-simple
+structure this general method is actually needed for shows up from
+<span class="arithmatex">\(d=4\)</span> on, where a single vertex of <span class="arithmatex">\(C(7,4)\)</span> can lie on as many as 8
+facets, with 5–6 nbc terms surviving there. Checked directly against the
+defining pole-structure property in
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/general_canonical_forms.sage">sagemath/general_canonical_forms.sage</a>
+for <span class="arithmatex">\(d=2,3,4\)</span>; see
+<a href="https://github.com/tomaszlukowski/positive_geometries/blob/main/sagemath/cyclic_polytope_explorer.ipynb">cyclic_polytope_explorer.ipynb</a>
+for the term-by-term breakdown at every vertex.</p>
+<p><strong>Volume conjecture.</strong> The canonical form, evaluated at the centroid (in
+a chart re-centered there), equals <span class="arithmatex">\(\pm\, d!\)</span> times the volume of
+<span class="arithmatex">\(C(n,d)\)</span>'s own projective dual taken at that same centroid — for
+<span class="arithmatex">\(C(6,3)\)</span>, <span class="arithmatex">\(3!\cdot\mathrm{Vol}(\text{dual}) = 6\cdot\tfrac{147}{1000}
+= \tfrac{441}{500}\)</span>, matching the centroid value exactly (see the note
+on <a href="../simplex/#canonical-form">simplex.md</a> for why the reference point
+has to be the centroid specifically).</p>
+<h2 id="dual-and-triangulations-verified-for-d-3">Dual and triangulations (verified for d = 3)<a class="headerlink" href="#dual-and-triangulations-verified-for-d-3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Dual</strong>: f-vector <span class="arithmatex">\((1,8,12,6,1)\)</span>, combinatorially the
+  <a href="../hypercube/">hypercube</a> — following from <span class="arithmatex">\(C(6,3)\)</span> itself being
+  combinatorially the octahedron (see <a href="#canonical-form">Canonical form</a>
+  above).</li>
+<li><strong>Triangulations &amp; secondary polytope</strong>: <strong>6</strong> triangulations in
+  total, all regular — secondary polytope of dimension 2 with 6
+  vertices.</li>
+</ul>
 <h2 id="why-it-belongs-here">Why it belongs here<a class="headerlink" href="#why-it-belongs-here" title="Permanent link">&para;</a></h2>
 <p>Cyclic polytopes are the extremal case against which every other family
 in this catalog can be measured: the
 <a href="https://en.wikipedia.org/wiki/Upper_bound_theorem">Upper Bound Theorem</a>
 says no <span class="arithmatex">\(d\)</span>-polytope with <span class="arithmatex">\(n\)</span> vertices has a larger f-vector,
-entrywise, than <span class="arithmatex">\(C(n,d)\)</span>'s. Concretely, their canonical forms are
-computed the same way as the <a href="../associahedron/">associahedron's</a> and
-<a href="../permutohedron/">permutohedron's</a> — by triangulating and summing
-<a href="../simplex/#canonical-form">simplex forms</a> — since neighborliness gives
-no shortcut to the canonical form itself, only to the face count.</p>
+entrywise, than <span class="arithmatex">\(C(n,d)\)</span>'s.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li>B. Grünbaum, <em>Convex Polytopes</em>, 2nd ed. (Ziegler, ed.), Ch. 4 and 8.</li>
 <li>G. Ziegler, <em>Lectures on Polytopes</em>, Ch. 8 — Gale's evenness condition
   and the Upper Bound Theorem.</li>
+<li>F. Brown, C. Dupont, <em>Positive geometries and canonical forms via
+  mixed Hodge theory</em>, <a href="https://arxiv.org/abs/2501.03202">arXiv:2501.03202</a> —
+  Proposition 6.7, the general nbc-sum method behind the canonical form
+  above.</li>
 </ul>
 
 
@@ -1382,7 +1466,7 @@ no shortcut to the canonical form itself, only to the face count.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2026 19:25:22 UTC">August 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2026 17:01:41 UTC">August 23, 2026</span>
   </span>
 
     
